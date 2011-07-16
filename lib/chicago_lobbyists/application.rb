@@ -28,8 +28,31 @@ module ChicagoLobbyists
       erb :lobbyist
     end
     
+    get "/firms" do
+      @current_menu = "firms"
+      erb :firms
+    end
+    
     get "/firms/:id" do
       erb :firm
+    end
+    
+    get "/agencies" do
+      @current_menu = "agencies"
+      erb :agencies
+    end
+    
+    get "/agencies/:id" do
+      erb :agency
+    end
+    
+    get "/clients" do
+      @current_menu = "clients"
+      erb :clients
+    end
+    
+    get "/clients/:id" do
+      erb :client
     end
     
     get "/:page" do |page_name|
