@@ -19,6 +19,10 @@ module ChicagoLobbyists
       erb :landing
     end
     
+    get "/lobbyists" do
+      erb :lobbyists
+    end
+    
     get "/lobbyists/:id" do
       erb :lobbyist
     end
