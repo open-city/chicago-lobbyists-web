@@ -135,6 +135,7 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 
 /* Dashboard */
 #dashboard h2 { color: #c00000; font-size: 14px; margin-bottom: 0.5em; text-transform: uppercase; }
+#dashboard h2 a { text-transform: none; }
 
 /* Charts on Homepage */
 .chartlist {
