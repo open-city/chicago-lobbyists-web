@@ -160,8 +160,13 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   
   /* Stats */
   #stats { list-style: none; margin: 0; }
-  #stats a:hover { text-decoration: none; }
-  #stats a:hover strong { color: #346983; }
+  #stats a:link, #stats a:visited {
+    color: #99b4c1;
+  }
+  #stats a:hover, #stats a:active {
+    color: #027BB6;
+    text-decoration: none;
+  }
   
   #stats li {
     background: #e4f3fa;
@@ -175,13 +180,6 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
     text-align: center;
   }
   
-  #stats a:link, #stats a:visited {
-    color: #99b4c1;
-  }
-  #stats a:hover, #stats a:active {
-    color: #027BB6;
-  }
-  
   #stats li:last-child { float: right; margin: 0; }
   #stats li#paid { width: 31.3%; background-color: #FFF; }
   #stats li#paid strong { color: #346983; }
@@ -189,6 +187,7 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   #stats strong { display: block; font-size: 40px; }
   #stats li.current { font-weight: bold; }
   #stats li.current a strong, #stats li.current a { color: #346983; }
+  
   
   /* Maps for profile pages */
   .map { }
