@@ -1,0 +1,149 @@
+/*-------------------------+
+ | Site: Chicago Lobbyists |
+ | Part: Master styles     |
+ +-------------------------*/
+
+/* Imports
+=====================================================================*/
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);
+@import "reset.css";
+@import "forms.css";
+
+
+/* Fonts
+=====================================================================*/
+body, input, select, textarea { font-family: "Droid Sans", Arial, sans-serif; }
+
+
+/* Basics
+=====================================================================*/
+a { color: #027bb6; text-decoration: none; }
+a:hover { text-decoration: underline; }
+body { font-size: 14px; line-height: 1.4; }
+blockquote, dl, ol, p, pre, table, ul { margin-bottom: 1.4em; }
+dt { margin-top: 1.4em; }
+dt:first-child { margin-top: 0; }
+em { font-style: italic; }
+h1 { font-size: 27px; line-height: 1.14; margin-bottom: 1em; }
+h1, h2, h3, h4, h5, h6, strong { font-weight: bold; }
+h2 { font-size: 19px; line-height: 1.26; }
+h3 { font-size: 17px; line-height: 1.17; margin-bottom: 0.5em; }
+h4 { font-size: 1.1em; }
+hr { background: #ddd; border: 0; clear: both; color: #ddd; height: 1px; margin: 1.5em 0; }
+ol { list-style: decimal; margin-left: 2em; }
+li { margin-bottom: 0.5em; }
+table { border-collapse: collapse; width: 100%; }
+td { border: 1px solid #ddd; border-width: 1px 0; padding: 0.3em 0.5em 0.3em 0; vertical-align: top; }
+th { font-size: 12px; font-weight: bold; padding: 0.3em 0.5em 0.3em 0; }
+ul { list-style: disc; margin-left: 1.5em; }
+
+
+/* Layout
+=====================================================================*/
+.clear { clear: both; }
+#content, #nav-content { margin: 0 auto; width: 980px; }
+
+/* Bios */
+#bio { clear: both; margin-bottom: 30px; }
+#bio-primary { float: right; width: 74.2%; }
+#bio-secondary { float: left; width: 22.7%; }
+
+/* Columns */
+.c2l, .c2r { width: 48%; }
+.c2l, .c3l, .c3m { float: left; }
+.c2r, .c3r { float: right; }
+.c3l { margin-right: 3%; }
+.c3l, .c3m, .c3r { width: 31%; }
+
+
+/* Content
+=====================================================================*/
+
+/* Bio */
+#bio-header p { margin: 0; }
+#bio-header img { margin-left: 15px; vertical-align: middle; }
+
+  /* Sections */
+  #bio .section { width: 346px; }
+  #bio .section dt { color: #888; }
+  #bio .section .total-paid { font-size: 34px; }
+
+/* Dashboard */
+#dashboard h2 { color: #c00000; font-size: 14px; margin-bottom: 0.5em; text-transform: uppercase; }
+
+  /* Charts */
+  .chartlist { border-top: 1px solid #eee; list-style: none; margin-left: 0; }
+  .chartlist a { display: block; padding: 0.4em 4.5em 0.4em 0.5em; position: relative; z-index: 2; }
+  
+  .chartlist .count { 
+    color: #999;
+    display: block;
+    font-weight: bold;
+    line-height: 2em;
+    margin: 0 0.3em;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+  }
+  
+  .chartlist .index { 
+    background: #b8e4f5;
+    display: block;
+    height: 100%;
+    left: 0;
+    line-height: 2em;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    text-indent: -9999px;
+  }
+  
+  .chartlist li { border-bottom: 1px solid #eee; position: relative; }
+  .chartlist li:hover { background: #efefef; }
+
+/* Footer */
+#footer { border-top: 1px solid #ddd; clear: both; color: #aaa; font-size: 11px; padding-top: 10px; }
+
+/* Header */
+#header { margin-bottom: 30px; }
+
+  /* Logo */
+  #logo { float: left; }
+  
+  /* Search */
+  #search { float: right; text-align: right; white-space: nowrap; }
+  #search input { font-size: 17px; }
+  
+  /* Stats */
+  #stats { list-style: none; margin: 0; }
+  #stats a:hover { text-decoration: none; }
+  #stats a:hover strong { color: #346983; }
+  
+  #stats li {
+    background: #e4f3fa;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    float: left;
+    text-align: left;
+    margin: 0 3% 30px 0;
+    width: 14.1%;
+    text-align: center;
+  }
+  
+  #stats li:last-child { float: right; margin: 0; }
+  #stats li#paid { width: 31.3%; }
+  #stats li#paid strong { color: #346983; }
+  #stats .stat { display: block; padding: 15px 1.5%; }
+  #stats strong { color: #99b4c1; display: block; font-size: 40px; }
+
+/* Muted text */
+.mute { color: #aaa; font-size: 12px; }
+
+/* Navigation */
+#nav { background: #e4f3fa; margin-bottom: 30px; padding: 0.75em 0; }
+#nav li { display: inline; margin-right: 1em; }
+#nav li.current { font-weight: bold; }
+#nav li.current a { color: #000; }
+#nav ul { list-style: none; margin: 0; }
