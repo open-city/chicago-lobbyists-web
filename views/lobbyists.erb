@@ -4,17 +4,18 @@
   <%= cl_erb "common/stats" %>
   
   <script type="text/javascript">
-  	$("#listing").dataTable({
-      "aaSorting": [[1, "desc"]],
-      "aoColumns": [
-        null,
-        { "sType": "currency" },
-        { "sType": "currency" },
-        { "bSortable": false }
-      ],
-      "bFilter": false,
-      "bInfo": false,
-      "bPaginate": false
+  	$(function(){
+	  	$("#listing").dataTable({
+	      "aaSorting": [[1, "desc"]],
+	      "aoColumns": [
+	        null,
+	        null,
+	        { "sType": "currency" }
+	      ],
+	      "bFilter": false,
+	      "bInfo": false,
+	      "bPaginate": false
+	    });
     });
   </script>
   
@@ -22,7 +23,7 @@
   
   <h1>Lobbyists</h1>
   
-  <table class="listing">
+  <table id="listing" class="listing">
     <thead>
       <tr>
         <th><span>Lobbyist</span></th>
@@ -32,12 +33,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><h3><a href="/lobbyists/1">John Smith</a></h3></td>
+        <td><h3><a href="/lobbyists/1">Alfred Smith</a></h3></td>
         <td><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></td>
         <td class="bar"><span style="width:100%;"><strong>$248,263,013</strong></span></td>
       </tr>
       <tr>
-        <td><h3><a href="/lobbyists/1">John Smith</a></h3></td>
+        <td><h3><a href="/lobbyists/1">Derek Smith</a></h3></td>
         <td><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></td>
         <td class="bar"><span style="width:80%;"><strong>$38,263,013</strong></span></td>
       </tr>
