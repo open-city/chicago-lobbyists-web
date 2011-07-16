@@ -132,6 +132,18 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   .listing .bar span strong {
     padding: 0 4.5em 0 0.5em;
   }
+  
+  #listing th span { color: #027BB6; cursor: pointer; }
+
+  #listing th.sorting_asc span {
+    background: url(/images/sort-up.png) no-repeat 100% 50%;
+    padding-right: 10px;
+  }
+
+  #listing th.sorting_desc span {
+    background: url(/images/sort-down.png) no-repeat 100% 50%;
+    padding-right: 10px;
+  } 
 
 /* Footer */
 #footer { border-top: 1px solid #ddd; clear: both; color: #aaa; font-size: 11px; padding-top: 10px; }
@@ -171,7 +183,6 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   
   /* Maps for profile pages */
   .map { }
-  
   
 /* Muted text */
 .mute { color: #aaa; font-size: 12px; }
