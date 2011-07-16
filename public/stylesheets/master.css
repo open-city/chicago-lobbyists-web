@@ -230,3 +230,9 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 
 /* Muted text */
 .mute { color: #aaa; font-size: 12px; }
+
+/* Unordered lists */
+
+.section ul {
+  list-style: none;
+}
