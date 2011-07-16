@@ -1,7 +1,7 @@
 <ul id="stats">
   <li class="<%= current_menu_class("lobbyists") %>"><a class="stat" href="/lobbyists"><strong>421</strong> Lobbyists</a></li>
   <li class="<%= current_menu_class("firms") %>"><a class="stat" href="/firms"><strong>244</strong> Lobbying firms</a></li>
-  <li id="paid"><span class="stat"><strong>$14,461,775.75</strong> Paid to lobbyists in 2010</a></li>
+  <li id="paid"><span class="stat"><strong>$<%= @total_paid %></strong> Paid to lobbyists in 2010</a></li>
   <li class="<%= current_menu_class("agencies") %>"><a class="stat" href="/agencies"><strong>534</strong> Actions sought</a></li>
   <li class="<%= current_menu_class("clients") %>"><a class="stat" href="/clients"><strong>1,018</strong> Clients</a></li>
 </ul>

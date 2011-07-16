@@ -16,6 +16,13 @@ module ChicagoLobbyists
     
     get "/" do
       @current_menu = "home"
+      @total_paid = "%.2f" % Compensation.all.inject(0.0) { |sum, c| sum += c.compensation.to_f }
+      compensation_by_lobbyist = Compensation.all.group_by { |c| c.lobbyist_id }
+      compensation_by_lobbyist.each do |lobbyist_id, compensations|
+        compensation_by_lobbyist[lobbyist_id] = compensations.inject(0.0) { |sum, c| sum += c.compensation.to_f }
+      end
+      compensation_by_lobbyist = compensation_by_lobbyist.to_a.sort_by { |c| -c.last }.first(5)
+      @highest_paid_lobbyists = compensation_by_lobbyist.map { |c| [Lobbyist.find(c.first), "%.2f" % c.last] }
       erb :landing
     end
     
