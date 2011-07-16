@@ -2,7 +2,35 @@
 <div id="content">
   <%= cl_erb "common/header" %>
   <%= cl_erb "common/stats" %>
+  
+  <script type="text/javascript">
+    $(function(){
+      $("#listing").dataTable({
+        "aaSorting": [[0, "asc"]],
+        "aoColumns": [
+          null,
+          null,
+          { "sType": "num-html" }
+        ],
+        "bFilter": false,
+        "bInfo": false,
+        "bPaginate": false
+      });
+    });
     
+    jQuery.fn.dataTableExt.oSort['num-html-asc']  = function(a,b) {
+      var x = parseFloat( a.replace( /<.*?>/g, "" ).replace("$","").replace(",","") ),
+          y = parseFloat( b.replace( /<.*?>/g, "" ).replace("$","").replace(",","") );
+      return ((x < y) ? -1 : ((x > y) ?  1 : 0));
+    };
+    
+    jQuery.fn.dataTableExt.oSort['num-html-desc'] = function(a,b) {
+      var x = parseFloat( a.replace( /<.*?>/g, "" ).replace("$","").replace(",","") ),
+          y = parseFloat( b.replace( /<.*?>/g, "" ).replace("$","").replace(",","") );
+      return ((x < y) ?  1 : ((x > y) ? -1 : 0));
+    };
+  </script>
+  
   <div class="clear"></div>
   
   <h1>Actions sought</h1>
@@ -10,8 +38,8 @@
   <table id="listing" class="listing">
     <thead>
       <tr>
-        <th>Agency</th>
-        <th>Actions sought in 2010</th>
+        <th><span>Agency</span></th>
+        <th><span>Actions sought in 2010</span></th>
       </tr>
     </thead>
     <tbody>
