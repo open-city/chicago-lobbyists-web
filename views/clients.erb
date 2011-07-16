@@ -1,0 +1,39 @@
+<!-- Content -->
+<div id="content">
+  <%= cl_erb "common/header" %>
+  <%= cl_erb "common/stats" %>
+  
+  <div class="clear"></div>
+  
+  <h1>Clients</h1>
+  
+  <table class="listing">
+    <thead>
+      <tr>
+        <th><span>Client</span></th>
+        <th><span>Paid in 2010</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><h3><a href="/clients/1">Lorrilard Tobacco</a></h3></td>
+        <td class="bar"><span style="width:100%;"><strong>$248,263,013</strong></span></td>
+      </tr>
+      <tr>
+        <td><h3><a href="/clients/1">David Mason &amp; Associates of Chicago</a></h3></td>
+        <td class="bar"><span style="width:80%;"><strong>$38,263,013</strong></span></td>
+      </tr>
+      <tr>
+        <td><h3><a href="/clients/1">WalMart</a></h3></td>
+        <td class="bar"><span style="width:60%;"><strong>$28,263,013</strong></span></td>
+      </tr>
+      <tr>
+        <td><h3><a href="/clients/1">Dish Network</a></h3></td>
+        <td class="bar"><span style="width:10%;"><strong>$28,263,013</strong></span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <%= cl_erb "common/footer" %>
+</div>
+<!-- /Content -->
