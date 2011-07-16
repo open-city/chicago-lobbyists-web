@@ -4,16 +4,14 @@ class Lobbyist
   attr_reader :id, :last_name, :first_name, :full_name, :slug
   
   def self.find(id)
-    conn = PGconn.connect("localhost", nil, nil, nil, "chicago_hackathon")
-    rs = conn.exec("SELECT * from chi_lobbyists WHERE id = #{id}")
+    rs = $conn.exec("SELECT * from chi_lobbyists WHERE id = #{id}")
     result = rs.first
         
     self.new(result)
   end
   
   def self.all
-    conn = PGconn.connect("localhost", nil, nil, nil, "chicago_hackathon")
-    rs = conn.exec("SELECT * from chi_lobbyists")
+    rs = $conn.exec("SELECT * from chi_lobbyists")
         
     rs.collect { |data| self.new(data) }
   end

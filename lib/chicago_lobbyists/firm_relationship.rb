@@ -8,16 +8,14 @@ class FirmRelationship
   end
   
   def self.find_all_by_lobbyist_id(lobbyist_id)
-    conn = PGconn.connect("localhost", nil, nil, nil, "chicago_hackathon")
-    rs = conn.exec("SELECT * from chi_lobbyist_firm_relationships WHERE lobbyist_id = #{lobbyist_id}")
+    rs = $conn.exec("SELECT * from chi_lobbyist_firm_relationships WHERE lobbyist_id = #{lobbyist_id}")
     result = rs.first
     
     rs.collect { |data| self.new(data) }
   end
   
   def self.find_all_by_firm_id(firm_id)
-    conn = PGconn.connect("localhost", nil, nil, nil, "chicago_hackathon")
-    rs = conn.exec("SELECT * from chi_lobbyist_firm_relationships WHERE firm_id = #{firm_id}")
+    rs = $conn.exec("SELECT * from chi_lobbyist_firm_relationships WHERE firm_id = #{firm_id}")
     result = rs.first
     
     rs.collect { |data| self.new(data) }

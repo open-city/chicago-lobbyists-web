@@ -8,16 +8,14 @@ class Compensation
   end
   
   def self.all
-    conn = PGconn.connect("localhost", nil, nil, nil, "chicago_hackathon")
-    rs = conn.exec("SELECT * from chi_lobbyist_compensations")
+    rs = $conn.exec("SELECT * from chi_lobbyist_compensations")
     result = rs.first
     
     rs.collect { |data| self.new(data) }
   end
   
   def self.find_all_by_lobbyist_id(lobbyist_id)
-    conn = PGconn.connect("localhost", nil, nil, nil, "chicago_hackathon")
-    rs = conn.exec("SELECT * from chi_lobbyist_compensations WHERE lobbyist_id = #{lobbyist_id}")
+    rs = $conn.exec("SELECT * from chi_lobbyist_compensations WHERE lobbyist_id = #{lobbyist_id}")
     result = rs.first
     
     rs.collect { |data| self.new(data) }
