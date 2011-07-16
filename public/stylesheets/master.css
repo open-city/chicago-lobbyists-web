@@ -72,7 +72,7 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 /* Dashboard */
 #dashboard h2 { color: #c00000; font-size: 14px; margin-bottom: 0.5em; text-transform: uppercase; }
 
-  /* Charts */
+  /* Charts on Homepage */
   .chartlist { border-top: 1px solid #eee; list-style: none; margin-left: 0; }
   .chartlist a { display: block; padding: 0.4em 4.5em 0.4em 0.5em; position: relative; z-index: 2; }
   
@@ -102,6 +102,39 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   
   .chartlist li { border-bottom: 1px solid #eee; position: relative; }
   .chartlist li:hover { background: #efefef; }
+
+  /* Tables on Listing Pages */
+  
+  .listing h3 {
+    margin-bottom: 0;
+  }
+  
+  .listing td {
+    padding: 1em 0;
+  }
+  
+  .listing .bar {
+    position: relative;
+    width: 50%;
+    padding: 0.4em 0;
+  }
+
+  .listing .bar span { 
+    background: #b8e4f5;
+    display: block;
+    font-weight: bold;
+    height: 100%;
+    line-height: 2em;
+    overflow: visible;
+    padding: 0.4em 0;
+  }
+  
+  .listing .bar span strong {
+    padding: 0 4.5em 0 0.5em;
+  }
+  
+  
+
 
 /* Footer */
 #footer { border-top: 1px solid #ddd; clear: both; color: #aaa; font-size: 11px; padding-top: 10px; }
