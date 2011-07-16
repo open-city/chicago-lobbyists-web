@@ -3,6 +3,21 @@
   <%= cl_erb "common/header" %>
   <%= cl_erb "common/stats" %>
   
+  <script type="text/javascript">
+  	$("#listing").dataTable({
+      "aaSorting": [[1, "desc"]],
+      "aoColumns": [
+        null,
+        { "sType": "currency" },
+        { "sType": "currency" },
+        { "bSortable": false }
+      ],
+      "bFilter": false,
+      "bInfo": false,
+      "bPaginate": false
+    });
+  </script>
+  
   <div class="clear"></div>
   
   <h1>Lobbyists</h1>
