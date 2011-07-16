@@ -35,7 +35,7 @@ li { margin-bottom: 0.5em; }
 table { border-collapse: collapse; width: 100%; }
 td { border: 1px solid #ddd; border-width: 1px 0; padding: 0.3em 0.5em 0.3em 0; vertical-align: top; }
 th { font-size: 12px; font-weight: bold; padding: 0.3em 0.5em 0.3em 0; }
-ul { list-style: disc; margin-left: 1.5em; }
+ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 
 
 /* Layout
