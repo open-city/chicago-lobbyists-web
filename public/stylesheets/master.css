@@ -35,7 +35,7 @@ li { margin-bottom: 0.5em; }
 table { border-collapse: collapse; width: 100%; }
 td { border: 1px solid #ddd; border-width: 1px 0; padding: 0.3em 0.5em 0.3em 0; vertical-align: top; }
 th { font-size: 12px; font-weight: bold; padding: 0.3em 0.5em 0.3em 0; }
-ul { list-style: disc; margin-left: 1.5em; }
+ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 
 
 /* Layout
@@ -67,6 +67,7 @@ ul { list-style: disc; margin-left: 1.5em; }
   #bio .section { width: 346px; }
   #bio .section dt { color: #888; }
   #bio .section .total-paid { font-size: 34px; }
+  #bio .spotlight strong { font-size: 34px; }
 
 /* Dashboard */
 #dashboard h2 { color: #c00000; font-size: 14px; margin-bottom: 0.5em; text-transform: uppercase; }
@@ -137,7 +138,38 @@ ul { list-style: disc; margin-left: 1.5em; }
   #stats li#paid strong { color: #346983; }
   #stats .stat { display: block; padding: 15px 1.5%; }
   #stats strong { color: #99b4c1; display: block; font-size: 40px; }
+  
+/* Listing table */
+#listing {margin: 0 10%; width: 80%; }
+#listing .num { text-align: right; }
+#listing td:last-child { padding-right: 0; }
+#listing td, #listing th { padding: 0.3em 1em 0.3em 0; }
+#listing th { font-size: 12px; font-weight: bold; text-align: left; }
+#listing th.charts { width: 50%; }
+#listing th.controls { width: 20px; }
+#listing th span { color: #027BB6; cursor: pointer; }
 
+#listing th.sorting_asc span {
+  background: url(../images/sort-up.png) no-repeat 100% 50%;
+  padding-right: 10px;
+}
+
+#listing th.sorting_desc span {
+  background: url(../images/sort-down.png) no-repeat 100% 50%;
+  padding-right: 10px;
+}
+
+  /* Bars */
+  .bars { position: relative; width: 100%; }
+  
+  .bars .outer {
+    height: 25px;
+    top: 0;
+    background: #B8E4F5;
+  }
+  
+  .bars span { display: block; left: 0; position: absolute; }
+  
 /* Muted text */
 .mute { color: #aaa; font-size: 12px; }
 
