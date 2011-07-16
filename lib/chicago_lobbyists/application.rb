@@ -20,6 +20,7 @@ module ChicagoLobbyists
     end
     
     get "/lobbyists" do
+      @current_menu = "lobbyists"
       erb :lobbyists
     end
     
