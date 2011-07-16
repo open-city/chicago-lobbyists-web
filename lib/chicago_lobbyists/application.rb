@@ -13,5 +13,9 @@ module ChicagoLobbyists
     get "/lobbyists/:id" do
       erb :lobbyist
     end
+    
+    get "/firms/:id" do
+      erb :firm
+    end
   end
 end
