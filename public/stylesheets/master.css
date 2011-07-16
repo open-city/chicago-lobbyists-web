@@ -45,8 +45,8 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 
 /* Bios */
 #bio { clear: both; margin-bottom: 30px; }
-#bio-primary { float: left; width: 74.2%; }
-#bio-secondary { float: right; width: 22.7%; }
+#bio-primary { float: right; width: 74.2%; }
+#bio-secondary { float: left; width: 22.7%; }
 
 /* Columns */
 .c2l, .c2r { width: 48%; }
