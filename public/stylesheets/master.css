@@ -165,6 +165,7 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   
   #stats li {
     background: #e4f3fa;
+    color: #99b4c1;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -179,7 +180,7 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   #stats li#paid { width: 31.3%; background-color: #FFF; }
   #stats li#paid strong { color: #346983; }
   #stats .stat { display: block; padding: 15px 1.5%; }
-  #stats strong { color: #99b4c1; display: block; font-size: 40px; }
+  #stats strong { display: block; font-size: 40px; }
   #stats li.current { font-weight: bold; }
   #stats li.current a strong, #stats li.current a { color: #346983; }
   
