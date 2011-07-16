@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Title -->
+	<title>Chicago Lobbyists</title>
+	
+	<!-- Info -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" media="all" href="../styles/master.css" />
+
+	<!-- JavaScript -->
+  <script src="../javascript/jquery.min.js" type="text/javascript"></script>
+	<script src="../javascript/jquery.ezpz_hint.min.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    $(function() {
+      $(".hint").ezpz_hint();
+    });
+  </script>
+</head>
+<body>
+
+<div id="nav">
+  <div id="nav-content">
+    <ul>
+      <li class="current"><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Content -->
+<div id="content">
+  <!-- Header -->
+  <div id="header">
+    <div id="logo"><a href="index.html"><img alt="Chicago Lobbyists" src="../images/logo.png" /></a></div>
+    <div id="search">
+      <form action="#" method="get">
+        <input class="hint" type="text" title="Find&hellip;" />
+        <input type="submit" value="Search" />
+      </form>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!-- /Header -->
+  
+  <ul id="stats">
+    <li><a class="stat" href="#"><strong>421</strong> Lobbyists</a></li>
+    <li><a class="stat" href="#"><strong>1,018</strong> Clients</a></li>
+    <li id="paid"><span class="stat"><strong>$14,461,775.75</strong> Paid to lobbyists in 2010</a></li>
+    <li><a class="stat" href="#"><strong>534</strong> Actions sought</a></li>
+    <li><a class="stat" href="#"><strong>244</strong> Lobbying firms</a></li>
+  </ul>
+  
+  <div class="clear"></div>
+  
+<table id="listing">
+        <thead>
+          <tr>
+            <th><span>Lobbyist</span></th>
+            <th class="num"><span>Paid in 2010</span></th>
+            <th class="charts"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#">John Smith</a></td>
+            <td class="num">$248,263,013</td>
+            <td>
+              <div class="bars">
+                <span class="outer" style="width: 100%"></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#">Jane Doe</a></td>
+            <td class="num">$148,263,013</td>
+            <td>
+              <div class="bars">
+                <span class="outer" style="width: 60%"></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#">John Smith</a></td>
+            <td class="num">$48,263,013</td>
+            <td>
+              <div class="bars">
+                <span class="outer" style="width: 25%"></span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+     </table>
+  
+  <!-- Footer -->
+  <div id="footer">
+    <p>Chicago Lobbyists designed and developed by <a href="http://www.webitects.com">Webitects</a> and <a href="http://www.obtiva.com">Obtiva</a>.</p>
+  </div>
+  <!-- /Footer -->
+</div>
+<!-- /Content -->
+
+</body>
+</html>

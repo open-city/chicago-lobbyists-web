@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Title -->
+	<title>Chicago Lobbyists</title>
+	
+	<!-- Info -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" media="all" href="/stylesheets/master.css" />
+
+	<!-- JavaScript -->
+  <script src="/javascripts/jquery.min.js" type="text/javascript"></script>
+	<script src="/javascripts/jquery.ezpz_hint.min.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    $(function() {
+      $(".hint").ezpz_hint();
+    });
+  </script>
+</head>
+<body>
+
+<%= cl_erb "common/nav" %>
+
 <%= yield %>
+
+</body>
+</html>
