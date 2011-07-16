@@ -175,8 +175,11 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
     text-align: center;
   }
   
-  #stats a {
+  #stats a:link, #stats a:visited {
     color: #99b4c1;
+  }
+  #stats a:hover, #stats a:active {
+    color: #027BB6;
   }
   
   #stats li:last-child { float: right; margin: 0; }
