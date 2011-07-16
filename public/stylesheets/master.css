@@ -174,37 +174,6 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   .map { }
   
   
-/* Listing table */
-#listing {margin: 0 10%; width: 80%; }
-#listing .num { text-align: right; }
-#listing td:last-child { padding-right: 0; }
-#listing td, #listing th { padding: 0.3em 1em 0.3em 0; }
-#listing th { font-size: 12px; font-weight: bold; text-align: left; }
-#listing th.charts { width: 50%; }
-#listing th.controls { width: 20px; }
-#listing th span { color: #027BB6; cursor: pointer; }
-
-#listing th.sorting_asc span {
-  background: url(../images/sort-up.png) no-repeat 100% 50%;
-  padding-right: 10px;
-}
-
-#listing th.sorting_desc span {
-  background: url(../images/sort-down.png) no-repeat 100% 50%;
-  padding-right: 10px;
-}
-
-  /* Bars */
-  .bars { position: relative; width: 100%; }
-  
-  .bars .outer {
-    height: 25px;
-    top: 0;
-    background: #B8E4F5;
-  }
-  
-  .bars span { display: block; left: 0; position: absolute; }
-  
 /* Muted text */
 .mute { color: #aaa; font-size: 12px; }
 
