@@ -132,9 +132,6 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   .listing .bar span strong {
     padding: 0 4.5em 0 0.5em;
   }
-  
-  
-
 
 /* Footer */
 #footer { border-top: 1px solid #ddd; clear: both; color: #aaa; font-size: 11px; padding-top: 10px; }
@@ -159,6 +156,7 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+    border: 5px solid #99b4c1;
     float: left;
     text-align: left;
     margin: 0 3% 30px 0;
@@ -171,6 +169,10 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   #stats li#paid strong { color: #346983; }
   #stats .stat { display: block; padding: 15px 1.5%; }
   #stats strong { color: #99b4c1; display: block; font-size: 40px; }
+  
+  /* Maps for profile pages */
+  .map { }
+  
   
 /* Listing table */
 #listing {margin: 0 10%; width: 80%; }
