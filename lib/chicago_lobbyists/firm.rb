@@ -4,16 +4,14 @@ class Firm
   attr_reader :id, :name, :address, :city, :state, :zip, :country
   
   def self.find(id)
-    conn = PGconn.connect("localhost", nil, nil, nil, "chicago_hackathon")
-    rs = conn.exec("SELECT * from chi_firms WHERE id = #{id}")
+    rs = $conn.exec("SELECT * from chi_firms WHERE id = #{id}")
     result = rs.first
         
     self.new(result)
   end
   
   def self.all
-    conn = PGconn.connect("localhost", nil, nil, nil, "chicago_hackathon")
-    rs = conn.exec("SELECT * from chi_firms")
+    rs = $conn.exec("SELECT * from chi_firms")
         
     rs.collect { |data| self.new(data) }
   end
