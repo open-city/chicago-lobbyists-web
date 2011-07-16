@@ -1,1 +1,59 @@
-Firms!
+<!-- Content -->
+<div id="content">
+  <%= cl_erb "common/header" %>
+  <%= cl_erb "common/stats" %>
+  
+  <script type="text/javascript">
+    $(function(){
+      $("#listing").dataTable({
+        "aaSorting": [[1, "desc"]],
+        "aoColumns": [
+          null,
+          null,
+          { "sType": "currency" }
+        ],
+        "bFilter": false,
+        "bInfo": false,
+        "bPaginate": false
+      });
+    });
+  </script>
+  
+  <div class="clear"></div>
+  
+  <h1>Firms</h1>
+  
+  <table id="listing" class="listing">
+    <thead>
+      <tr>
+        <th>Firm</th>
+        <th>Paid to firm in 2010</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><h3><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></h3></td>
+        <td class="bar"><span style="width:100%;"><strong>$248,263,013</strong></span></td>
+      </tr>
+      <tr>
+        <td><h3><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></h3></td>
+        <td class="bar"><span style="width:100%;"><strong>$248,263,013</strong></span></td>
+      </tr>
+      <tr>
+        <td><h3><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></h3></td>
+        <td class="bar"><span style="width:100%;"><strong>$248,263,013</strong></span></td>
+      </tr>
+      <tr>
+        <td><h3><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></h3></td>
+        <td class="bar"><span style="width:100%;"><strong>$248,263,013</strong></span></td>
+      </tr>
+      <tr>
+        <td><h3><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></h3></td>
+        <td class="bar"><span style="width:100%;"><strong>$248,263,013</strong></span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <%= cl_erb "common/footer" %>
+</div>
+<!-- /Content -->

@@ -4,18 +4,18 @@
   <%= cl_erb "common/stats" %>
   
   <script type="text/javascript">
-  	$(function(){
-	  	$("#listing").dataTable({
-	      "aaSorting": [[1, "desc"]],
-	      "aoColumns": [
-	        null,
-	        null,
-	        { "sType": "currency" }
-	      ],
-	      "bFilter": false,
-	      "bInfo": false,
-	      "bPaginate": false
-	    });
+    $(function(){
+      $("#listing").dataTable({
+        "aaSorting": [[1, "desc"]],
+        "aoColumns": [
+          null,
+          null,
+          { "sType": "currency" }
+        ],
+        "bFilter": false,
+        "bInfo": false,
+        "bPaginate": false
+      });
     });
   </script>
   
@@ -26,31 +26,31 @@
   <table id="listing" class="listing">
     <thead>
       <tr>
-        <th><span>Lobbyist</span></th>
-        <th><span>Firm</span></th>
-        <th><span>Paid in 2010</span></th>
+        <th>Lobbyist</th>
+        <th>Firm</th>
+        <th>Paid to lobbyist in 2010</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><h3><a href="/lobbyists/1">Alfred Smith</a></h3></td>
         <td><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:100%;"><strong>$248,263,013</strong></span></td>
+        <td class="bar"><span style="width:100%;"><strong>$263,013.00</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/lobbyists/1">Derek Smith</a></h3></td>
         <td><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:80%;"><strong>$38,263,013</strong></span></td>
+        <td class="bar"><span style="width:80%;"><strong>$63,013.36</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/lobbyists/1">John Smith</a></h3></td>
         <td><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:60%;"><strong>$28,263,013</strong></span></td>
+        <td class="bar"><span style="width:60%;"><strong>$3,013.00</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/lobbyists/1">John Smith</a></h3></td>
         <td><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:10%;"><strong>$28,263,013</strong></span></td>
+        <td class="bar"><span style="width:10%;"><strong>$4.52</strong></span></td>
       </tr>
     </tbody>
   </table>
