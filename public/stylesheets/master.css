@@ -235,4 +235,5 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 
 .section ul {
   list-style: none;
+  margin-left: 0;
 }
