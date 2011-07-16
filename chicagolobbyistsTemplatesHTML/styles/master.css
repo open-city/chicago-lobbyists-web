@@ -67,6 +67,7 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   #bio .section { width: 346px; }
   #bio .section dt { color: #888; }
   #bio .section .total-paid { font-size: 34px; }
+  #bio .spotlight strong { font-size: 34px; }
 
 /* Dashboard */
 #dashboard h2 { color: #c00000; font-size: 14px; margin-bottom: 0.5em; text-transform: uppercase; }
