@@ -165,7 +165,6 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   
   #stats li {
     background: #e4f3fa;
-    color: #99b4c1;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -174,6 +173,10 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
     margin: 0 3% 30px 0;
     width: 14.1%;
     text-align: center;
+  }
+  
+  #stats a {
+    color: #99b4c1;
   }
   
   #stats li:last-child { float: right; margin: 0; }
