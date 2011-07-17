@@ -5,6 +5,8 @@
   
   <script type="text/javascript">
     $(function(){
+      setBarWidthByCurrency();
+    
       $("#listing").dataTable({
         "aaSorting": [[0, "asc"]],
         "aoColumns": [
@@ -18,17 +20,6 @@
       });
     });
     
-    jQuery.fn.dataTableExt.oSort['num-html-asc']  = function(a,b) {
-      var x = parseFloat( a.replace( /<.*?>/g, "" ).replace("$","").replace(",","") ),
-          y = parseFloat( b.replace( /<.*?>/g, "" ).replace("$","").replace(",","") );
-      return ((x < y) ? -1 : ((x > y) ?  1 : 0));
-    };
-    
-    jQuery.fn.dataTableExt.oSort['num-html-desc'] = function(a,b) {
-      var x = parseFloat( a.replace( /<.*?>/g, "" ).replace("$","").replace(",","") ),
-          y = parseFloat( b.replace( /<.*?>/g, "" ).replace("$","").replace(",","") );
-      return ((x < y) ?  1 : ((x > y) ? -1 : 0));
-    };
   </script>
   
   <div class="clear"></div>
@@ -46,23 +37,23 @@
     <tbody>
       <tr>
         <td><h3><a href="/lobbyists/1">Alfred Smith</a></h3></td>
-        <td><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:100%;"><strong>$263,013.00</strong></span></td>
+        <td><a href="/firms/1">A Dewey Cheatham &amp; Howe, LLC</a></td>
+        <td class="bar"><span style="width:100%;"><strong>263013.00</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/lobbyists/1">Derek Smith</a></h3></td>
-        <td><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:80%;"><strong>$63,013.36</strong></span></td>
+        <td><a href="/firms/1">B Dewey Cheatham &amp; Howe, LLC</a></td>
+        <td class="bar"><span style="width:80%;"><strong>63013.36</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/lobbyists/1">John Smith</a></h3></td>
-        <td><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:60%;"><strong>$3,013.00</strong></span></td>
+        <td><a href="/firms/1">C Dewey Cheatham &amp; Howe, LLC</a></td>
+        <td class="bar"><span style="width:60%;"><strong>3013.00</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/lobbyists/1">John Smith</a></h3></td>
-        <td><a href="/firms/1">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:10%;"><strong>$4.52</strong></span></td>
+        <td><a href="/firms/1">D Dewey Cheatham &amp; Howe, LLC</a></td>
+        <td class="bar"><span style="width:10%;"><strong>4.52</strong></span></td>
       </tr>
     </tbody>
   </table>

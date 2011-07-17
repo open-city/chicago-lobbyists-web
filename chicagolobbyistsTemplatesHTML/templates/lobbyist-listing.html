@@ -11,12 +11,46 @@
 	<link rel="stylesheet" type="text/css" media="all" href="../styles/master.css" />
 
 	<!-- JavaScript -->
-  <script src="../javascript/jquery.min.js" type="text/javascript"></script>
-	<script src="../javascript/jquery.ezpz_hint.min.js" type="text/javascript"></script>
+    <script src="../javascripts/jquery.min.js" type="text/javascript"></script>
+	<script src="../javascripts/jquery.ezpz_hint.min.js" type="text/javascript"></script>
+	<script src="../javascripts/jquery.dataTables.js" type="text/javascript"></script>
+	<script src="../javascripts/dataTables.sorting.js" type="text/javascript"></script>
+	<script src="../javascripts/jquery.formatCurrency-1.4.0.min.js" type="text/javascript"></script>
+	<script src="../javascripts/listing.bars.js" type="text/javascript"></script>
   
   <script type="text/javascript">
     $(function() {
       $(".hint").ezpz_hint();
+
+	var maxArray = new Array();
+    $('.bar span strong').each(function(){
+      maxArray.push(parseInt($(this).html()));
+    });
+    
+    console.log('maxArray: ' + maxArray);
+    var maxNumber = Math.max.apply( Math, maxArray );
+    if (maxNumber > 0)
+    {
+      console.log('maxNumber: ' + maxNumber);
+      $('.bar').each(function(){
+        console.log('number: ' + $(this).children().children().html());
+        $(this).children().width((($(this).children().children().html()/maxNumber) * 100) + '%');
+      });
+    }
+    $('.bar span strong').formatCurrency();
+
+      
+      $("#listing").dataTable({
+        "aaSorting": [[0, "asc"]],
+        "aoColumns": [
+          null,
+          null,
+          { "sType": "num-html" }
+        ],
+        "bFilter": false,
+        "bInfo": false,
+        "bPaginate": false
+      });
     });
   </script>
 </head>
@@ -58,7 +92,7 @@
   
   <h1>Lobbyists</h1>
   
-  <table class="listing">
+  <table class="listing" id="listing">
     <thead>
       <tr>
         <th><span>Lobbyist</span></th>
@@ -70,22 +104,22 @@
       <tr>
         <td><h3><a href="lobbyist.html">John Smith</a></h3></td>
         <td><a href="firm.html">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:100%;"><strong>$248,263,013</strong></span></td>
+        <td class="bar"><span><strong>248263013</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="lobbyist.html">John Smith</a></h3></td>
         <td><a href="firm.html">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:80%;"><strong>$38,263,013</strong></span></td>
+        <td class="bar"><span><strong>8263013</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="lobbyist.html">John Smith</a></h3></td>
         <td><a href="firm.html">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:60%;"><strong>$28,263,013</strong></span></td>
+        <td class="bar"><span><strong>63013</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="lobbyist.html">John Smith</a></h3></td>
         <td><a href="firm.html">Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:10%;"><strong>$28,263,013</strong></span></td>
+        <td class="bar"><span><strong>3013</strong></span></td>
       </tr>
     </tbody>
   </table>
