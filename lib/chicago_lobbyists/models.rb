@@ -10,7 +10,11 @@ protocol = "postgres"
 
 begin
   match = ENV["DATABASE_URL"].match "^(postgres):\/\/([^:]+):([^@]+)@([^\/]+)\/(.+)$"
-  protocol, user, password, server, db = match.slice(1).split
+  protocol = match[1]
+  user     = match[2]
+  password = match[3]
+  server   = match[4]
+  db       = match[5]
   DataMapper.setup(:default, "#{protocol}://#{user}:#{password}@#{server}/#{db}")
 rescue
   protocol, server, db = ["postgres", "localhost", "chicago_hackathon"]
