@@ -12,11 +12,24 @@ module ChicagoLobbyists
       def current_menu_class(menu_name)
         return "current" if current_menu == menu_name
       end
+      
+      def total_paid
+        Compensation.sum(:compensation)
+      end
+      
+      def number_to_currency(number)
+        decimal_part = number.to_f % 1
+        decimal_part_string = ("%.2f" % decimal_part)[1..-1]
+        
+        integer_part = number.to_i
+        integer_part_string = integer_part.to_s.reverse.gsub(/(\d{3}(?=(\d)))/, "\\1,").reverse
+        
+        "$#{integer_part_string}#{decimal_part_string}"
+      end
     end
     
     get "/" do
       @current_menu = "home"
-      @total_paid = "%.2f" % Compensation.sum(:compensation)
       @highest_paid_lobbyists = Compensation.group_lobbyist_compensations
       erb :landing
     end
