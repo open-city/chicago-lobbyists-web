@@ -7,8 +7,8 @@ gem "thin", "1.2.7"
 # data
 gem 'data_mapper'
 gem 'data_objects'
-gem 'do_postgres'
 gem 'dm-postgres-adapter'
+gem 'do_postgres'
 
 group :development do
   gem "heroku"
