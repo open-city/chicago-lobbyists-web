@@ -15,8 +15,8 @@
           <li><a href="/lobbyists/1">Name</a><span class="index" style="width: 60%;"></span><span class="count">123</span></li>
           <li><a href="/lobbyists/1">Name</a><span class="index" style="width: 40%;"></span><span class="count">123</span></li>
           <li><a href="/lobbyists/1">Name</a><span class="index" style="width: 20%;"></span><span class="count">123</span></li> -->
-          <% @highest_paid_lobbyists.each do |lobbyist, paid| %>
-            <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a><span class="index" style="width: 80%;"></span><span class="count"><%= paid %></span></li>
+          <% @highest_paid_lobbyists.each do |lobbyist, pay| %>
+            <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a><span class="index" style="width: 80%;"></span><span class="count"><%= pay %></span></li>
           <% end %>
         </ul>
       </div>
@@ -62,7 +62,7 @@
   <hr />
   
   <h2>About this project</h2>
-  <div class="c2l">
+  <div class="c2l about">
     <p>ChicagoLobbyists.org is intended to improve the transparency of interactions between City of Chicago agencies and lobbyists and their clients. All data comes from the City of Chicago and can be found at <a href="http://data.cityofchicago.org">data.cityofchicago.org</a>. We expect to make this application available for use with any city, county, or state.</p>
     <p>This is a project of Chad, Chirag, Derek, Nick, Paul, Ruthie, and Ryan. Paul noticed the lobbyist data, conceived the project, and got the team together. Chad and Ryan did the bulk of the backend development with help from Derek and Chirag. Derek and Ruthie did the frontend development. Nick and Paul worked on the user interface prototypes.</p>
     <p>If you're shopping for a lobbyist, ratings are not necessarily a good indication of effectiveness. For now, until we get additional data, we've divided the amount that a lobbyist has billed by the number of reported interactions with City agencies.</p>

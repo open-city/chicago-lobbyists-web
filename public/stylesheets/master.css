@@ -108,7 +108,6 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 #stats li.current { font-weight: bold; }
 #stats li.current a strong, #stats li.current a { color: #346983; }
 
-
 /* Footer
 =====================================================================*/
 
@@ -122,6 +121,9 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 
 /* Content
 =====================================================================*/
+
+/* About */
+.about { text-align: justify; width:100%; }
 
 /* Bio */
 #bio-header p { margin: 0; }

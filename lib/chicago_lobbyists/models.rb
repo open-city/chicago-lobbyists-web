@@ -1,18 +1,22 @@
+DataMapper::Logger.new($stdout, :debug)
+
+protocol = "postgres"
+
 begin
-  shared_database_url = ENV["SHARED_DATABASE_URL"]
-  match = shared_database_url.match "^postgres:\/\/([^:]+):([^@]+)@([^\/]+)\/(.+)$"
-  server   = match[3]
-  dbname   = match[4]
-  user     = match[1]
-  password = match[2]
+  match = ENV["SHARED_DATABASE_URL"].match "^(postgres):\/\/([^:]+):([^@]+)@([^\/]+)\/(.+)$"
+  protocol, user, password, server, db = match.slice(1).split
+  DataMapper.setup(:default, "#{protocol}://#{user}:#{password}@#{server}/#{db}")
 rescue
-  server = "localhost"
-  dbname = "chicago_hackathon"
+  protocol, server, db = ["postgres", "localhost", "chicago_hackathon"]
+  DataMapper.setup(:default, "#{protocol}://#{server}/#{db}")
 end
 
-$conn = PGconn.connect(server, nil, nil, nil, dbname, user, password)
+require 'dm-core'
+require 'dm-validations'
+require 'dm-serializer'
+require 'dm-timestamps'
 
-require "chicago_lobbyists/lobbyist"
-require "chicago_lobbyists/firm"
-require "chicago_lobbyists/firm_relationship"
-require "chicago_lobbyists/compensation"
+require "chicago_lobbyists/models/lobbyist"
+require "chicago_lobbyists/models/firm"
+require "chicago_lobbyists/models/firm_relationship"
+require "chicago_lobbyists/models/compensation"
