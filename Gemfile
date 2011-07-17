@@ -9,7 +9,6 @@ gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'data_objects'
 gem 'do_postgres'
-gem 'pg'
 
 group :development do
   gem "heroku"
