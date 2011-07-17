@@ -14,7 +14,10 @@ class Lobbyist
   has n, :compensations
 
   def total_compensation
-    sum(compensations)
+    0.0
+#    compensations.inject(0.0) do |array, c|
+#      c.sum(:compensation)
+#    end
   end
 
 end
