@@ -1,7 +1,7 @@
 class Firm
   include DataMapper::Resource
   
-  storage_names[:default] = "chi_lobbyist_firm_relationships"
+  storage_names[:default] = "chi_firms"
 
   property :id,         Serial, :required => true
   property :slug,       String, :required => true
