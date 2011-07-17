@@ -1,5 +1,11 @@
 module ChicagoLobbyists
   class Application < Sinatra::Base
+    configure do
+      database_url = ENV["DATABASE_URL"] || "postgres://localhost/chicago_hackathon"
+      DataMapper.setup(:default, database_url)
+      DataMapper.finalize
+    end
+    
     helpers do
       def cl_erb(template)
         erb template.to_sym
