@@ -4,6 +4,7 @@ class FirmRelationship
   storage_names[:default] = "chi_lobbyist_firm_relationships"
 
   property :id,          Serial,  :required => true
+  property :slug,        String,  :required => true
   property :lobbyist_id, Integer, :required => true
   property :firm_id,     Integer, :required => true
   property :client_name, String,  :required => true

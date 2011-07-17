@@ -19,4 +19,8 @@ class Lobbyist
     end
   end
 
+  def clients
+    firm_relationships.sort_by(&:client_name)
+  end
+
 end
