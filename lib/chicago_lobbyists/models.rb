@@ -1,4 +1,4 @@
-DataMapper::Logger.new($stdout, :debug)
+#DataMapper::Logger.new($stdout, :debug)
 
 protocol = "postgres"
 
