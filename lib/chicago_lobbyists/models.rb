@@ -3,7 +3,7 @@
 protocol = "postgres"
 
 begin
-  match = ENV["SHARED_DATABASE_URL"].match "^(postgres):\/\/([^:]+):([^@]+)@([^\/]+)\/(.+)$"
+  match = ENV["DATABASE_URL"].match "^(postgres):\/\/([^:]+):([^@]+)@([^\/]+)\/(.+)$"
   protocol, user, password, server, db = match.slice(1).split
   DataMapper.setup(:default, "#{protocol}://#{user}:#{password}@#{server}/#{db}")
 rescue
