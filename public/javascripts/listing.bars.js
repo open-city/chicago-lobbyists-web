@@ -25,9 +25,9 @@ function calculateNumberBars()
 }
 
 function setUlBarWidthByCurrency(ulId) {
-	$('#' + ulId + 'li .count').toNumber();
+	$('#' + ulId + ' li .count').toNumber();
 	calculateUlBars(ulId);
-	$('#' + ulId + 'li .count').formatCurrency();
+	$('#' + ulId + ' li .count').formatCurrency();
 }
 
 function setUlBarWidthByNumber(ulId) {
@@ -37,14 +37,14 @@ function setUlBarWidthByNumber(ulId) {
 function calculateUlBars(ulId)
 {
 	var maxArray = new Array();
-    $('#' + ulId + 'li .count').each(function(){
+    $('#' + ulId + ' li .count').each(function(){
       maxArray.push(parseInt($(this).html()));
     });
     
     var maxNumber = Math.max.apply( Math, maxArray );
     if (maxNumber > 0)
     {
-      $('#' + ulId + 'li').each(function(){
+      $('#' + ulId + ' li').each(function(){
         $(this).children('.index').width((($(this).children('.count').html()/maxNumber) * 100) + '%');
       });
     }   
