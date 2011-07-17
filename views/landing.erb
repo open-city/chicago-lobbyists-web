@@ -3,27 +3,37 @@
   <%= cl_erb "common/header" %>
   <%= cl_erb "common/stats" %>
   
+  <script type="text/javascript">
+    $(function(){
+    	setUlBarWidthByCurrency('home-lobbyists');
+    	setUlBarWidthByCurrency('home-firms');
+    	setUlBarWidthByNumber('home-clients');
+    	setUlBarWidthByNumber('home-agencies');
+    });
+    
+  </script>
+  
   <div class="clear"></div>
   
   <div id="dashboard">
     <div class="c2l">
       <div class="section">
         <h2>Highest-paid lobbyists <a href="/lobbyists">All lobbyists &raquo;</a></h2>
-        <ul class="chartlist">
+        <ul class="chartlist" id="home-lobbyists">
           <% @highest_paid_lobbyists.each do |lobbyist, pay| %>
-            <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a><span class="index" style="width: 80%;"></span><span class="count"><%= number_to_currency(pay) %></span></li>
+            <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a><span class="index"></span><span class="count"><%= number_to_currency(pay) %></span></li>
           <% end %>
         </ul>
       </div>
       
       <div class="section">
         <h2>Most active clients <a href="/clients">All clients &raquo;</a></h2>
-        <ul class="chartlist">
-          <li><a href="/clients/1">Name</a><span class="index" style="width: 100%;"></span><span class="count">123</span></li>
-          <li><a href="/clients/1">Name</a><span class="index" style="width: 80%;"></span><span class="count">123</span></li>
-          <li><a href="/clients/1">Name</a><span class="index" style="width: 60%;"></span><span class="count">123</span></li>
-          <li><a href="/clients/1">Name</a><span class="index" style="width: 40%;"></span><span class="count">123</span></li>
-          <li><a href="/clients/1">Name</a><span class="index" style="width: 20%;"></span><span class="count">123</span></li>
+        <ul class="chartlist" id="home-clients">
+          <li><a href="/clients/1">Name</a><span class="index"></span><span class="count">123</span></li>
+          <li><a href="/clients/1">Name</a><span class="index"></span><span class="count">80</span></li>
+          <li><a href="/clients/1">Name</a><span class="index"></span><span class="count">70</span></li>
+          <li><a href="/clients/1">Name</a><span class="index"></span><span class="count">60</span></li>
+          <li><a href="/clients/1">Name</a><span class="index"></span><span class="count">50</span></li>
         </ul>
       </div>
     </div>
@@ -31,23 +41,23 @@
     <div class="c2r">
       <div class="section">
         <h2>Highest-paid lobbying firms <a href="/firms">All firms &raquo;</a></h2>
-        <ul class="chartlist">
-          <li><a href="/firms/1">Name</a><span class="index" style="width: 100%;"></span><span class="count">123</span></li>
-          <li><a href="/firms/1">Name</a><span class="index" style="width: 80%;"></span><span class="count">123</span></li>
-          <li><a href="/firms/1">Name</a><span class="index" style="width: 60%;"></span><span class="count">123</span></li>
-          <li><a href="/firms/1">Name</a><span class="index" style="width: 40%;"></span><span class="count">123</span></li>
-          <li><a href="/firms/1">Name</a><span class="index" style="width: 20%;"></span><span class="count">123</span></li>
+        <ul class="chartlist" id="home-firms">
+          <li><a href="/firms/1">Name</a><span class="index"></span><span class="count">10567</span></li>
+          <li><a href="/firms/1">Name</a><span class="index"></span><span class="count">9345</span></li>
+          <li><a href="/firms/1">Name</a><span class="index"></span><span class="count">7567</span></li>
+          <li><a href="/firms/1">Name</a><span class="index"></span><span class="count">4567</span></li>
+          <li><a href="/firms/1">Name</a><span class="index"></span><span class="count">567</span></li>
         </ul>
       </div>
       
       <div class="section">
         <h2>Most lobbied city agencies <a href="/agencies">All agencies &raquo;</a></h2>
-        <ul class="chartlist">
-          <li><a href="/agencies/1">Name</a><span class="index" style="width: 100%;"></span><span class="count">123</span></li>
-          <li><a href="/agencies/1">Name</a><span class="index" style="width: 80%;"></span><span class="count">123</span></li>
-          <li><a href="/agencies/1">Name</a><span class="index" style="width: 60%;"></span><span class="count">123</span></li>
-          <li><a href="/agencies/1">Name</a><span class="index" style="width: 40%;"></span><span class="count">123</span></li>
-          <li><a href="/agencies/1">Name</a><span class="index" style="width: 20%;"></span><span class="count">123</span></li>
+        <ul class="chartlist" id="home-agencies">
+          <li><a href="/agencies/1">Name</a><span class="index"></span><span class="count">123</span></li>
+          <li><a href="/agencies/1">Name</a><span class="index"></span><span class="count">83</span></li>
+          <li><a href="/agencies/1">Name</a><span class="index"></span><span class="count">63</span></li>
+          <li><a href="/agencies/1">Name</a><span class="index"></span><span class="count">43</span></li>
+          <li><a href="/agencies/1">Name</a><span class="index"></span><span class="count">23</span></li>
         </ul>
       </div>
     </div>
