@@ -21,22 +21,9 @@
         <div class="section">
           <h2>Clients</h2>
           <ul>
-            <li><a href="client.html">3M Corporation</a></li>
-            <li><a href="client.html">Allstate Insurance Co.</a></li>
-            <li><a href="client.html">CFSA Ciber Inc</a></li>
-            <li><a href="client.html">David Mason &amp; Associates of Illinois</a></li>
-            <li><a href="client.html">Diageo Multistate Corp</a></li>
-            <li><a href="client.html">Direct TV Group Inc</a></li>
-            <li><a href="client.html">DirectV, Inc</a></li>
-            <li><a href="client.html">Dish Network</a></li>
-            <li><a href="client.html">Elgin Sweeping Services Inc</a></li>
-            <li><a href="client.html">Illinois Pipe Trades Advancement &amp; Promotion Program</a></li>
-            <li><a href="client.html">Kronos Inc.</a></li>
-            <li><a href="client.html">Lorillard Tobacco</a></li>
-            <li><a href="client.html">Ltd.HP (Hewlett Packard)</a></li>
-            <li><a href="client.html">Oracle</a></li>
-            <li><a href="client.html">Satellite Broadcasting &amp; Communications</a></li>
-            <li><a href="client.html">Symantec Corp</a></li>
+            <% @lobbyist.clients.each do |relationship| %>
+              <li><a href="/clients/<%= relationship.slug %>"><%= relationship.client_name %></a></li>
+            <% end %>
           </ul>
         </div>
       </div>
