@@ -17,7 +17,7 @@ module ChicagoLobbyists
       end
 
       def clients_count
-        repository(:default).adapter.select("SELECT COUNT(DISTINCT client_name) as clients FROM chi_lobbyist_firm_relationships")
+        repository(:default).adapter.select("SELECT COUNT(DISTINCT client_name) as clients FROM chi_lobbyist_firm_relationships").first
       end
 
       def cl_erb(template)
