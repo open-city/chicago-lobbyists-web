@@ -86,6 +86,7 @@ DEPENDENCIES
   data_mapper
   data_objects
   dm-postgres-adapter
+  do_postgres
   heroku
   shotgun
   sinatra (= 1.2.6)
