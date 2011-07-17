@@ -2,11 +2,24 @@ module ChicagoLobbyists
   class Application < Sinatra::Base
     configure do
       database_url = ENV["DATABASE_URL"] || "postgres://localhost/chicago_hackathon"
+      DataMapper::Logger.new($stdout, :debug)
       DataMapper.setup(:default, database_url)
       DataMapper.finalize
     end
     
     helpers do
+      def lobbyists_count
+        Lobbyist.count
+      end
+
+      def firms_count
+        Firm.count
+      end
+
+      def clients_count
+        repository(:default).adapter.select("SELECT COUNT(DISTINCT client_name) as clients FROM chi_lobbyist_firm_relationships").first
+      end
+
       def cl_erb(template)
         erb template.to_sym
       end
