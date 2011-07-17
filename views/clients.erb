@@ -5,6 +5,8 @@
   
   <script type="text/javascript">
     $(function(){
+      setBarWidthByNumber();
+    
       $("#listing").dataTable({
         "aaSorting": [[0, "asc"]],
         "aoColumns": [
@@ -26,25 +28,25 @@
     <thead>
       <tr>
         <th><span>Client</span></th>
-        <th><span>Amount paid to lobbying firms in 2010</span></th>
+        <th><span>Number of lobbyists used</span></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><h3><a href="/clients/1">Lorrilard Tobacco</a></h3></td>
-        <td class="bar"><span style="width:100%;"><strong>$248,263,013</strong></span></td>
+        <td class="bar"><span><strong>43</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/clients/1">David Mason &amp; Associates of Chicago</a></h3></td>
-        <td class="bar"><span style="width:80%;"><strong>$38,263,013</strong></span></td>
+        <td class="bar"><span><strong>23</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/clients/1">WalMart</a></h3></td>
-        <td class="bar"><span style="width:60%;"><strong>$28,263,013</strong></span></td>
+        <td class="bar"><span><strong>10</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/clients/1">Dish Network</a></h3></td>
-        <td class="bar"><span style="width:10%;"><strong>$28,263,013</strong></span></td>
+        <td class="bar"><span><strong>63</strong></span></td>
       </tr>
     </tbody>
   </table>

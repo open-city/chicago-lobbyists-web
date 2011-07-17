@@ -5,6 +5,8 @@
   
   <script type="text/javascript">
     $(function(){
+      setBarWidthByNumber();
+    
       $("#listing").dataTable({
         "aaSorting": [[0, "asc"]],
         "aoColumns": [
@@ -26,29 +28,29 @@
     <thead>
       <tr>
         <th><span>Agency</span></th>
-        <th><span>Actions sought in 2010</span></th>
+        <th><span>Lobbyist actions sought in 2010</span></th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><h3><a href="/agencies/1">Aviation (AVIA)</a></h3></td>
-        <td class="bar"><span style="width:100%;"><strong>73</strong></span></td>
+        <td class="bar"><span><strong>73</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/agencies/1">Finance (FINA)</a></h3></td>
-        <td class="bar"><span style="width:50%;"><strong>50</strong></span></td>
+        <td class="bar"><span><strong>50</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/agencies/1">Office of Compliance (OOCA)</a></h3></td>
-        <td class="bar"><span style="width:42%;"><strong>42</strong></span></td>
+        <td class="bar"><span><strong>42</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/agencies/1">Planning and Development (PLAN)</a></h3></td>
-        <td class="bar"><span style="width:10%;"><strong>10</strong></span></td>
+        <td class="bar"><span><strong>10</strong></span></td>
       </tr>
       <tr>
         <td><h3><a href="/agencies/1">City Council (COUN)</a></h3></td>
-        <td class="bar"><span style="width:1%;"><strong>1</strong></span></td>
+        <td class="bar"><span><strong>1</strong></span></td>
       </tr>
     </tbody>
   </table>
