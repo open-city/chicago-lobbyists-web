@@ -11,5 +11,6 @@ class FirmRelationship
   
   belongs_to :lobbyist
   belongs_to :firm
+  belongs_to :client
 
 end

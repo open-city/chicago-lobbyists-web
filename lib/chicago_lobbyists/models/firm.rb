@@ -8,7 +8,8 @@ class Firm
   property :name,       String, :required => true
 
   has n, :firm_relationships, :order => :client_name
-  has n, :lobbyists, :through => :firm_relationships
+  has n, :lobbyists,     :through => :firm_relationships
+  has n, :clients,       :through => :firm_relationships
   has n, :compensations, :through => :lobbyists
 
   def self.list_by_compensation default_options={}
