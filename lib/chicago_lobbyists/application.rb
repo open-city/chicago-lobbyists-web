@@ -64,6 +64,7 @@ module ChicagoLobbyists
     get "/" do
       @current_menu = "home"
       @highest_paid_lobbyists = Compensation.group_lobbyist_compensations
+      @highest_paid_firms = Compensation.group_firm_compensations
       erb :landing
     end
     

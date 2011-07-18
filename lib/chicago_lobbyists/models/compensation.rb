@@ -16,7 +16,8 @@ class Compensation
 
   def self.group_lobbyist_compensations default_options={:limit => 5}
     sql = <<-SQL
-      SELECT sum(compensation), lobbyist_id FROM chi_lobbyist_compensations
+      SELECT sum(compensation), lobbyist_id
+      FROM chi_lobbyist_compensations
       GROUP BY lobbyist_id
       ORDER BY SUM(compensation) DESC, lobbyist_id
       LIMIT ?
@@ -24,6 +25,21 @@ class Compensation
 
     repository(:default).adapter.select(sql.strip, default_options[:limit]).map { |struct|
       [Lobbyist.first(:id => struct.lobbyist_id), "%.2f" % struct.sum] }
+  end
+
+  def self.group_firm_compensations default_options={:limit => 5}
+    sql = <<-SQL
+      SELECT sum(c.compensation), r.firm_id
+      FROM chi_lobbyist_compensations c
+        INNER JOIN chi_lobbyist_firm_relationships r
+        ON c.lobbyist_id = r.lobbyist_id
+      GROUP BY r.firm_id
+      ORDER BY SUM(c.compensation) DESC, r.firm_id
+      LIMIT ?
+    SQL
+
+    repository(:default).adapter.select(sql.strip, default_options[:limit]).map { |struct|
+      [Firm.first(:id => struct.firm_id), "%.2f" % struct.sum] }
   end
 
 end
