@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require "rubygems"
+require "bundler"
+require "irb"
+
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
+require "chicago_lobbyists/models"
+
+database_url = ENV["DATABASE_URL"] || "postgres://localhost/chicago_hackathon"
+DataMapper.setup(:default, database_url)
+DataMapper.finalize
+
+IRB.start
