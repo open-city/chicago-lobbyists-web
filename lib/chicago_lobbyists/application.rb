@@ -46,7 +46,21 @@ module ChicagoLobbyists
         "$#{integer_part_string}#{decimal_part_string}"
       end
     end
-    
+
+    def pagination_options_from params={}
+      { :limit => :size, :offset => :page }.inject({}) do |memo, hash|
+        memo[hash.first] = params[hash.last] || send(hash.last)
+      end
+    end
+
+    def size
+      20
+    end
+
+    def page
+      0
+    end
+
     get "/" do
       @current_menu = "home"
       @highest_paid_lobbyists = Compensation.group_lobbyist_compensations
@@ -55,9 +69,16 @@ module ChicagoLobbyists
     
     get "/lobbyists" do
       @current_menu = "lobbyists"
+      @lobbyists = Lobbyist.list_by_compensation
       erb :lobbyists
     end
-    
+
+    get "/lobbyists/paginate/:page/:size" do
+      @current_menu = "lobbyists"
+      @lobbyists = Lobbyist.list_by_compensation :limit => (params[:size] || size), :offset => (params[:page] || page) #pagination_options_from(params)
+      erb :lobbyists
+    end
+
     get "/lobbyists/:id" do
       @total_paid = "%.2f" % Compensation.sum(:compensation)
       @lobbyist = Lobbyist.first :slug => params[:id]

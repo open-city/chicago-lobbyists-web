@@ -6,9 +6,9 @@
   <script type="text/javascript">
     $(function(){
       setBarWidthByCurrency();
-    
+
       $("#listing").dataTable({
-        "aaSorting": [[0, "asc"]],
+        "aaSorting": [[2, "desc"]],
         "aoColumns": [
           null,
           null,
@@ -35,29 +35,16 @@
       </tr>
     </thead>
     <tbody>
+      <% @lobbyists.each do |lobbyist| %>
       <tr>
-        <td><h3><a href="/lobbyists/1">Alfred Smith</a></h3></td>
-        <td><a href="/firms/1">A Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:100%;"><strong>263013.00</strong></span></td>
+        <td><h3><a href="/lobbyists/<%= lobbyist[1] %>"><%= lobbyist[2] %></a></h3></td>
+        <td><a href="/firms">Adding soon...</a></td>
+        <td class="bar"><span style="width:100%;"><strong><%= number_to_currency lobbyist.last %></strong></span></td>
       </tr>
-      <tr>
-        <td><h3><a href="/lobbyists/1">Derek Smith</a></h3></td>
-        <td><a href="/firms/1">B Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:80%;"><strong>63013.36</strong></span></td>
-      </tr>
-      <tr>
-        <td><h3><a href="/lobbyists/1">John Smith</a></h3></td>
-        <td><a href="/firms/1">C Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:60%;"><strong>3013.00</strong></span></td>
-      </tr>
-      <tr>
-        <td><h3><a href="/lobbyists/1">John Smith</a></h3></td>
-        <td><a href="/firms/1">D Dewey Cheatham &amp; Howe, LLC</a></td>
-        <td class="bar"><span style="width:10%;"><strong>4.52</strong></span></td>
-      </tr>
-    </tbody>
+    <% end %>
+   </tbody>
   </table>
-  
+
   <%= cl_erb "common/footer" %>
 </div>
 <!-- /Content -->
