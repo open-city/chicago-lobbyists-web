@@ -21,8 +21,8 @@
         <div class="section">
           <h2>Clients</h2>
           <ul>
-            <% @lobbyist.clients.each do |relationship| %>
-              <li><a href="/clients/<%= relationship.slug %>"><%= relationship.client_name %></a></li>
+            <% @lobbyist.clients.each do |client| %>
+              <li><a href="/clients/<%= client.slug %>"><%= client.name %></a></li>
             <% end %>
           </ul>
         </div>

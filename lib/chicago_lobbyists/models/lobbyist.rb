@@ -10,7 +10,8 @@ class Lobbyist
   property :full_name,  String
 
   has n, :firm_relationships
-  has n, :firms, :through => :firm_relationships
+  has n, :firms,   :through => :firm_relationships
+  has n, :clients, :through => :firm_relationships
   has n, :compensations
 
   def self.list_by_compensation default_options={}
@@ -33,10 +34,6 @@ class Lobbyist
 
   def total_compensation
     Compensation.aggregate(:compensation.sum, {:lobbyist_id => self.id}) || 0.00
-  end
-
-  def clients
-    firm_relationships.sort_by(&:client_name)
   end
 
 end
