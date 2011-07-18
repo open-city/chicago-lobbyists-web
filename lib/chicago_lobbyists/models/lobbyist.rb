@@ -32,9 +32,7 @@ class Lobbyist
   end
 
   def total_compensation
-    "%.2f" % compensations.inject(0.0) do |array, c|
-      array += c.compensation
-    end
+    Compensation.aggregate(:compensation.sum, {:lobbyist_id => self.id}) || 0.00
   end
 
   def clients

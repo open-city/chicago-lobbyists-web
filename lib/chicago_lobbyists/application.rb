@@ -69,7 +69,7 @@ module ChicagoLobbyists
     
     get "/lobbyists" do
       @current_menu = "lobbyists"
-      @lobbyists = Lobbyist.list_by_compensation
+      @lobbyists = Lobbyist.all
       erb :lobbyists
     end
 

@@ -37,9 +37,9 @@
     <tbody>
       <% @lobbyists.each do |lobbyist| %>
       <tr>
-        <td><h3><a href="/lobbyists/<%= lobbyist[1] %>"><%= lobbyist[2] %></a></h3></td>
+        <td><h3><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></h3></td>
         <td><a href="/firms">Adding soon...</a></td>
-        <td class="bar"><span style="width:100%;"><strong><%= number_to_currency lobbyist.last %></strong></span></td>
+        <td class="bar"><span style="width:100%;"><strong><%= number_to_currency lobbyist.total_compensation %></strong></span></td>
       </tr>
     <% end %>
    </tbody>
