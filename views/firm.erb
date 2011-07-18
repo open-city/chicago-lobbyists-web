@@ -32,7 +32,7 @@
           <h2>Clients</h2>
           <ul>
             <% @firm.clients.each do |client| %>
-            <li><a href="/clients/<%= client.slug %>"><%= client.name %></a> (X)</li>
+            <li><a href="/clients/<%= client.slug %>"><%= client.name %></a></li>
             <% end %>
           </ul>
         </div><!-- /.section -->
@@ -121,9 +121,7 @@
       <img alt="" src="../images/map.jpg" />
       <p><strong>5 miles</strong> from Chicago City Hall</p>
       <p>
-        <a href="/firms/1">Chico and Nunes, PC</a>
-        <br />333 W. Wacker Dr., Ste 1800
-        <br />Chicago, 60606
+        <br />Address not available
       </p>
     </div>
   </div>
