@@ -8,10 +8,10 @@
       setBarWidthByNumber();
     
       $("#listing").dataTable({
-        "aaSorting": [[0, "asc"]],
+        "aaSorting": [[1, "desc"], [0, "asc"]],
         "aoColumns": [
           null,
-          { "sType": "num-html" }
+          { "sSortDataType": "dom-text", "sType": "num-html" }
         ],
         "bFilter": false,
         "bInfo": false,
@@ -32,22 +32,12 @@
       </tr>
     </thead>
     <tbody>
+      <% @clients.each do |client| %>
       <tr>
-        <td><h3><a href="/clients/1">Lorrilard Tobacco</a></h3></td>
-        <td class="bar"><span><strong>43</strong></span></td>
+        <td><h3><a href="/clients/<%= client.slug %>"><%= client.name %></a></h3></td>
+        <td class="bar"><span><strong>To be added...</strong></span></td>
       </tr>
-      <tr>
-        <td><h3><a href="/clients/1">David Mason &amp; Associates of Chicago</a></h3></td>
-        <td class="bar"><span><strong>23</strong></span></td>
-      </tr>
-      <tr>
-        <td><h3><a href="/clients/1">WalMart</a></h3></td>
-        <td class="bar"><span><strong>10</strong></span></td>
-      </tr>
-      <tr>
-        <td><h3><a href="/clients/1">Dish Network</a></h3></td>
-        <td class="bar"><span><strong>63</strong></span></td>
-      </tr>
+      <% end %>
     </tbody>
   </table>
   

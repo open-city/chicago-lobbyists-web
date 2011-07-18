@@ -8,7 +8,7 @@
   <div id="bio">
     <div id="bio-header">
       <p>Lobbying firm</p>
-      <h1>Chico and Nunes, PC</h1>
+      <h1><%= @firm.name %></h1>
     </div>
     
     <div id="bio-primary">
@@ -16,36 +16,24 @@
         
         <div class="section">
           <h2>2010 billing</h2>
-          <p><strong class="total-paid">$2,467,055.62</strong></p>
+          <p><strong class="total-paid"><%= number_to_currency @firm.total_compensation %></strong></p>
         </div><!-- /.section -->
         
         <div class="section">
           <h2>Lobbyists</h2>
           <ul>
-            <li><a href="/lobbyists/1">Marcus Nunes</a></li>
-            <li><a href="/lobbyists/1">Richard Carbonara</a></li>
-            <li><a href="/lobbyists/1">Caroline Domagalski</a></li>
-            <li><a href="/lobbyists/1">Robert Markin</a></li>
-            <li><a href="/lobbyists/1">Kate O. Tragesser</a></li>
+            <% @firm.lobbyists.each do |lobbyist| %>
+            <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></li>
+            <% end %>
           </ul>
         </div><!-- /.section -->
         
         <div class="section">
           <h2>Clients</h2>
           <ul>
-            <li><a href="client.html">Aetna, Inc.</a> (5)</li>
-            <li><a href="client.html">ALL Masonry</a> (2)</li>
-            <li><a href="client.html">Alladin Landscaping</a> (1)</li>
-            <li><a href="client.html">Ambar, Inc.</a> (3)</li>
-            <li><a href="client.html">AT &amp; T Services</a> (5)</li>
-            <li><a href="client.html">Atkco Construction Services LLC</a> (2)</li>
-            <li><a href="client.html">Avis Budget Group, Inc</a> (1)</li>
-            <li><a href="client.html">Aztec Supply Corp.</a> (1)</li>
-            <li><a href="client.html">Azteca Supply Co.</a> (4)</li>
-            <li><a href="client.html">Cash America International</a> (2)</li>
-            <li><a href="client.html">Castro Rioja Enterprises LLC</a> (1)</li>
-            <li><a href="client.html">Chicago Carriage Cab Company</a> (2)</li>
-            <li><a href="client.html">Chicago Crushing and Recycling</a> (3)</li>
+            <% @firm.firm_relationships.each do |relationship| %>
+            <li><a href="/clients/<%= relationship.client_name %>"><%= relationship.client_name %></a> (X)</li>
+            <% end %>
           </ul>
         </div><!-- /.section -->
         

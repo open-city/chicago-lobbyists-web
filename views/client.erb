@@ -8,7 +8,7 @@
   <div id="bio">
     <div id="bio-header">
       <p>Client of lobbying firm</p>
-      <h1>Wal-Mart Stores, Inc.</h1>
+      <h1><%= @client.name %></h1>
     </div>
     
     <div id="bio-primary">
@@ -17,22 +17,12 @@
         <div class="section">
           <h2>Lobbying firms and which lobbyists were engaged</h2>
           <dl>
-            <dt><h3><a href="/firms/1">Neal &amp; Leroy, LLC</a></h3></dt>
-            <dd><a href="/lobbyists/1">Mary George</a> (*****)</dd>
-            <dd><a href="/lobbyists/1">Neal Langdon</a> (*****)</dd>
-            <dd><a href="/lobbyists/1">Carol Stubblefield</a> (*****)</dd>
-            
-            <dt><h3><a href="/firms/1">Nicolay &amp; Dart, LLC</a></h3></dt>
-            <dd><a href="/lobbyists/1">Timothy Dart</a> (*****)</dd>
-            
-            <dt><h3><a href="/firms/1">Serafin &amp; Associates, Inc</a></h3></dt>
-            <dd><a href="/lobbyists/1">Betsy Sales</a> (*****)</dd>
-            <dd><a href="/lobbyists/1">Thom Serafin</a> (*****)</dd>
-
-            <dt><h3><a href="/firms/1">Dewey, Cheatham &amp; Howe</a></h3></dt>
-            <dd><a href="/lobbyists/1">Betsy Dewey</a> (*****)</dd>
-            <dd><a href="/lobbyists/1">Thomas Cheatham</a> (*****)</dd>
-            <dd><a href="/lobbyists/1">Albert Howe</a> (*****)</dd>
+            <% @client.firms.each do |firm| %>
+              <dt><h3><a href="/firms/<%= firm.slug %>"><%= firm.name %></a></h3></dt>
+              <% firm.lobbyists.each do |lobbyist| %>
+              <dd><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a> (*****)</dd>
+              <% end %>
+            <% end %>
           </dl>
         </div><!-- /.section -->
         

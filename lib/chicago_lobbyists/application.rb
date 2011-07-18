@@ -17,7 +17,7 @@ module ChicagoLobbyists
       end
 
       def clients_count
-        repository(:default).adapter.select("SELECT COUNT(DISTINCT client_name) as clients FROM chi_lobbyist_firm_relationships").first
+        Client.count
       end
 
       def cl_erb(template)
@@ -92,7 +92,19 @@ module ChicagoLobbyists
     end
     
     get "/firms/:id" do
+      @firm = Firm.first :slug => params[:id]
       erb :firm
+    end
+    
+    get "/clients" do
+      @current_menu = "clients"
+      @clients = Client.list_by_lobbyists
+      erb :clients
+    end
+    
+    get "/clients/:id" do
+      @client = Client.first :slug => params[:id]
+      erb :client
     end
     
     get "/agencies" do
@@ -102,15 +114,6 @@ module ChicagoLobbyists
     
     get "/agencies/:id" do
       erb :agency
-    end
-    
-    get "/clients" do
-      @current_menu = "clients"
-      erb :clients
-    end
-    
-    get "/clients/:id" do
-      erb :client
     end
     
     get "/:page" do |page_name|

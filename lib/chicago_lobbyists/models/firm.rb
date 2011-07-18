@@ -7,8 +7,9 @@ class Firm
   property :slug,       String, :required => true
   property :name,       String, :required => true
 
-  has n, :firm_relationships
+  has n, :firm_relationships, :order => :client_name
   has n, :lobbyists, :through => :firm_relationships
+  has n, :compensations, :through => :lobbyists
 
   def self.list_by_compensation default_options={}
     options = { :limit => 20, :offset => 1 }.merge(default_options)
@@ -29,6 +30,10 @@ class Firm
     repository(:default).adapter.select(sql.strip).map { |struct|
       [struct.slug, struct.name, struct.billed]
     }.sort { |a,b| a.last <=> b.last }
+  end
+
+  def total_compensation
+    Compensation.aggregate(:compensation.sum, {:lobbyist_id => lobbyists.map(&:id)}) || 0.00
   end
 
 end
