@@ -14,14 +14,14 @@ function calculateNumberBars()
     $('.bar span strong').each(function(){
       maxArray.push(parseInt($(this).html()));
     });
-    
+
     var maxNumber = Math.max.apply( Math, maxArray );
     if (maxNumber > 0)
     {
       $('.bar').each(function(){
         $(this).children().width((($(this).children().children().html()/maxNumber) * 100) + '%');
       });
-    }   
+    }
 }
 
 function setUlBarWidthByCurrency(ulId) {
@@ -40,13 +40,13 @@ function calculateUlBars(ulId)
     $('#' + ulId + ' li .count').each(function(){
       maxArray.push(parseInt($(this).html()));
     });
-    
+
     var maxNumber = Math.max.apply( Math, maxArray );
     if (maxNumber > 0)
     {
       $('#' + ulId + ' li').each(function(){
         $(this).children('.index').width((($(this).children('.count').html()/maxNumber) * 100) + '%');
       });
-    }   
+    }
 }
 

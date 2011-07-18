@@ -87,6 +87,7 @@ module ChicagoLobbyists
     
     get "/firms" do
       @current_menu = "firms"
+      @firms = Firm.list_by_compensation
       erb :firms
     end
     

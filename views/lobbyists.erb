@@ -8,12 +8,12 @@
       setBarWidthByCurrency();
 
       $("#listing").dataTable({
-        "aaSorting": [[2, "desc"]],
         "aoColumns": [
           null,
           null,
-          { "sType": "num-html" }
+          { "sSortDataType": "dom-text", "sType": "currency" }
         ],
+        "aaSorting": [[2, "desc"], [0, "asc"]],
         "bFilter": false,
         "bInfo": false,
         "bPaginate": false
