@@ -16,7 +16,7 @@ class Firm
     options = { :limit => 20, :offset => 1 }.merge(default_options)
 
     sql = <<-SQL
-      SELECT f.slug, f.name, coalesce(SUM(c.compensation), SUM(c.compensation), 0.00) as billed
+      SELECT f.slug, f.name, coalesce(SUM(distinct c.compensation), SUM(distinct c.compensation), 0.00) as billed
       FROM chi_firms f
         INNER JOIN chi_lobbyist_firm_relationships r
         ON f.id = r.firm_id
@@ -24,7 +24,7 @@ class Firm
         INNER JOIN chi_lobbyist_compensations c
         ON r.lobbyist_id = c.lobbyist_id
       GROUP BY f.slug, f.name
-      ORDER BY coalesce(SUM(c.compensation), SUM(c.compensation), 0.00) asc
+      ORDER BY coalesce(SUM(distinct c.compensation), SUM(distinct c.compensation), 0.00) asc
 --      LIMIT #{options[:limit]} OFFSET #{options[:offset]}
     SQL
 
