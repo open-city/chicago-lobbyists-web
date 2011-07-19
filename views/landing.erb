@@ -42,8 +42,8 @@
       <div class="section">
         <h2>Highest-paid lobbying firms <a href="/firms">All firms &raquo;</a></h2>
         <ul class="chartlist" id="home-firms">
-          <% @highest_paid_firms.each do |firm, pay| %>
-          <li><a href="/firms/<%= firm.slug %>"><%= firm.name %></a><span class="index"></span><span class="count"><%= pay %></span></li>
+          <% @highest_paid_firms.each do |name, slug, pay| %>
+          <li><a href="/firms/<%= slug %>"><%= name %></a><span class="index"></span><span class="count"><%= pay %></span></li>
           <% end %>
         </ul>
       </div>
