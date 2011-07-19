@@ -16,10 +16,12 @@ class Compensation
 
   def self.group_lobbyist_compensations default_options={:limit => 5}
     sql = <<-SQL
-      SELECT sum(compensation), lobbyist_id
-      FROM chi_lobbyist_compensations
-      GROUP BY lobbyist_id
-      ORDER BY SUM(compensation) DESC, lobbyist_id
+      SELECT sum(DISTINCT c.compensation), c.lobbyist_id
+      FROM chi_lobbyist_compensations c
+        INNER JOIN chi_lobbyists l
+        ON c.lobbyist_id = l.id
+      GROUP BY c.lobbyist_id
+      ORDER BY SUM(DISTINCT c.compensation) DESC, c.lobbyist_id
       LIMIT ?
     SQL
 
