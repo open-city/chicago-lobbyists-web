@@ -21,6 +21,12 @@
   <script type="text/javascript">
     $(function() {
       $(".hint").ezpz_hint();
+      
+      $("a.coming_soon").click(function(e) {
+        e.preventDefault();
+
+        alert("That feature will be coming soon. Be sure to check back soon!");
+      });
     });
   </script>
 </head>
