@@ -1,6 +1,11 @@
 <!-- Content -->
 <div id="content">
   <%= cl_erb "common/header" %>
+  
+  <div class='notice'>
+  	<p>We are currently working on validating our lobbyist data. Until we get everything sorted out, the links below have been disabled. <br />Be sure to check back soon!</p>
+  </div>
+  
   <%= cl_erb "common/stats" %>
   
   <script type="text/javascript">
@@ -10,11 +15,11 @@
     	setUlBarWidthByNumber('home-clients');
     	setUlBarWidthByNumber('home-agencies');
     	
-        $("a.coming_soon").click(function(e) {
-          e.preventDefault();
-          
-          alert("That feature will be coming soon. Be sure to check back soon!");
-        });
+        //$("a.coming_soon").click(function(e) {
+        //  e.preventDefault();
+        //  
+        //  alert("That feature will be coming soon. Be sure to check back soon!");
+        //});
     });
     
   </script>
