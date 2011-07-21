@@ -16,6 +16,6 @@ CREATE TABLE public.chi_agencies  (
 INSERT INTO public.chi_agencies (slug, code, name)
 SELECT DISTINCT lower(replace(replace(replace(replace(replace(ac.name, ',', ''), '.', ''), ' ', '-'), '&', 'and'), '''', '')), a.agency_code, ac.name
 FROM public.lobbyist_agencies a
-  LEFT OUTER JOIN chi_agency_codes ac
+  LEFT OUTER JOIN public.lobbyist_agency_codes ac
   ON a.agency_code = ac.code;
 
