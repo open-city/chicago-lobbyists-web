@@ -17,7 +17,7 @@ module ChicagoLobbyists
       end
 
       def actions_count
-        "???"
+        Action.count
       end
 
       def clients_count

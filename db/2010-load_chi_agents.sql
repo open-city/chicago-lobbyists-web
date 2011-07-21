@@ -13,7 +13,7 @@ CREATE TABLE public.chi_agents  (
 
 
 -- LOAD CHICAGO LOBBYIST AGENTS
-INSERT INTO public.chi_agents (slug, name)
-SELECT DISTINCT lower(replace(replace(replace(replace(agency_code, ',', ''), '.', ''), ' ', '-'), '&', 'and')), agency_code
+INSERT INTO public.chi_agents (slug, code, name)
+SELECT DISTINCT lower(replace(replace(replace(replace(agency_code, ',', ''), '.', ''), ' ', '-'), '&', 'and')), agency_code, agency_code
 FROM public.lobbyist_agencies;
 
