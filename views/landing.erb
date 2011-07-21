@@ -62,11 +62,9 @@
       <div class="section">
         <h2>Most lobbied city agencies <a href="#" class="coming_soon">All agencies &raquo;</a></h2>
         <ul class="chartlist" id="home-agencies">
-          <li><a href="#" class="coming_soon">Name</a><span class="index"></span><span class="count">123</span></li>
-          <li><a href="#" class="coming_soon">Name</a><span class="index"></span><span class="count">83</span></li>
-          <li><a href="#" class="coming_soon">Name</a><span class="index"></span><span class="count">63</span></li>
-          <li><a href="#" class="coming_soon">Name</a><span class="index"></span><span class="count">43</span></li>
-          <li><a href="#" class="coming_soon">Name</a><span class="index"></span><span class="count">23</span></li>
+          <% @most_lobbied_agencies.each do |agency, count| %>
+            <li><a href="#" class="coming_soon"><%= agency %></a><span class="index"></span><span class="count"><%= count %></span></li>
+          <% end %>
         </ul>
       </div>
     </div>

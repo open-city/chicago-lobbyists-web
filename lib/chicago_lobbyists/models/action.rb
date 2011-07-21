@@ -10,4 +10,7 @@ class Action
   property :administrative, Boolean
   property :legislative,    Boolean
 
+  belongs_to :agency
+  belongs_to :lobbyist
+
 end

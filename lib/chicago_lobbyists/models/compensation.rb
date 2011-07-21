@@ -16,7 +16,7 @@ class Compensation
 
   def self.group_lobbyist_compensations default_options={:limit => 5}
     sql = <<-SQL
-      SELECT sum(DISTINCT c.compensation), c.lobbyist_id
+      SELECT SUM(DISTINCT c.compensation), c.lobbyist_id
       FROM chi_lobbyist_compensations c
         INNER JOIN chi_lobbyists l
         ON c.lobbyist_id = l.id
