@@ -2,6 +2,6 @@
   <li class="<%= current_menu_class("lobbyists") %>"><a class="stat coming_soon" href="#"><strong><%= lobbyists_count %></strong> Lobbyists</a></li>
   <li class="<%= current_menu_class("firms") %>"><a class="stat coming_soon" href="#"><strong><%= firms_count %></strong>Lobbying firms</a></li>
   <li id="paid"><span class="stat"><strong><%= number_to_currency(total_paid) %></strong> Paid to lobbyists in 2010</a></li>
-  <li class="<%= current_menu_class("agencies") %>"><a class="stat coming_soon" href="#"><strong>534</strong>Actions sought</a></li>
+  <li class="<%= current_menu_class("agencies") %>"><a class="stat coming_soon" href="#"><strong><%= actions_count %></strong>Actions sought</a></li>
   <li class="<%= current_menu_class("clients") %>"><a class="stat coming_soon" href="#"><strong><%= clients_count %></strong>Clients</a></li>
 </ul>

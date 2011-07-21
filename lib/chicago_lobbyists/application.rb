@@ -16,6 +16,10 @@ module ChicagoLobbyists
         Firm.count
       end
 
+      def actions_count
+        "???"
+      end
+
       def clients_count
         Client.count
       end

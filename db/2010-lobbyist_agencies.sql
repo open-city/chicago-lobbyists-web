@@ -1,16 +1,16 @@
 DROP TABLE public.lobbyist_agencies;
 
 CREATE TABLE public.lobbyist_agencies  ( 
-    id                  serial not null,
+  id                  serial not null,
 	last_name         	varchar(150) NULL,
 	first_name        	varchar(150) NULL,
-	agency_code       	varchar(150) NULL,
-	admin_action      	varchar(150) NULL,
-	legislative_action	varchar(150) NULL,
-	action_sought     	varchar(150) NULL,
+	agency_code       	varchar(10) NULL,
+	admin_action      	boolean NULL,
+	legislative_action	boolean NULL,
+	action_sought     	varchar(100) NULL,
 
-    CONSTRAINT lobbyist_agencies_pk PRIMARY KEY(id)
-	);
+  CONSTRAINT lobbyist_agencies_pk PRIMARY KEY(id)
+);
 
 INSERT INTO public.lobbyist_agencies(last_name, first_name, agency_code, admin_action, legislative_action, action_sought)
   VALUES('Bonoma', 'David', 'PLAN', '0', '1', '6B Application');
