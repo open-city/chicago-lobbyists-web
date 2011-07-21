@@ -1,7 +1,7 @@
-class Agent
+class Agency
   include DataMapper::Resource
 
-  storage_names[:default] = "chi_agent"
+  storage_names[:default] = "chi_agencies"
 
   property :id,         Serial,  :required => true
   property :slug,       String,  :required => true
