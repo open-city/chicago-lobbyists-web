@@ -82,23 +82,39 @@ module ChicagoLobbyists
     get "/lobbyists/paginate/:page/:size" do
       @current_menu = "lobbyists"
       @lobbyists = Lobbyist.list_by_compensation :limit => (params[:size] || size), :offset => (params[:page] || page) #pagination_options_from(params)
+
       erb :lobbyists
     end
 
     get "/lobbyists/:id" do
       @total_paid = "%.2f" % Compensation.sum(:compensation)
       @lobbyist = Lobbyist.first :slug => params[:id]
+      @actions = @lobbyist.actions.group_by { |action|
+        action.purpose
+      }.sort_by { |purpose| purpose }
+      @agency_actions = @lobbyist.actions.group_by { |action|
+        action.agency
+      }.sort_by { |agency, actions| agency.name }
+
       erb :lobbyist
     end
     
     get "/firms" do
       @current_menu = "firms"
       @firms = Firm.list_by_compensation
+
       erb :firms
     end
     
     get "/firms/:id" do
       @firm = Firm.first :slug => params[:id]
+      @actions = @firm.actions.group_by { |action|
+        action.purpose
+      }.sort_by { |purpose| purpose }
+      @agency_actions = @firm.actions.group_by { |action|
+        action.agency
+      }.sort_by { |agency, actions| agency.name }
+
       erb :firm
     end
     

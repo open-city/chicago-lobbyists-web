@@ -11,6 +11,7 @@ class Client
   has n, :firm_relationships
   has n, :firms,     :through => :firm_relationships
   has n, :lobbyists, :through => :firm_relationships
+  has n, :actions,   :through => :lobbyists
 
   def self.list_by_lobbyists
     all :order => :name.desc

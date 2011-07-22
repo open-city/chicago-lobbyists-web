@@ -11,6 +11,7 @@ class Firm
   has n, :lobbyists,     :through => :firm_relationships, :order => :full_name
   has n, :clients,       :through => :firm_relationships, :order => :name
   has n, :compensations, :through => :lobbyists
+  has n, :actions,       :through => :lobbyists
 
   def self.list_by_compensation default_options={}
     options = { :limit => 20, :offset => 1 }.merge(default_options)

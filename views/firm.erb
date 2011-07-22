@@ -44,19 +44,14 @@
         <div class="section">
           <h2>Actions sought</h2>
           <dl>
-            <dt>Industry concerns</dt>
-            <dd><a href="agency.html">Office of the Mayor</a> (5)</dd>
-            
-            <dt>TIF</dt>
-            <dd><a href="agency.html">Budget and management</a> (3)</dd>
-            <dd><a href="agency.html">City Council</a> (2)</dd>
-            
-            <dt>Procurement</dt>
-            <dd><a href="agency.html">Budget and management</a> (74)</dd>
-            
-            <dt>Tax Assistance</dt>
-            <dd><a href="agency.html">Budget and management</a> (6)</dd>
-            <dd><a href="agency.html">City Council</a> (12)</dd>
+            <% @actions.each do |purpose, actions| %>
+            <dt><%= purpose %></dt>
+
+            <% actions.group_by { |action| action.agency.name }.each do |name, actions| %>
+              <dd><a href="/agencies/<%= actions.first.agency.slug %>"><%= name %></a> (<%= actions.count %>)</dd>
+            <% end %>
+
+            <% end %>
           </dl>
           <p class="mute">Current data does not allow us to learn <strong>how much each client paid to each lobbying firm or lobbyist.</strong> We expect that the city will add data to make this possible.</p>
         </div><!-- /.section -->
@@ -75,41 +70,13 @@
               </tr>
             </thead>
             <tbody>
+              <% @agency_actions.each do |agency, actions| %>
               <tr>
-                <td><a href="agency.html">Budget and management</a></td>
-                <td>19</td>
-                <td>18</td>
+                <td><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a></td>
+                <td><%= actions.select(&:administrative).count %></td>
+                <td><%= actions.select(&:legislative).count %></td>
               </tr>
-              <tr>
-                <td><a href="agency.html">City Council</a></td>
-                <td>28</td>
-                <td>27</td>
-              </tr>
-              <tr>
-                <td><a href="agency.html">Department of Police</a></td>
-                <td>19</td>
-                <td>19</td>
-              </tr>
-              <tr>
-                <td><a href="agency.html">General Services</a></td>
-                <td>26</td>
-                <td>23</td>
-              </tr>
-              <tr>
-                <td><a href="agency.html">Office of the Mayor</a></td>
-                <td>28</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td><a href="agency.html">Transportation</a></td>
-                <td>28</td>
-                <td>28</td>
-              </tr>
-              <tr>
-                <td><a href="agency.html">Water Management</a></td>
-                <td>24</td>
-                <td>23</td>
-              </tr>
+            <% end %>
             </tbody>
           </table>
           <p class="mute">Current data does not allow us to learn <strong>which clients requested what actions in front of which committees.</strong> We expect that the city will add data to make this possible.</p>
