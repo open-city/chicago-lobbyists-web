@@ -20,7 +20,7 @@
             <% @client.firms.each do |firm| %>
               <dt><h3><a href="/firms/<%= firm.slug %>"><%= firm.name %></a></h3></dt>
               <% firm.lobbyists.each do |lobbyist| %>
-              <dd><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a> (*****)</dd>
+              <dd><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></dd>
               <% end %>
             <% end %>
           </dl>
@@ -36,28 +36,18 @@
             <thead>
               <tr>
                 <th>Department</th>
+                <th>Voucher</th>
                 <th>Amount</th>
               </tr>
             </thead>
             <tbody>
+              <% @client.city_payments.each do |city_payment| %>
               <tr>
-                <td><a href="/agencies/1">To be added...</a></td>
-                <td>$0,000.00</td>
+                <td>???</td>
+                <td><%= city_payment.voucher_number %></td>
+                <td><%= number_to_currency city_payment.amount %></td>
               </tr>
-<!--
-              <tr>
-                <td><a href="/agencies/1">Finance</a></td>
-                <td>$4,117,804.16</td>
-              </tr>
-              <tr>
-                <td><a href="/agencies/1">Office of Compliance</a></td>
-                <td>$32,423.00</td>
-              </tr>
-              <tr>
-                <td><a href="/agencies/1">Planning and Development</a></td>
-                <td>$140,184.50</td>
-              </tr>
--->
+              <% end %>
             </tbody>
           </table>
         </div><!-- /.section -->

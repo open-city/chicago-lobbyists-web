@@ -7,7 +7,7 @@ class Firm
   property :slug,       String, :required => true
   property :name,       String, :required => true
 
-  has n, :firm_relationships, :order => :client_name
+  has n, :firm_relationships
   has n, :lobbyists,     :through => :firm_relationships, :order => :full_name
   has n, :clients,       :through => :firm_relationships, :order => :name
   has n, :compensations, :through => :lobbyists
