@@ -100,14 +100,20 @@
     </div>
     <div id="bio-secondary">
       <div class="map">
+        <div class="map-overlay">
+          <div class="text">Coming Soon!</div>
+        </div>
         <img alt="" src="/images/map.jpg" />
-        <p><strong>5 miles</strong> from Chicago City Hall</p>
+
+        <p><strong>(N) miles</strong> from Chicago City Hall</p>
       </div>
+
       <h2>Lobbying firm</h2>
       <% @lobbyist.firms.each do |firm| %>
       <p>
         <a href="/firms/<%= firm.slug %>"><%= firm.name %></a>
-        <br />Address not available
+        <p>Address not available</p>
+        <p class="mute">Current data does not allow us to learn address information for firms. We expect that the city will add data to make this possible.</p>
       </p>
       <% end %>
 

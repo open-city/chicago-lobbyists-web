@@ -46,7 +46,31 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 /* Bios */
 #bio { clear: both; margin-bottom: 30px; }
 #bio-primary { float: right; width: 74.2%; }
-#bio-secondary { float: left; width: 22.7%; }
+#bio-secondary { float: left; position: relative; width: 22.7%; }
+#bio-secondary .map-overlay {
+  background:#fff6d3;
+  border:3px solid #FFE27E;
+  font-size:4em;
+  height:219px;
+  left:0;
+  opacity:.6;
+  position:absolute;
+  text-align:center;
+  top:0;
+  vertical-align:middle;
+  width:219px;
+}
+
+.map-overlay .text {
+  -webkit-transform: rotate(-45deg);	
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+
+  margin: 40px 0 0 15px;
+  transform: rotate(-45deg);
+}
+
 
 /* Columns */
 .c2l, .c2r { width: 48%; }
