@@ -16,7 +16,11 @@
         
         <div class="section spotlight">
           <h2>Actions involving lobbyists</h2>
-          <p><strong>56 Administrative<br />27 Legislative</strong></p>
+          <p>
+            <strong><%= @agency.actions.select(&:administrative).count %> Administrative</strong>
+            <br />
+            <strong><%= @agency.actions.select(&:legislative).count %> Legislative</strong>
+          </p>
         </div><!-- /.section -->
         
         <div class="section">
