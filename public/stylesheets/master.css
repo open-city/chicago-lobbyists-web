@@ -52,7 +52,7 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 .c2l, .c2r { width: 48%; }
 .c2l, .c3l, .c3m { float: left; }
 .c2r, .c3r { float: right; }
-.c2r ul { margin: 0 }
+.c2r ul { margin-top: 0 }
 .c3l { margin-right: 3%; }
 .c3l, .c3m, .c3r { width: 31%; }
 
