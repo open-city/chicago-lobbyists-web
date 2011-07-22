@@ -119,6 +119,13 @@ module ChicagoLobbyists
     end
     
     get "/agencies/:id" do
+      @agency = Agency.first :slug => params[:id]
+      @lobbyist_actions = @agency.actions.group_by { |action|
+        action.lobbyist }.sort_by { |lobbyist, actions|
+          lobbyist.full_name }
+      @purpose_actions = @agency.actions.group_by { |action|
+          action.purpose
+        }.sort_by { |purpose, actions| purpose }
       erb :agency
     end
     

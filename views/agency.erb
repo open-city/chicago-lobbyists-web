@@ -8,7 +8,7 @@
   <div id="bio">
     <div id="bio-header">
       <p>City Agency</p>
-      <h1>Aviation (AVIA)</h1>
+      <h1><%= @agency.name %> (<%= @agency.code %>)</h1>
     </div>
     
     <div id="bio-primary">
@@ -30,81 +30,13 @@
               </tr>
             </thead>
             <tbody>
+              <% @lobbyist_actions.each do |lobbyist, actions| %>
               <tr>
-                <td><a href="lobbyist.html">Myles Berman</a></td>
-                <td>6</td>
-                <td>0</td>
+                <td><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></td>
+                <td><%= actions.group_by(&:administrative).count %></td>
+                <td><%= actions.group_by(&:legislative).count %></td>
               </tr>
-              <tr>
-                <td><a href="lobbyist.html">Michael Brown</a></td>
-                <td>3</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">Demetrius Carney</a></td>
-                <td>1</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">David Crosson</a></td>
-                <td>1</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">John Cullerton</a></td>
-                <td>1</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">Myles Berman</a></td>
-                <td>6</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">Michael Brown</a></td>
-                <td>3</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">Demetrius Carney</a></td>
-                <td>1</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">David Crosson</a></td>
-                <td>1</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">John Cullerton</a></td>
-                <td>1</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">Myles Berman</a></td>
-                <td>6</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">Michael Brown</a></td>
-                <td>3</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">Demetrius Carney</a></td>
-                <td>1</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">David Crosson</a></td>
-                <td>1</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td><a href="lobbyist.html">John Cullerton</a></td>
-                <td>1</td>
-                <td>1</td>
-              </tr>
+              <% end %>
             </tbody>
           </table>
         </div><!-- /.section -->
@@ -123,13 +55,18 @@
               </tr>
             </thead>
             <tbody>
+              <% @purpose_actions.each do |purpose, actions| %>
               <tr>
-                <td>6B application</td>
-                <td>
-                  <a href="/lobbyists/1">David Bonoma</a> (4)<br>
-                  <a href="/lobbyists/1">Victor Reyes</a> (1)
+                <td><%= purpose %></td>
+                <td nowrap>
+                  <ul>
+                  <% actions.group_by(&:lobbyist).each do |lobbyist, actions| %>
+                    <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a> (<%= actions.count %>)</a></li>
+                  <% end %>
+                  </ul>
                 </td>
               </tr>
+              <% end %>
               <tr>
                 <td>911 Fees</td>
                 <td>
@@ -149,13 +86,16 @@
       </div>
     </div>
     <div id="bio-secondary">
+      <!--
       <img alt="" src="../images/map.jpg" />
       
       <p><strong>5 miles</strong> from Chicago City Hall</p>
+      -->
       <p>
-        <a href="firm.html">Aviation (AVIA)</a>
-        <br />333 W. Wacker Dr., Ste 1800
-        <br />Chicago, 60606
+      <!--        <a href="firm.html">Aviation (AVIA)</a> -->
+        <div class="addy">
+          Address Unknown
+        </div>
       </p>
     </div>
   </div>

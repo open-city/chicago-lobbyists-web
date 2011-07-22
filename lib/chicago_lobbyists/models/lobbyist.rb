@@ -10,8 +10,8 @@ class Lobbyist
   property :full_name,  String
 
   has n, :firm_relationships
-  has n, :firms,   :through => :firm_relationships
-  has n, :clients, :through => :firm_relationships
+  has n, :firms,   :through => :firm_relationships, :order => :name
+  has n, :clients, :through => :firm_relationships, :order => :name
   has n, :compensations
 
   def self.list_by_compensation default_options={}

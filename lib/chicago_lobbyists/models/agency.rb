@@ -5,10 +5,13 @@ class Agency
 
   property :id,         Serial,  :required => true
   property :slug,       String,  :required => true
+  property :code,       String,  :required => true
   property :name,       String,  :required => true
   property :address_id, Integer
 
   has n, :actions
+  has n, :lobbyists, :through => :actions
+  has n, :firms, :through => :lobbyists
 
   def self.most_lobbied default_options={:limit => 5}
     sql = <<-SQL
