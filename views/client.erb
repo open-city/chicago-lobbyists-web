@@ -36,16 +36,16 @@
             <thead>
               <tr>
                 <th>Department</th>
-                <th>Voucher</th>
                 <th>Amount</th>
+                <th>Payment Date</th>
               </tr>
             </thead>
             <tbody>
               <% @client.city_payments.each do |city_payment| %>
               <tr>
-                <td>???</td>
-                <td><%= city_payment.voucher_number %></td>
+                <td><%= city_payment.department_name.strip.length == 0 ? "Unknown" : city_payment.department_name %></td>
                 <td><%= number_to_currency city_payment.amount %></td>
+                <td><%= city_payment.check_date %></td>
               </tr>
               <% end %>
             </tbody>

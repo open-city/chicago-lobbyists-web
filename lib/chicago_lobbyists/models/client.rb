@@ -7,7 +7,7 @@ class Client
   property :slug,  String, :required => true
   property :name,  String, :required => true
 
-  has n, :city_payments, :order => :amount.desc
+  has n, :city_payments, :order => :check_date.asc
   has n, :firm_relationships
   has n, :firms,     :through => :firm_relationships
   has n, :lobbyists, :through => :firm_relationships
