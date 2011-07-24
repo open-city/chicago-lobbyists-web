@@ -16,5 +16,17 @@ class Client
   def self.list_by_lobbyists
     all :order => :name.desc
   end
-
+  
+  def self.all_by_most_active
+    sql = <<-EOSQL
+      SELECT c.id, COUNT(fr.id) FROM #{storage_names[:default]} c
+      INNER JOIN #{FirmRelationship.storage_names[:default]} fr ON fr.client_id = c.id
+      GROUP BY c.id
+      ORDER BY COUNT(fr.id) DESC
+    EOSQL
+    
+    repository(:default).adapter.select(sql.strip).map { |struct| 
+      [self.first(:id => struct.id), struct.count]
+    }
+  end
 end

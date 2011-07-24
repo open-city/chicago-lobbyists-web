@@ -40,11 +40,9 @@
       <div class="section">
         <h2>Most active clients <a href="#" class="coming_soon">All clients &raquo;</a></h2>
         <ul class="chartlist" id="home-clients">
-          <li><a href="#" class="coming_soon">Name</a><span class="index"></span><span class="count">123</span></li>
-          <li><a href="#" class="coming_soon">Name</a><span class="index"></span><span class="count">80</span></li>
-          <li><a href="#" class="coming_soon">Name</a><span class="index"></span><span class="count">70</span></li>
-          <li><a href="#" class="coming_soon">Name</a><span class="index"></span><span class="count">60</span></li>
-          <li><a href="#" class="coming_soon">Name</a><span class="index"></span><span class="count">50</span></li>
+          <% @most_active_clients.each do |client, lobbyists_used| %>
+            <li><a href="#"><%= client.name %></a><span class="index"></span><span class="count"><%= lobbyists_used %></span></li>
+          <% end %>
         </ul>
       </div>
     </div>

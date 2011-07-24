@@ -70,6 +70,7 @@ module ChicagoLobbyists
       @highest_paid_lobbyists = Compensation.group_lobbyist_compensations
       @highest_paid_firms     = Compensation.group_firm_compensations
       @most_lobbied_agencies  = Agency.most_lobbied
+      @most_active_clients    = Client.all_by_most_active.first(5)
       erb :landing
     end
     
