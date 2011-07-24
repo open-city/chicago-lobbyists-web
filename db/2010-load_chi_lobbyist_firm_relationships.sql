@@ -14,11 +14,13 @@ CREATE TABLE public.chi_lobbyist_firm_relationships  (
 -- CHICAGO LOBBYIST CLIENTS
 INSERT INTO public.chi_lobbyist_firm_relationships(
   lobbyist_id, firm_id, client_id)
-SELECT DISTINCT l.id, firm.id, client.id
-FROM public.chi_lobbyists l
-  INNER JOIN public.lobbyists client
-  ON l.first_name = client.first_name and l.last_name = client.last_name
+SELECT DISTINCT l.id, f.id, c.id
+FROM public.lobbyists r
+  INNER JOIN public.chi_lobbyists l
+  ON r.first_name = l.first_name and r.last_name = l.last_name
 
-  INNER JOIN public.chi_firms firm
-  ON firm.name = client.employer_name;
+  INNER JOIN public.chi_firms f
+  ON r.employer_name = f.name
 
+  INNER JOIN public.chi_clients c
+  ON r.client_name = c.name;
