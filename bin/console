@@ -7,6 +7,7 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 require "chicago_lobbyists/models"
 
 database_url = ENV["DATABASE_URL"] || "postgres://localhost/chicago_hackathon"
+DataMapper::Logger.new($stdout, :debug) if ENV["CONSOLE_LOGGING"] == "1"
 DataMapper.setup(:default, database_url)
 DataMapper.finalize
 
