@@ -21,8 +21,12 @@
         <div class="section">
           <h2>Clients</h2>
           <ul>
-            <% @lobbyist.clients.each do |client| %>
+            <% if @lobbyist.clients.empty? %>
+              <li>No clients found</li>
+            <% else %>
+              <% @lobbyist.clients.each do |client| %>
               <li><a href="/clients/<%= client.slug %>"><%= client.name %></a></li>
+              <% end %>
             <% end %>
           </ul>
         </div>

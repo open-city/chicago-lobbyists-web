@@ -31,8 +31,12 @@
         <div class="section" style="height:400px;">
           <h2>Clients</h2>
           <ul>
-            <% @firm.clients.each do |client| %>
+            <% if @firm.clients.empty? %>
+              <li>No clients found</li>
+            <% else %>
+              <% @firm.clients.each do |client| %>
             <li><a href="/clients/<%= client.slug %>"><%= client.name %></a></li>
+              <% end %>
             <% end %>
           </ul>
         </div><!-- /.section -->

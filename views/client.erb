@@ -41,12 +41,18 @@
               </tr>
             </thead>
             <tbody>
-              <% @client.city_payments.each do |city_payment| %>
+              <% if @client.city_payments.empty? %>
+              <tr>
+                <td colspan="3">No payments found</td>
+              </tr>
+              <% else %>
+                <% @client.city_payments.each do |city_payment| %>
               <tr>
                 <td><%= city_payment.department_name.strip.length == 0 ? "Unknown" : city_payment.department_name %></td>
                 <td><%= number_to_currency city_payment.amount %></td>
                 <td><%= city_payment.check_date %></td>
               </tr>
+                <% end %>
               <% end %>
             </tbody>
           </table>
