@@ -132,6 +132,7 @@ module ChicagoLobbyists
     
     get "/agencies" do
       @current_menu = "agencies"
+      @agencies = Agency.list_by_actions
       erb :agencies
     end
     

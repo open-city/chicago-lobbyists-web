@@ -32,26 +32,12 @@
       </tr>
     </thead>
     <tbody>
+      <% @agencies.each do |agency| %>
       <tr>
-        <td><h3><a href="/agencies/1">Aviation (AVIA)</a></h3></td>
-        <td class="bar"><span><strong>73</strong></span></td>
+        <td><h3><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a></h3></td>
+        <td class="bar"><span><strong>To be added...</strong></span></td>
       </tr>
-      <tr>
-        <td><h3><a href="/agencies/1">Finance (FINA)</a></h3></td>
-        <td class="bar"><span><strong>50</strong></span></td>
-      </tr>
-      <tr>
-        <td><h3><a href="/agencies/1">Office of Compliance (OOCA)</a></h3></td>
-        <td class="bar"><span><strong>42</strong></span></td>
-      </tr>
-      <tr>
-        <td><h3><a href="/agencies/1">Planning and Development (PLAN)</a></h3></td>
-        <td class="bar"><span><strong>10</strong></span></td>
-      </tr>
-      <tr>
-        <td><h3><a href="/agencies/1">City Council (COUN)</a></h3></td>
-        <td class="bar"><span><strong>1</strong></span></td>
-      </tr>
+      <% end %>
     </tbody>
   </table>
   
