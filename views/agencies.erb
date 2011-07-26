@@ -8,7 +8,7 @@
       setBarWidthByNumber();
     
       $("#listing").dataTable({
-        "aaSorting": [[0, "asc"]],
+        "aaSorting": [[1, "desc"], [0, "asc"]],
         "aoColumns": [
           null,
           { "sType": "num-html" }
@@ -22,7 +22,7 @@
   
   <div class="clear"></div>
   
-  <h1>Actions sought</h1>
+  <h1>Actions sought to government agencies</h1>
   
   <table id="listing" class="listing">
     <thead>
@@ -32,10 +32,10 @@
       </tr>
     </thead>
     <tbody>
-      <% @agencies.each do |agency| %>
+      <% @agencies.each do |agency, count| %>
       <tr>
         <td><h3><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a></h3></td>
-        <td class="bar"><span><strong>To be added...</strong></span></td>
+        <td class="bar"><span><strong><%= count %></strong></span></td>
       </tr>
       <% end %>
     </tbody>

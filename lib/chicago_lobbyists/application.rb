@@ -121,7 +121,7 @@ module ChicagoLobbyists
     
     get "/clients" do
       @current_menu = "clients"
-      @clients = Client.list_by_lobbyists
+      @clients = Client.all_by_most_active
       erb :clients
     end
     

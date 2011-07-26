@@ -14,7 +14,18 @@ class Agency
   has n, :firms, :through => :lobbyists
   
   def self.list_by_actions
-    all :order => :name.asc
+    sql = <<-SQL
+      SELECT agency.id, COUNT(action.id)
+      FROM chi_agencies agency
+        INNER JOIN chi_actions action
+        ON agency.id = action.agency_id
+      GROUP BY agency.id
+      ORDER BY COUNT(action.id) DESC
+    SQL
+    
+    repository(:default).adapter.select(sql.strip).map { |struct| 
+      [self.first(:id => struct.id), struct.count]
+    }
   end
 
   def self.most_lobbied default_options={:limit => 5}

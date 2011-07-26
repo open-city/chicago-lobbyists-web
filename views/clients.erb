@@ -32,10 +32,10 @@
       </tr>
     </thead>
     <tbody>
-      <% @clients.each do |client| %>
+      <% @clients.each do |client, count| %>
       <tr>
         <td><h3><a href="/clients/<%= client.slug %>"><%= client.name %></a></h3></td>
-        <td class="bar"><span><strong>To be added...</strong></span></td>
+        <td class="bar"><span><strong><%= count %></strong></span></td>
       </tr>
       <% end %>
     </tbody>
