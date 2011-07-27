@@ -13,34 +13,19 @@ class Agency
   has n, :lobbyists, :through => :actions
   has n, :firms, :through => :lobbyists
   
-  def self.list_by_actions
+  def self.list_by_actions default_options={:limit => 5}
     sql = <<-SQL
-      SELECT agency.id, COUNT(action.id)
+      SELECT agency.slug, agency.name, COUNT(action.id)
       FROM chi_agencies agency
         INNER JOIN chi_actions action
         ON agency.id = action.agency_id
-      GROUP BY agency.id
-      ORDER BY COUNT(action.id) DESC
-    SQL
-    
-    repository(:default).adapter.select(sql.strip).map { |struct| 
-      [self.first(:id => struct.id), struct.count]
-    }
-  end
-
-  def self.most_lobbied default_options={:limit => 5}
-    sql = <<-SQL
-      SELECT agency.id, COUNT(action.id)
-      FROM chi_agencies agency
-        INNER JOIN chi_actions action
-        ON agency.id = action.agency_id
-      GROUP BY agency.id
+      GROUP BY agency.slug, agency.name
       ORDER BY COUNT(action.id) DESC
       LIMIT ?
     SQL
 
     repository(:default).adapter.select(sql.strip, default_options[:limit]).map { |struct|
-      [self.first(:id => struct.id), struct.count] }
+      [struct.slug, struct.name, struct.count] }
   end
 
 end

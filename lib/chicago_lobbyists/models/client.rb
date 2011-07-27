@@ -17,16 +17,17 @@ class Client
     all :order => :name.desc
   end
   
-  def self.all_by_most_active
+  def self.all_by_most_active default_options={:limit => 5}
     sql = <<-EOSQL
-      SELECT c.id, COUNT(fr.id) FROM #{storage_names[:default]} c
+      SELECT c.slug, c.name, COUNT(fr.id) FROM #{storage_names[:default]} c
       INNER JOIN #{FirmRelationship.storage_names[:default]} fr ON fr.client_id = c.id
-      GROUP BY c.id
+      GROUP BY c.slug, c.name
       ORDER BY COUNT(fr.id) DESC
+      LIMIT ?
     EOSQL
     
-    repository(:default).adapter.select(sql.strip).map { |struct| 
-      [self.first(:id => struct.id), struct.count]
+    repository(:default).adapter.select(sql.strip, default_options[:limit]).map { |struct| 
+      [struct.slug, struct.name, struct.count]
     }
   end
 end

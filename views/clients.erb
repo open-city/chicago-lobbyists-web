@@ -32,9 +32,9 @@
       </tr>
     </thead>
     <tbody>
-      <% @clients.each do |client, count| %>
+      <% @clients.each do |slug, name, count| %>
       <tr>
-        <td><h3><a href="/clients/<%= client.slug %>"><%= client.name %></a></h3></td>
+        <td><h3><a href="/clients/<%= slug %>"><%= name %></a></h3></td>
         <td class="bar"><span><strong><%= count %></strong></span></td>
       </tr>
       <% end %>

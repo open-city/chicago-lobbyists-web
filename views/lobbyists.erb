@@ -35,11 +35,11 @@
       </tr>
     </thead>
     <tbody>
-      <% @lobbyists.each do |lobbyist| %>
+      <% @lobbyists.each do |id, slug, full_name, billed| %>
       <tr>
-        <td><h3><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></h3></td>
+        <td><h3><a href="/lobbyists/<%= slug %>"><%= full_name %></a></h3></td>
         <td><a href="/firms">Adding soon...</a></td>
-        <td class="bar"><span style="width:100%;"><strong><%= number_to_currency lobbyist.total_compensation %></strong></span></td>
+        <td class="bar"><span style="width:100%;"><strong><%= number_to_currency billed %></strong></span></td>
       </tr>
     <% end %>
    </tbody>

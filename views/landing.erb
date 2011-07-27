@@ -27,8 +27,8 @@
       <div class="section">
         <h2>Highest-paid lobbyists <a href="/lobbyists">All lobbyists &raquo;</a></h2>
         <ul class="chartlist" id="home-lobbyists">
-          <% @highest_paid_lobbyists.each do |lobbyist, pay| %>
-            <li><a href="/lobbyists/<%= lobbyist.slug %>" class="coming_soon"><%= lobbyist.full_name %></a><span class="index"></span><span class="count"><%= number_to_currency(pay) %></span></li>
+          <% @highest_paid_lobbyists.each do |slug, name, pay| %>
+            <li><a href="/lobbyists/<%= slug %>" class="coming_soon"><%= name %></a><span class="index"></span><span class="count"><%= number_to_currency(pay) %></span></li>
           <% end %>
         </ul>
       </div>
@@ -36,8 +36,8 @@
       <div class="section">
         <h2>Most active clients <a href="/clients">All clients &raquo;</a></h2>
         <ul class="chartlist" id="home-clients">
-          <% @most_active_clients.each do |client, lobbyists_used| %>
-            <li><a href="/clients/<%= client.slug %>"><%= client.name %></a><span class="index"></span><span class="count"><%= lobbyists_used %></span></li>
+          <% @most_active_clients.each do |slug, name, lobbyists_used| %>
+            <li><a href="/clients/<%= slug %>"><%= name %></a><span class="index"></span><span class="count"><%= lobbyists_used %></span></li>
           <% end %>
         </ul>
       </div>
@@ -56,8 +56,8 @@
       <div class="section">
         <h2>Most lobbied city agencies <a href="/agencies">All agencies &raquo;</a></h2>
         <ul class="chartlist" id="home-agencies">
-          <% @most_lobbied_agencies.each do |agency, count| %>
-            <li><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a><span class="index"></span><span class="count"><%= count %></span></li>
+          <% @most_lobbied_agencies.each do |slug, name, count| %>
+            <li><a href="/agencies/<%= slug %>"><%= name %></a><span class="index"></span><span class="count"><%= count %></span></li>
           <% end %>
         </ul>
       </div>

@@ -69,14 +69,14 @@ module ChicagoLobbyists
       @current_menu = "home"
       @highest_paid_lobbyists = Compensation.group_lobbyist_compensations
       @highest_paid_firms     = Compensation.group_firm_compensations
-      @most_lobbied_agencies  = Agency.most_lobbied
-      @most_active_clients    = Client.all_by_most_active.first(5)
+      @most_lobbied_agencies  = Agency.list_by_actions
+      @most_active_clients    = Client.all_by_most_active
       erb :landing
     end
     
     get "/lobbyists" do
       @current_menu = "lobbyists"
-      @lobbyists = Lobbyist.all
+      @lobbyists = Lobbyist.list_by_compensation :limit => 1000
       erb :lobbyists
     end
 
@@ -121,7 +121,7 @@ module ChicagoLobbyists
     
     get "/clients" do
       @current_menu = "clients"
-      @clients = Client.all_by_most_active
+      @clients = Client.all_by_most_active :limit => 1000
       erb :clients
     end
     
@@ -132,7 +132,7 @@ module ChicagoLobbyists
     
     get "/agencies" do
       @current_menu = "agencies"
-      @agencies = Agency.list_by_actions
+      @agencies = Agency.list_by_actions :limit => 1000
       erb :agencies
     end
     
