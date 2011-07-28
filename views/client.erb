@@ -12,13 +12,11 @@
     </div>
     
     <div id="bio-primary">
-      <div class="c2l">
-        
         <div class="section">
-          <h2>Lobbying firms and which lobbyists were engaged</h2>
+          <h2>Firms and lobbyists</h2>
           <dl>
             <% @client.firms.each do |firm| %>
-              <dt><h3><a href="/firms/<%= firm.slug %>"><%= firm.name %></a></h3></dt>
+              <dt><a href="/firms/<%= firm.slug %>"><%= firm.name %></a></dt>
               <% firm.lobbyists.each do |lobbyist| %>
               <dd><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></dd>
               <% end %>
@@ -26,12 +24,8 @@
           </dl>
         </div><!-- /.section -->
         
-      </div><!-- /.c2l -->
-      
-      <div class="c2r">
-        
         <div class="section">
-          <h2>Payments received from city departments</h2>
+          <h2>Payments from city</h2>
           <table>
             <thead>
               <tr>
@@ -57,9 +51,6 @@
             </tbody>
           </table>
         </div><!-- /.section -->
-        
-      </div><!-- /.cr2 -->
-      
     </div>
     <div id="bio-secondary">
       <p class="mute">From current data we cannot learn <strong>how much clients paid to hire which lobbyists for what purposes.</strong> We expect that the city will add data to make this possible.</p>

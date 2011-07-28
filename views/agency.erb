@@ -12,14 +12,12 @@
     </div>
     
     <div id="bio-primary">
-      <div class="c2l">
-        
         <div class="section spotlight">
           <h2>Actions involving lobbyists</h2>
           <p>
-            <strong><%= @agency.actions.select(&:administrative).count %> Administrative</strong>
+            <strong><%= @agency.actions.select(&:administrative).count %></strong> Administrative
             <br />
-            <strong><%= @agency.actions.select(&:legislative).count %> Legislative</strong>
+            <strong><%= @agency.actions.select(&:legislative).count %></strong> Legislative
           </p>
         </div><!-- /.section -->
         
@@ -44,10 +42,6 @@
             </tbody>
           </table>
         </div><!-- /.section -->
-        
-      </div>
-      
-      <div class="c2r">
         
         <div class="section">
           <h2>Types of actions sought</h2>
@@ -76,12 +70,7 @@
 
           <p class="mute">Current data does not allow us to learn <strong>how much each client paid to each lobbying firm or lobbyist.</strong> We expect that the city will add data to make this possible.</p>
         </div><!-- /.section -->
-      </div>
-      
-      <div class="c2r">
 
-
-      </div>
     </div>
     <div id="bio-secondary">
       <div class="map-overlay">

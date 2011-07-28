@@ -21,7 +21,7 @@ a { color: #027bb6; text-decoration: none; }
 a:hover { text-decoration: underline; }
 body { font-size: 14px; line-height: 1.4; }
 blockquote, dl, ol, p, pre, table, ul { margin-bottom: 1.4em; }
-dt { margin-top: 1.4em; }
+dt { font-size: 15px; font-weight: bold; margin-top: 1em; }
 dt:first-child { margin-top: 0; }
 em { font-style: italic; }
 h1 { font-size: 27px; line-height: 1.14; margin-bottom: 1em; }
@@ -33,6 +33,7 @@ hr { background: #ddd; border: 0; clear: both; color: #ddd; height: 1px; margin:
 ol { list-style: decimal; margin-left: 2em; }
 li { margin-bottom: 0.5em; }
 table { border-collapse: collapse; width: 100%; }
+table li, table ul { margin: 0; }
 td { border: 1px solid #ddd; border-width: 1px 0; padding: 0.3em 0.5em 0.3em 0; vertical-align: top; }
 th { font-size: 12px; font-weight: bold; padding: 0.3em 0.5em 0.3em 0; }
 ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
