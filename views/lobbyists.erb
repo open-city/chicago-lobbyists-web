@@ -10,10 +10,9 @@
       $("#listing").dataTable({
         "aoColumns": [
           null,
-          null,
           { "sSortDataType": "dom-text", "sType": "currency" }
         ],
-        "aaSorting": [[2, "desc"], [0, "asc"]],
+        "aaSorting": [[1, "desc"], [0, "asc"]],
         "bFilter": false,
         "bInfo": false,
         "bPaginate": false
@@ -30,7 +29,6 @@
     <thead>
       <tr>
         <th><span>Lobbyist</span></th>
-        <th><span>Firm</span></th>
         <th><span>Amount billed in 2010</span></th>
       </tr>
     </thead>
@@ -38,7 +36,6 @@
       <% @lobbyists.each do |id, slug, full_name, billed| %>
       <tr>
         <td><h3><a href="/lobbyists/<%= slug %>"><%= full_name %></a></h3></td>
-        <td><a href="/firms">Adding soon...</a></td>
         <td class="bar"><span style="width:100%;"><strong><%= number_to_currency billed %></strong></span></td>
       </tr>
     <% end %>
