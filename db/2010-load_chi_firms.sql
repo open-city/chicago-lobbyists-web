@@ -12,5 +12,5 @@ CREATE TABLE public.chi_firms  (
 
 -- LOAD CHICAGO LOBBYIST FIRMS
 INSERT INTO public.chi_firms (slug, name)
-SELECT DISTINCT lower(replace(replace(replace(replace(employer_name, ',', ''), '.', ''), ' ', '-'), '&', 'and')), employer_name
+SELECT DISTINCT lower(replace(replace(replace(replace(replace(employer_name, ',', ''), '.', ''), ' ', '-'), '/', ''), '&', 'and')), employer_name
 FROM public.lobbyists;
