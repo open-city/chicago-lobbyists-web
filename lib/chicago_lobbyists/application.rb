@@ -7,49 +7,7 @@ module ChicagoLobbyists
       DataMapper.finalize
     end
     
-    helpers do
-      def lobbyists_count
-        Lobbyist.count
-      end
-
-      def firms_count
-        Firm.count
-      end
-
-      def actions_count
-        Action.count
-      end
-
-      def clients_count
-        Client.count
-      end
-
-      def cl_erb(template)
-        erb template.to_sym
-      end
-      
-      def current_menu
-        @current_menu
-      end
-      
-      def current_menu_class(menu_name)
-        return "current" if current_menu == menu_name
-      end
-      
-      def total_paid
-        Compensation.sum(:compensation)
-      end
-      
-      def number_to_currency(number)
-        decimal_part = number.to_f % 1
-        decimal_part_string = ("%.2f" % decimal_part)[1..-1]
-        
-        integer_part = number.to_i
-        integer_part_string = integer_part.to_s.reverse.gsub(/(\d{3}(?=(\d)))/, "\\1,").reverse
-        
-        "$#{integer_part_string}#{decimal_part_string}"
-      end
-    end
+    helpers ChicagoLobbyists::Helpers
 
     def pagination_options_from params={}
       { :limit => :size, :offset => :page }.inject({}) do |memo, hash|
@@ -75,6 +33,7 @@ module ChicagoLobbyists
     end
     
     get "/lobbyists" do
+      @page_title = "Lobbyists"
       @current_menu = "lobbyists"
       @lobbyists = Lobbyist.list_by_compensation :limit => 1000
       erb :lobbyists
@@ -90,6 +49,7 @@ module ChicagoLobbyists
     get "/lobbyists/:id" do
       @total_paid = "%.2f" % Compensation.sum(:compensation)
       @lobbyist = Lobbyist.first :slug => params[:id]
+      @page_title = "#{@lobbyist.first_name} #{@lobbyist.last_name} - Lobbyist"
       @actions = @lobbyist.actions.group_by { |action|
         action.purpose
       }.sort_by { |purpose| purpose }
@@ -101,6 +61,7 @@ module ChicagoLobbyists
     end
     
     get "/firms" do
+      @page_title = "Firms"
       @current_menu = "firms"
       @firms = Firm.list_by_compensation
 
@@ -109,6 +70,7 @@ module ChicagoLobbyists
     
     get "/firms/:id" do
       @firm = Firm.first :slug => params[:id]
+      @page_title = "#{@firm.name} - Lobbying Firm"
       @actions = @firm.actions.group_by { |action|
         action.purpose
       }.sort_by { |purpose| purpose }
@@ -120,6 +82,7 @@ module ChicagoLobbyists
     end
     
     get "/clients" do
+      @page_title = "Clients"
       @current_menu = "clients"
       @clients = Client.all_by_most_active :limit => 1000
       erb :clients
@@ -127,10 +90,12 @@ module ChicagoLobbyists
     
     get "/clients/:id" do
       @client = Client.first :slug => params[:id]
+      @page_title = "#{@client.name} - Client"
       erb :client
     end
     
     get "/agencies" do
+      @page_title = "City Agencies"
       @current_menu = "agencies"
       @agencies = Agency.list_by_actions :limit => 1000
       erb :agencies
@@ -138,6 +103,7 @@ module ChicagoLobbyists
     
     get "/agencies/:id" do
       @agency = Agency.first :slug => params[:id]
+      @page_title = "#{@agency.name} (#{@agency.code}) - City Agency"
       @lobbyist_actions = @agency.actions.group_by { |action|
         action.lobbyist }.sort_by { |lobbyist, actions|
           lobbyist.full_name }
