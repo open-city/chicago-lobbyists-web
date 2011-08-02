@@ -31,7 +31,7 @@ class Compensation
 
   def self.group_firm_compensations default_options={:limit => 5}
     sql = <<-SQL
-      SELECT r.firm_id, f.name, f.slug, SUM(DISTINCT c.compensation)
+      SELECT r.firm_id, f.name, f.slug, SUM(c.compensation)
       FROM chi_lobbyist_firm_relationships r
         RIGHT OUTER JOIN chi_lobbyist_compensations c
         ON r.lobbyist_id = c.lobbyist_id

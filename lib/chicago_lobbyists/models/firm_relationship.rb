@@ -6,10 +6,8 @@ class FirmRelationship
   property :id,          Serial,  :required => true
   property :lobbyist_id, Integer, :required => true
   property :firm_id,     Integer, :required => true
-  property :client_id,   Integer, :required => true
   
   belongs_to :lobbyist
   belongs_to :firm
-  belongs_to :client
 
 end

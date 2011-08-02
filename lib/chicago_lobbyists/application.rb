@@ -26,7 +26,7 @@ module ChicagoLobbyists
     get "/" do
       @current_menu = "home"
       @highest_paid_lobbyists = Compensation.group_lobbyist_compensations
-      @highest_paid_firms     = Compensation.group_firm_compensations
+      @highest_paid_firms     = Firm.all_by_most_compensated(5)
       @most_lobbied_agencies  = Agency.list_by_actions
       @most_active_clients    = Client.all_by_most_active
       erb :landing
@@ -63,7 +63,7 @@ module ChicagoLobbyists
     get "/firms" do
       @page_title = "Firms"
       @current_menu = "firms"
-      @firms = Firm.list_by_compensation
+      @firms = Firm.all_by_most_compensated
 
       erb :firms
     end

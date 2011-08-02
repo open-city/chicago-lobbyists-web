@@ -9,29 +9,28 @@ class Firm
 
   has n, :firm_relationships
   has n, :lobbyists,     :through => :firm_relationships, :order => :full_name
-  has n, :clients,       :through => :firm_relationships, :order => :name
+  has n, :client_relationships
+  has n, :clients,       :through => :client_relationships, :order => :name
   has n, :compensations, :through => :lobbyists
   has n, :actions,       :through => :lobbyists
 
-  def self.list_by_compensation default_options={}
-    options = { :limit => 20, :offset => 1 }.merge(default_options)
-
-    sql = <<-SQL
-      SELECT f.slug, f.name, coalesce(SUM(distinct c.compensation), SUM(distinct c.compensation), 0.00) as billed
-      FROM chi_firms f
-        INNER JOIN chi_lobbyist_firm_relationships r
-        ON f.id = r.firm_id
-        
-        INNER JOIN chi_lobbyist_compensations c
-        ON r.lobbyist_id = c.lobbyist_id
-      GROUP BY f.slug, f.name
-      ORDER BY coalesce(SUM(distinct c.compensation), SUM(distinct c.compensation), 0.00) asc
---      LIMIT #{options[:limit]} OFFSET #{options[:offset]}
-    SQL
-
-    repository(:default).adapter.select(sql.strip).map { |struct|
-      [struct.slug, struct.name, struct.billed]
-    }.sort { |a,b| a.last <=> b.last }
+  def self.all_by_most_compensated(limit = nil)
+    sql = <<-EOSQL
+      SELECT firm.slug, firm.name, SUM(c.compensation) FROM chi_firms firm
+        INNER JOIN chi_lobbyist_firm_relationships fr ON fr.firm_id = firm.id
+        INNER JOIN chi_lobbyists lobbyist ON lobbyist.id = fr.lobbyist_id
+        INNER JOIN chi_lobbyist_compensations c ON c.lobbyist_id = lobbyist.id
+      GROUP BY firm.slug, firm.name
+      ORDER BY SUM(c.compensation) DESC
+    EOSQL
+    
+    select_args = if limit
+      [(sql + " LIMIT ?").strip, limit]
+    else
+      [sql.strip]
+    end
+    
+    repository(:default).adapter.select(*select_args)
   end
 
   def total_compensation

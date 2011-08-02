@@ -34,8 +34,8 @@
     <tbody>
       <% @firms.each do |firm| %>
       <tr>
-        <td><h3><a href="/firms/<%= firm[0] %>"><%= firm[1] %></a></h3></td>
-        <td class="bar"><span style="width:100%;"><strong><%= number_to_currency firm[2] %></strong></span></td>
+        <td><h3><a href="/firms/<%= firm.slug %>"><%= firm.name %></a></h3></td>
+        <td class="bar"><span style="width:100%;"><strong><%= number_to_currency(firm.sum) %></strong></span></td>
       </tr>
       <% end %>
     </tbody>

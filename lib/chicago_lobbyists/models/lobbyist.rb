@@ -11,7 +11,8 @@ class Lobbyist
 
   has n, :firm_relationships
   has n, :firms,   :through => :firm_relationships, :order => :name
-  has n, :clients, :through => :firm_relationships, :order => :name
+  has n, :client_relationships
+  has n, :clients, :through => :client_relationships, :order => :name
   has n, :compensations
   has n, :actions, :order => :purpose
 
