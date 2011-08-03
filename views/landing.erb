@@ -66,14 +66,44 @@
   </div>
   
   <hr />
-  
+  <div class='c3r'>
+  	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 3,
+  interval: 6000,
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#B8E4F5',
+      color: '#027ab6'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000000',
+      links: '#027BB6'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'all'
+  }
+}).render().setUser('chilobbyists').start();
+</script>
+  </div>
   <h2>About this project</h2>
-  <div class="c2l about">
     <p>ChicagoLobbyists.org is intended to improve the transparency of interactions between City of Chicago agencies and lobbyists and their clients. All data comes from the City of Chicago and can be found at <a href="http://data.cityofchicago.org">data.cityofchicago.org</a>. We expect to make this application available for use with any city, county, or state.</p>
     <p>This is a project by <a href='http://twitter.com/chadwpry'>Chad Pry</a>, <a href='http://twitter.com/derek_eder'>Derek Eder</a>, <a href='http://twitter.com/paulbaker'>Paul Baker</a> and <a href='http://twitter.com/ryanbriones'>Ryan Briones</a>. It started on July 16th, 2011 at the Google Hackathon with some amazing help from <a href='http://twitter.com/patelc75'>Chirag Patel</a>, <a href='http://twitter.com/unruthless'>Ruthie BenDor</a> and <a href='http://twitter.com/rougeux'>Nick Rougeux</a>. Paul noticed the lobbyist data, conceived the project, and got the team together. Chad and Ryan did the bulk of the backend development with help from Derek and Chirag. Derek and Ruthie did the frontend development. Nick and Paul worked on the user interface prototypes.</p>
     <p>The datasets that are currently available do not allow us to present how much each client paid to each lobbyist or lobbying firm, nor which clients requested what actions in front of which agencies. We expect that the City will add data to make this possible.</p>
     <p>If you have any comments, questions or feature suggestions, you can contact us at <a href='mailto:chi.lobbyists@gmail.com'>chi.lobbyists@gmail.com</a>.</p>
-  </div>
   
   <%= cl_erb "common/footer" %>
 </div>

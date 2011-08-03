@@ -148,9 +148,6 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 /* Content
 =====================================================================*/
 
-/* About */
-.about { text-align: justify; width:100%; }
-
 /* Bio */
 #bio-header p { margin: 0; }
 #bio-header img { margin-left: 15px; vertical-align: middle; }
