@@ -50,6 +50,7 @@ module ChicagoLobbyists
       @total_paid = "%.2f" % Compensation.sum(:compensation)
       @lobbyist = Lobbyist.first :slug => params[:id]
       @page_title = "#{@lobbyist.first_name} #{@lobbyist.last_name} - Lobbyist"
+      @current_menu = "lobbyists"
       @actions = @lobbyist.actions.group_by { |action|
         action.purpose
       }.sort_by { |purpose| purpose }
@@ -71,6 +72,7 @@ module ChicagoLobbyists
     get "/firms/:id" do
       @firm = Firm.first :slug => params[:id]
       @page_title = "#{@firm.name} - Lobbying Firm"
+      @current_menu = "firms"
       @actions = @firm.actions.group_by { |action|
         action.purpose
       }.sort_by { |purpose| purpose }
@@ -91,6 +93,7 @@ module ChicagoLobbyists
     get "/clients/:id" do
       @client = Client.first :slug => params[:id]
       @page_title = "#{@client.name} - Client"
+      @current_menu = "clients"
       erb :client
     end
     
@@ -104,6 +107,7 @@ module ChicagoLobbyists
     get "/agencies/:id" do
       @agency = Agency.first :slug => params[:id]
       @page_title = "#{@agency.name} (#{@agency.code}) - City Agency"
+      @current_menu = "agencies"
       @lobbyist_actions = @agency.actions.group_by { |action|
         action.lobbyist }.sort_by { |lobbyist, actions|
           lobbyist.full_name }
