@@ -13,5 +13,9 @@ class Address
   def full_address
     "#{street} #{city}, #{state} #{zip} #{country}"
   end
+  
+  def full_address_formatted
+    "#{street}<br /> #{city}, #{state} #{zip}<br />#{country}"
+  end
 
 end

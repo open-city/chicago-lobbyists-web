@@ -84,9 +84,10 @@
       </div>
       <img alt="" src="../images/map.jpg" />
 
-      <p><strong>(N) miles</strong> from Chicago City Hall</p>
-      <p>Address not available</p>
-      <p class="mute">Current data does not allow us to learn address information for firms. We expect that the city will add data to make this possible.</p>
+      <p><strong>Address(es) on file:</strong></p>
+      <% @firm.addresses.each do |address| %>
+      <p><%= address.full_address_formatted %></p>
+      <% end %>
     </div>
   </div>
   
