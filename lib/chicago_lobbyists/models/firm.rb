@@ -13,6 +13,8 @@ class Firm
   has n, :clients,       :through => :client_relationships, :order => :name
   has n, :compensations, :through => :lobbyists
   has n, :actions,       :through => :lobbyists
+  has n, :firm_addresses
+  has n, :addresses,     :through => :firm_addresses
 
   def self.all_by_most_compensated(limit = nil)
     sql = <<-EOSQL
