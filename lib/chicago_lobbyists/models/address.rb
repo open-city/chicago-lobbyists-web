@@ -10,6 +10,9 @@ class Address
   property :zip,            String,  :required => true
   property :country,        String,  :required => true
 
+  has n, :firm_addresses
+  has n, :firms,     :through => :firm_addresses
+
   def full_address
     "#{street} #{city}, #{state} #{zip} #{country}"
   end

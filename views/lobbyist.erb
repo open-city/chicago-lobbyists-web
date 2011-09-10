@@ -66,12 +66,18 @@
         </div>
     </div>
     <div id="bio-secondary">
-      <div class="map">
-        <div class="map-overlay">
-          <div class="text">Coming Soon!</div>
-        </div>
-        <img alt="" src="/images/map.jpg" />
-      </div>
+      <div id="map_canvas" style="border:1px solid #000; width: 222px; height: 222px;"></div>
+
+      <script type="text/javascript">
+        $(function(){
+          defineMap(new google.maps.LatLng(41.37680856570233,-84.287109375));
+
+          <% @lobbyist.firms.map(&:addresses).first.each do |address| %>
+          if (map != null)
+            geocode("<%= address.full_address.gsub(/\/n/, ' ').gsub(/ /, '+') %>");
+         <% end %>
+        });
+      </script>
 
       <h2>Lobbying firm</h2>
       <% @lobbyist.firms.each do |firm| %>

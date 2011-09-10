@@ -9,12 +9,6 @@ module ChicagoLobbyists
     
     helpers ChicagoLobbyists::Helpers
 
-    def pagination_options_from params={}
-      { :limit => :size, :offset => :page }.inject({}) do |memo, hash|
-        memo[hash.first] = params[hash.last] || send(hash.last)
-      end
-    end
-
     def size
       20
     end
@@ -41,7 +35,7 @@ module ChicagoLobbyists
 
     get "/lobbyists/paginate/:page/:size" do
       @current_menu = "lobbyists"
-      @lobbyists = Lobbyist.list_by_compensation :limit => (params[:size] || size), :offset => (params[:page] || page) #pagination_options_from(params)
+      @lobbyists = Lobbyist.list_by_compensation :limit => (params[:size] || size), :offset => (params[:page] || page)
 
       erb :lobbyists
     end
