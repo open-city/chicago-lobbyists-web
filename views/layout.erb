@@ -39,9 +39,20 @@
         zoom: 13,
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeControl: false
+        mapTypeControl: false,
+        scrollwheel: false,
+        
       };
       map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+      
+      var city_hall_latLang = new google.maps.LatLng(41.883205,-87.630204);
+      var city_hall_MarkerImage = 'http://chicagolobbyists.org/images/city-hall.png';
+      var city_hall = new google.maps.Marker({
+          map: map,
+          position: city_hall_latLang,
+          icon: city_hall_MarkerImage,
+          title: 'City Hall'
+        });
     }
 
     function geocode(address) {
