@@ -78,7 +78,7 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Ammann', 'Nicholas', 'Nicholas Ammann', '1 Infinite Loop, MS 3-CF', 'Cupertino', 'CA', '95014', 'United States', 'Apple Inc.', 'Apple, Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Anderson', 'Jane', 'Jane Anderson', '111 W. Washington, Ste. 1100', 'Chicago', 'IL', '60602', 'United States', 'Anderson & Moore, P.C.', 'Yellow Services, Inc', '2010');
+  VALUES('Anderson', 'Jane', 'Jane Anderson', '111 W. Washington St., Suite 1100', 'Chicago', 'IL', '60602', 'United States', 'Anderson & Moore, P.C.', 'Yellow Services, Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Angus', 'Jessica', 'Jessica Angus', '820 W. Jackson Blvd', 'Chicago', 'IL', '60607', 'United States', 'SEIU Health Care IL/IN', 'SEIU Health Care IL/IN', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -86,19 +86,19 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Arnone', 'Kym', 'Kym Arnone', '745 Seventh Ave.', 'New York', 'NY', '10019', 'United States', 'Barclays Capital, Inc.', 'Barclays Capital Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ETA Creative Arts Foundation', '2010');
+  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ETA Creative Arts Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'GCYC, LLC', '2010');
+  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'GCYC, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'RCHD, LLC', '2010');
+  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'RCHD, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Steans Family Foundation', '2010');
+  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Steans Family Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Comer Science & Education Foundation', '2010');
+  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Comer Science & Education Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'GCCP, LLC', '2010');
+  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'GCCP, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Sonia Shankman School Corp.', '2010');
+  VALUES('Asaro', 'Lenny', 'Lenny Asaro', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Sonia Shankman School Corp.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Attermann', 'Neal', 'Neal Attermann', '390 Greenwich St., 2nd Flr', 'New York', 'NY', '10013', 'United States', 'Citigroup Global Markets Inc.', 'Citigroup Global Markets Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -198,47 +198,47 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Benton', 'Derryl', 'Derryl Benton', '2349 Blossomwood Dr.', 'Oviedo', 'FL', '32765', 'United States', 'Airport Management Services, LLC', 'Airport Management Services, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Ansonia Properties', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Ansonia Properties');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Commonwealth Edison', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Commonwealth Edison');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Macquarie Holdings (USA), Inc', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Macquarie Holdings (USA), Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Midwest Generation EME,LLC', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Midwest Generation EME,LLC');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Skyway Concession Company LLC', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Skyway Concession Company LLC');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Solargenix Energy LLC', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Solargenix Energy LLC');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Thermal Chicago Corporation', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Thermal Chicago Corporation');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Dyson Inc', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Dyson Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'L-3 Communications Corp', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'L-3 Communications Corp');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Patrick Engineering', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Patrick Engineering');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'CN', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'CN');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Integrys Energy Group, Inc', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Integrys Energy Group, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Macquarie Real Estate, Inc', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Macquarie Real Estate, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Pentair, Inc', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Pentair, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Macquarie Capital (USA)', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Macquarie Capital (USA)');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Superdawg Drive-In, Inc', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Superdawg Drive-In, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Johnson Diversey, Inc', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Johnson Diversey, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'GOJO Industries, Inc', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'GOJO Industries, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Burns & McDonnell Engineering Co, Inc', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Burns & McDonnell Engineering Co, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Potbelly Sandwich Works', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Potbelly Sandwich Works');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Berman', 'Myles', 'Myles Berman', '321 N Clark St. #2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Baker Tilly Virchow Karuse, LLP', '2010');
+  VALUES('Berman', 'Myles', 'Myles Berman', '321 N. Clark St.', 'Ste. 2800', 'Chicago', 'IL', '60610', 'United States', 'Foley & Lardner, LLP', 'Baker Tilly Virchow Karuse, LLP');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Bernardini', 'Charles', 'Charles Bernardini', '70 W. Madison, Ste. 3500', 'Chicago', 'IL', '60602', 'United States', 'Ungaretti & Harris LLP', 'Naccarato, Vince', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -264,21 +264,21 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Borovicka', 'John', 'John Borovicka', '222 W. Adams St.', 'Chicago', 'IL', '60606', 'United States', 'William Blair and Co.', 'William Blair & Co., LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Capri Capital Partners', '2010');
+  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Capri Capital Partners', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Interstate Outdoor Advertising, LP', '2010');
+  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Interstate Outdoor Advertising, LP', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Swedish Covenant Hospital', '2010');
+  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Swedish Covenant Hospital', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Bronzeville Associates Limited Partnership', '2010');
+  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Bronzeville Associates Limited Partnership', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
+  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Children''s Home & Aid Society of IL', '2010');
+  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Children''s Home & Aid Society of IL', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'River Bend Real Estate Investments, LLC', '2010');
+  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'River Bend Real Estate Investments, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Inwindow Outdoor', '2010');
+  VALUES('Borstein', 'Scott', 'Scott Borstein', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Inwindow Outdoor', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Boumenot', 'Albert', 'Albert Boumenot', '11 S. LaSalle St., Ste 800', 'Chicago', 'IL', '60603', 'United States', 'George K Baum & Co.', 'George K. Baum & Co.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -622,15 +622,15 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Devine', 'Richard', 'Richard Devine', '2236 W. Pratt Blvd', 'Chicago', 'IL', '60644', 'United States', 'Meckler Bulger Tilson Marick & Pearson LLP', 'Chicago Aviation Partners', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Diamond', 'Terrance', 'Terrance Diamond', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
+  VALUES('Diamond', 'Terrance', 'Terrance Diamond', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Diamond', 'Terrance', 'Terrance Diamond', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
+  VALUES('Diamond', 'Terrance', 'Terrance Diamond', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Diamond', 'Terrance', 'Terrance Diamond', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Comer Science & Education Foundation', '2010');
+  VALUES('Diamond', 'Terrance', 'Terrance Diamond', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Comer Science & Education Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Diamond', 'Terrance', 'Terrance Diamond', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Near North Montessori', '2010');
+  VALUES('Diamond', 'Terrance', 'Terrance Diamond', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Near North Montessori', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Diamond', 'Terrance', 'Terrance Diamond', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Sonia Shankman School Corp.', '2010');
+  VALUES('Diamond', 'Terrance', 'Terrance Diamond', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Sonia Shankman School Corp.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Diaz-perez', 'Luis', 'Luis Diaz-perez', '1 Financial Place  440 S. LaSalle, Ste. 3300', 'Chicago', 'IL', '60605', 'United States', 'ComEd', 'ComEd', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -900,7 +900,7 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Fratto', 'Anthony', 'Anthony Fratto', '11 S. LaSalle St., Ste 800', 'Chicago', 'IL', '60603', 'United States', 'George K Baum & Co.', 'George K. Baum & Co.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Fredd', 'Anne', 'Anne Fredd', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
+  VALUES('Fredd', 'Anne', 'Anne Fredd', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Freeburg', 'Charles', 'Charles Freeburg', '222 W. Adams St.', 'Chicago', 'IL', '60606', 'United States', 'William Blair and Co.', 'William Blair', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -952,97 +952,97 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Gainer', 'William', 'William Gainer', '10250 S. Bell', 'Chicago', 'IL', '60643', 'United States', 'William Gainer', 'Shoreline Sightseeing', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'CC Industries', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'CC Industries', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Mid-Continental Bldg Corp', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Mid-Continental Bldg Corp', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Feitler, Richard & Margery', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Feitler, Richard & Margery', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '210-218 West Lake LLC', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '210-218 West Lake LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Jupiter Realty Corporation', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Jupiter Realty Corporation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Digital Lakeside Holdings LLC', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Digital Lakeside Holdings LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Columbia College', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Columbia College', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Charter School Foundation', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Charter School Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Tokyo Inn Company', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Tokyo Inn Company', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Poetry Foundation', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Poetry Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'McDonald''s Corporation', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'McDonald''s Corporation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '1401 N. Astor LLC', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '1401 N. Astor LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'YMCA of the USA', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'YMCA of the USA', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '848 W. Randolph, LLC', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '848 W. Randolph, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Alpha Baking Company, Inc', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Alpha Baking Company, Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Compass Group USA, Inc', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Compass Group USA, Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Hancock House LLC', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Hancock House LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Javors, Jay and Jill', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Javors, Jay and Jill', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'North Park University', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'North Park University', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chik-Fil-A, Inc', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chik-Fil-A, Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Kotler, Bradley and Jennifer', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Kotler, Bradley and Jennifer', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Belgravia Group, Ltd.', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Belgravia Group, Ltd.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Richards, Edward & Kowalski-Richards, Bernice', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Richards, Edward & Kowalski-Richards, Bernice', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Swedish Covenant Hospital', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Swedish Covenant Hospital', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Englewood Cooperative', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Englewood Cooperative', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Westport Associates LP', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Westport Associates LP', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'M Development', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'M Development', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Northside Imports, Inc', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Northside Imports, Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'AIA Chicago Foundation', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'AIA Chicago Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Kizziah, Keith and Barbara', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Kizziah, Keith and Barbara', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '667 W. Diversey LLC', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '667 W. Diversey LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Nuelle, David and Kristen', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Nuelle, David and Kristen', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Pontee, Patrick and Sei', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Pontee, Patrick and Sei', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Pontiac Produce Cafe Inc dba Big Star', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Pontiac Produce Cafe Inc dba Big Star', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Peninsula Hotel', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Peninsula Hotel', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Joseph Gattuso', 'Smart Love Parenting Center', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Joseph Gattuso', 'Smart Love Parenting Center', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Nuelle, David and Kristen', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Nuelle, David and Kristen', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'O''Connor, Michael', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'O''Connor, Michael', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Peninsula Hotel', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Peninsula Hotel', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Pontee, Patrick and Sei', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Pontee, Patrick and Sei', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Tokyo Inn Company', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Tokyo Inn Company', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '1235 N. Marion Ct., LLC', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '1235 N. Marion Ct., LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Terroir Restaurant d/b/a/ Avec', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Terroir Restaurant d/b/a/ Avec', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Keneally, Timothy & Mary Ann', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Keneally, Timothy & Mary Ann', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'JPMorgan Chase Bank, NA', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'JPMorgan Chase Bank, NA', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'JMB Financial Advisors, LLC', '2010');
+  VALUES('Gattuso', 'Joseph', 'Joseph Gattuso', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'JMB Financial Advisors, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Gebo', 'Kate', 'Kate Gebo', '77 W. Wacker Dr.', 'Chicago', 'IL', '60601', 'United States', 'United Airlines', 'United Airlines', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -1348,31 +1348,31 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Gust', 'John', 'John Gust', '55 W. Monroe, Ste. 3500', 'Chicago', 'IL', '60603', 'United States', 'Jefferies & Company Inc', 'Jefferies & Company Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'JFJ Development', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'JFJ Development', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Museum of Contemporary Art', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Museum of Contemporary Art', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'U.S. Equities Realty LLC', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'U.S. Equities Realty LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'ProLogis', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'ProLogis', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Loop Parking', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Loop Parking', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Jupiter Realty Corporation', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Jupiter Realty Corporation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Strategic Hotel Capital, Inc.', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Strategic Hotel Capital, Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Park District', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Park District', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Parking Meters LLC', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Parking Meters LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Harper Court Partners LLC', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Harper Court Partners LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Swedish Covenant Hospital', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Swedish Covenant Hospital', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'AIA Chicago Foundation', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'AIA Chicago Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Security Properties Inc', '2010');
+  VALUES('Guthman', 'Jack', 'Jack Guthman', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Security Properties Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Haines', 'Cabray', 'Cabray Haines', '222 W. Adams, Ste. 520', 'Chicago', 'IL', '60606', 'United States', 'Siebert Brandford Shank & Co, LLC', 'Siebert Brandford Shank & Co, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -1496,19 +1496,19 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Iberl', 'John', 'John Iberl', '1856 W. Pershing Rd', 'Chicago', 'IL', '60609', 'United States', 'Iberl Management Corp', 'Community Currency Exchange Assoc. of IL, Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Spertus Institute of Jewish Studies', '2010');
+  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Spertus Institute of Jewish Studies', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Columbia College', '2010');
+  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Columbia College', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Music and Dance Theater Chicago', '2010');
+  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Music and Dance Theater Chicago', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '848 W. Randolph, LLC', '2010');
+  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', '848 W. Randolph, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Loop Parking', '2010');
+  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Loop Parking', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Parking Meters LLC', '2010');
+  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Chicago Parking Meters LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'U.S. Equities Realty LLC', '2010');
+  VALUES('Ingram', 'Richard', 'Richard Ingram', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'U.S. Equities Realty LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Jackson', 'Darrell', 'Darrell Jackson', '50 S. LaSalle St., B-2', 'Chicago', 'IL', '60603', 'United States', 'Northern Trust Corporation', 'Northern Trust Corporation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -1580,19 +1580,19 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Karadsheh', 'Noreen', 'Noreen Karadsheh', '5221 N. Broadway', 'Chicago', 'IL', '60640', 'United States', 'RCI WRS dba NovaCare Rehabilitation', 'RCI WRS dba NovaCare Rehabilitation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Advocate Health Care Network', '2010');
+  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Advocate Health Care Network');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Securities Industry and Financial Markets Assoc., Inc.', '2010');
+  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Securities Industry and Financial Markets Assoc., Inc.');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'SEC Group, Inc', '2010');
+  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'SEC Group, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Wight & Co.', '2010');
+  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Wight & Co.');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Apple, Inc', '2010');
+  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Apple, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'City Scope Productions', '2010');
+  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'City Scope Productions');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'UPS', '2010');
+  VALUES('Kasper', 'Michael', 'Michael Kasper', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'UPS');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Kastrup', 'Genie', 'Genie Kastrup', '111 E. Wacker Dr., Ste. 2500', 'Chicago', 'IL', '60601', 'United States', 'SEIU Illinois Council', 'SEIU Illinois Council', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -1782,15 +1782,15 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('La Schiazza', 'Paul', 'Paul La Schiazza', '225 W. Randolph St., Ste 27a', 'Chicago', 'IL', '60606', 'United States', 'AT&T Illinois', 'AT&T Illinois', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Lacy', 'Leah', 'Leah Lacy', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
+  VALUES('Lacy', 'Leah', 'Leah Lacy', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Lacy', 'Leah', 'Leah Lacy', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Metropolitan Pier and Exposition Authority', '2010');
+  VALUES('Lacy', 'Leah', 'Leah Lacy', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Metropolitan Pier and Exposition Authority', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Lacy', 'Leah', 'Leah Lacy', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
+  VALUES('Lacy', 'Leah', 'Leah Lacy', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Lacy', 'Leah', 'Leah Lacy', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'St. Bernard Hospital', '2010');
+  VALUES('Lacy', 'Leah', 'Leah Lacy', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'St. Bernard Hospital', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Lacy', 'Leah', 'Leah Lacy', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Aviation Port Services, LLC', '2010');
+  VALUES('Lacy', 'Leah', 'Leah Lacy', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Aviation Port Services, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Lanctot', 'Thomas', 'Thomas Lanctot', '222 W. Adams St.', 'Chicago', 'IL', '60606', 'United States', 'William Blair and Co.', 'William Blair', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -1860,9 +1860,9 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Lynch', 'Daniel', 'Daniel Lynch', '77 W. Wacker Dr.', 'Chicago', 'IL', '60601', 'United States', 'United Airlines', 'Continental Airl Lines, Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Lynch', 'Francine', 'Francine Lynch', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
+  VALUES('Lynch', 'Francine', 'Francine Lynch', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Lynch', 'Francine', 'Francine Lynch', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Ancona Montessori School', '2010');
+  VALUES('Lynch', 'Francine', 'Francine Lynch', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Ancona Montessori School', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Mack', 'William', 'William Mack', '440 S. LaSalle St.', 'Chicago', 'IL', '60606', 'United States', 'Morgan Stanley & Co., Inc.', 'Morgan Stanley', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -1902,7 +1902,7 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Mccullough', 'Kimberly', 'Kimberly Mccullough', '225 W. randolph St. Suite 27B', 'Chicago', 'IL', '60606', 'United States', 'AT&T Illinois', 'AT&T Illinois', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Mcdermott', 'Ronald', 'Ronald Mcdermott', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Land and Lakes Company', '2010');
+  VALUES('Mcdermott', 'Ronald', 'Ronald Mcdermott', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Land and Lakes Company', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Mcenerney', 'Mike', 'Mike Mcenerney', '2608 S. Damen', 'Chicago', 'IL', '60608', 'United States', 'Republic Services, Inc', 'Republic Services, Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -1922,21 +1922,21 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Mckenna', 'Craig', 'Craig Mckenna', '1221 Avenue of the Americas', 'New York', 'NY', '10020', 'United States', 'Morgan Stanley & Co., Inc.', 'Morgan Stanley', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ETA Creative Arts Foundation', '2010');
+  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ETA Creative Arts Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'GCYC, LLC', '2010');
+  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'GCYC, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'RCHD, LLC', '2010');
+  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'RCHD, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Steans Family Foundation', '2010');
+  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Steans Family Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Comer Science & Education Foundation', '2010');
+  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Comer Science & Education Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'GCCP, LLC', '2010');
+  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'GCCP, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
+  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Sonia Shankman School Corp.', '2010');
+  VALUES('Mcloyd', 'Eric', 'Eric Mcloyd', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Sonia Shankman School Corp.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Mcnerney', 'Patrick', 'Patrick Mcnerney', '71 S. Wacker Dr.', 'Chicago', 'IL', '60606', 'United States', 'Mayer Brown LLP', 'Bank of America NA', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -2176,109 +2176,109 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Narefsky', 'David', 'David Narefsky', '71 S. Wacker Dr.', 'Chicago', 'IL', '60606', 'United States', 'Mayer Brown LLP', 'USX Corporation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Blue Cross / Blue Shield', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Blue Cross / Blue Shield', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ETA Creative Arts Foundation', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ETA Creative Arts Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Metropolitan Pier and Exposition Authority', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Metropolitan Pier and Exposition Authority', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'RCHD, LLC', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'RCHD, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Wal-Mart Stores, Inc.', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Wal-Mart Stores, Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Northwestern Memorial Hospital', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Northwestern Memorial Hospital', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Steans Family Foundation', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Steans Family Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Capri Capital Partners', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Capri Capital Partners', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Swedish Covenant Hospital', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Swedish Covenant Hospital', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Talbott Associates LP', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Talbott Associates LP', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Interstate Outdoor Advertising, LP', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Interstate Outdoor Advertising, LP', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Bronzeville Associates Limited Partnership', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Bronzeville Associates Limited Partnership', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'CCH Inc.', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'CCH Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'JJJ Properties Inc', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'JJJ Properties Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'MB Real Estate', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'MB Real Estate', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'New South Partners LLC', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'New South Partners LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'St. Bernard Hospital', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'St. Bernard Hospital', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'DLC Urbancore', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'DLC Urbancore', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Comer Science & Education Foundation', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Comer Science & Education Foundation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Near North Montessori', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Near North Montessori', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Sonia Shankman School Corp.', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Sonia Shankman School Corp.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Children''s Home & Aid Society of IL', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Children''s Home & Aid Society of IL', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'River Bend Real Estate Investments, LLC', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'River Bend Real Estate Investments, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', '527 S. Clinton LLC', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', '527 S. Clinton LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Near North Health Services Corp', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Near North Health Services Corp', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', '210 W. 87th St. LLC', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', '210 W. 87th St. LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Ancona Montessori School', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Ancona Montessori School', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'New Channels Realty', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'New Channels Realty', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ICE Development, LLC', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ICE Development, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', '55th & State Redevelopment LLC', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', '55th & State Redevelopment LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Hyatt Regency', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Hyatt Regency', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Trade', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Trade', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Le Fleur De Lis', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Le Fleur De Lis', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Inwindow Outdoor', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Inwindow Outdoor', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Wal-Mart Stores, Inc.', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Wal-Mart Stores, Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Wisman, James & Anna', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Wisman, James & Anna', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Footwear Factory Development Corp', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Footwear Factory Development Corp', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ULICH Children''s Advantage Network', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ULICH Children''s Advantage Network', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Aviation Port Services, LLC', '2010');
+  VALUES('Neal', 'Langdon', 'Langdon Neal', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Aviation Port Services, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Newman', 'Paul', 'Paul Newman', '1303 E. Algonquin Rd.', 'Schaumburg', 'IL', '60196', 'United States', 'Motorola, Inc', 'Motorola, Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Newtson', 'Jeremy', 'Jeremy Newtson', '190 S. LaSalle St.', 'Chicago', 'IL', '60603', 'United States', 'Barclays Capital, Inc.', 'Barclays Capital Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nicolay', 'John', 'John Nicolay', '33 N. Dearborn', 'Chicago', 'IL', '60602', 'United States', 'Nicolay & Dart LLC', 'Citigroup', '2010');
+  VALUES('Nicolay', 'John', 'John Nicolay', '33 N. Dearborn St.', 'Chicago', 'IL', '60602', 'United States', 'Nicolay & Dart LLC', 'Citigroup', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Advocate Health Care Network', '2010');
+  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Advocate Health Care Network');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Securities Industry and Financial Markets Assoc., Inc.', '2010');
+  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Securities Industry and Financial Markets Assoc., Inc.');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'SEC Group, Inc', '2010');
+  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'SEC Group, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Wight & Co.', '2010');
+  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Wight & Co.');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Apple, Inc', '2010');
+  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'Apple, Inc');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'City Scope Productions', '2010');
+  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'City Scope Productions');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'UPS', '2010');
+  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'UPS');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 NORTH LASALLE STREET/nSUITE 300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'UPS', '2010');
+  VALUES('Nottage', 'Courtney', 'Courtney Nottage', '222 N. LaSalle St.', '#300', 'Chicago', 'IL', '60601', 'United States', 'Fletcher, O''Brien, Kasper & Nottage, PC', 'UPS');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Novak', 'Theodore', 'Theodore Novak', '203 N. LaSalle St. Suite 1900', 'Chicago', 'IL', '60601', 'United States', 'DLA Piper Rudnick Gray Cary', 'Centrum Properties, Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -2308,63 +2308,63 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Novak', 'Theodore', 'Theodore Novak', '203 N. LaSalle St. Suite 1900', 'Chicago', 'IL', '60601', 'United States', 'DLA Piper Rudnick Gray Cary', 'Chicago Lakeside Development LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Tropical Optical', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Tropical Optical', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Azteca Supply Co.', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Azteca Supply Co.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Hispanic Housing Development Corporation', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Hispanic Housing Development Corporation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Lexington Group', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Lexington Group', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'United Neighborhood Organization', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'United Neighborhood Organization', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'AT & T Services', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'AT & T Services', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Harbor East, LLC', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Harbor East, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Clear Channel Airports', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Clear Channel Airports', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Village Green Companies', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Village Green Companies', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Continental Recycling - 1300 Exchange LLC', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Continental Recycling - 1300 Exchange LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Delaware North Companies', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Delaware North Companies', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Soodan & Associates, Inc', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Soodan & Associates, Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Aetna, Inc.', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Aetna, Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'GC Services', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'GC Services', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Clear Channel Outdoor', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Clear Channel Outdoor', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Cisco Systems', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Cisco Systems', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Primera Engineers, Ltd.', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Primera Engineers, Ltd.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Exelon Generation', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Exelon Generation', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Alladin Landscaping', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Alladin Landscaping', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Nuance Group (North America), Inc', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Nuance Group (North America), Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'HNTB Corp.', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'HNTB Corp.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'RAM Wrecking Inc', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'RAM Wrecking Inc', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Cash America International', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Cash America International', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Solomon Cordwell Buenz', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Solomon Cordwell Buenz', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Cloverhill Pastry - Vend Corp', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Cloverhill Pastry - Vend Corp', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Vermillion Development', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Vermillion Development', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Gold Eagle', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Gold Eagle', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Chicago Carriage Cab Company', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Chicago Carriage Cab Company', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. #1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Free Green Can, LLC', '2010');
+  VALUES('Nunes', 'Marcus', 'Marcus Nunes', '333 W. Wacker Dr. Ste 1800', 'Chicago', 'IL', '60606', 'United States', 'Chico & Nunes, PC', 'Free Green Can, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('O''connor', 'Meredith', 'Meredith O''connor', '200 E. Randolph - 47th Flr.', 'Chicago', 'IL', '60601', 'United States', 'Jones Lang LaSalle Americas, Inc', 'W2005 CMK Realty LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -2690,31 +2690,31 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Schey', 'Emily', 'Emily Schey', '311 S. Wacker Dr., Ste. 3000', 'Chicago', 'IL', '60606', 'United States', 'Freeborn & Peters LLP', 'Prism Development Company', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Environs Development', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Environs Development', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', '4600 Schubert LLC', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', '4600 Schubert LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', '9023 Beverly LLC', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', '9023 Beverly LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Clark - Devon Hardware', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Clark - Devon Hardware', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Sidel, Barry', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Sidel, Barry', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Signal Ensemble Theater', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Signal Ensemble Theater', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Strauss, Robert', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Strauss, Robert', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Asat, Inc.', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Asat, Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Hansen, Lauren & Eric', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Hansen, Lauren & Eric', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Presidential Bank', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Presidential Bank', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Schneider Electric', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'Schneider Electric', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'St. Lukes LDHA', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', 'St. Lukes LDHA', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 East Monroe Street, 37th Floor', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', '2954 N Racine LLP', '2010');
+  VALUES('Schramm', 'Jessica', 'Jessica Schramm', '55 E. Monroe St. 37th Flr', 'Chicago', 'IL', '60603', 'United States', 'Thompson Coburn LLP', '2954 N Racine LLP', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Sciaccotta', 'John', 'John Sciaccotta', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Shefsky & Froelich Ltd.', 'Toyoka Inn Co.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -2784,17 +2784,17 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Shank', 'Suzanne', 'Suzanne Shank', '222 W. Adams, Ste. 520', 'Chicago', 'IL', '60606', 'United States', 'Siebert Brandford Shank & Co, LLC', 'Siebert Brandford Shank & Co, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Metropolitan Pier and Exposition Authority', '2010');
+  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Metropolitan Pier and Exposition Authority', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
+  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
+  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'DLC Urbancore', '2010');
+  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'DLC Urbancore', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'River Bend Real Estate Investments, LLC', '2010');
+  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'River Bend Real Estate Investments, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Aviation Port Services, LLC', '2010');
+  VALUES('Shaqildi', 'Amal', 'Amal Shaqildi', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Aviation Port Services, LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Shea', 'Courtney', 'Courtney Shea', '221 N. LaSalle St., #1500', 'Chicago', 'IL', '60601', 'United States', 'Acacia Financial Group Inc', 'Acacia Financial', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
@@ -2846,51 +2846,51 @@ INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, st
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Streicher', 'Paul', 'Paul Streicher', '70 W. Madison Street, Suite 3900', 'Chicago', 'IL', '60602', 'United States', 'Fedota Childers, P.C.', 'Illinois Limousine Assoc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Wal-Mart Stores, Inc.', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Wal-Mart Stores, Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Northwestern Memorial Hospital', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Northwestern Memorial Hospital', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'CCH Inc.', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'CCH Inc.', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'New South Partners LLC', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'New South Partners LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'St. Bernard Hospital', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'St. Bernard Hospital', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'DLC Urbancore', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'DLC Urbancore', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Medalliono Management Corp (Chicago Metro Taxi)', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Medalliono Management Corp (Chicago Metro Taxi)', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Near North Health Services Corp', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Near North Health Services Corp', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'New Channels Realty', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'New Channels Realty', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', '55th & State Redevelopment LLC', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', '55th & State Redevelopment LLC', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Hyatt Regency', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Hyatt Regency', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Footwear Factory Development Corp', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Footwear Factory Development Corp', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ULICH Children''s Advantage Network', '2010');
+  VALUES('Stubblefield', 'Carol', 'Carol Stubblefield', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'ULICH Children''s Advantage Network', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Stumpf', 'David', 'David Stumpf', '233 N. Michigan Ave. 9th flr', 'Chicago', 'IL', '60601', 'United States', 'UnitedHealthcare of Illinois, Inc.', 'United Healthcare Services', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Sublett', 'Jeanette', 'Jeanette Sublett', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Metropolitan Pier and Exposition Authority', '2010');
+  VALUES('Sublett', 'Jeanette', 'Jeanette Sublett', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Metropolitan Pier and Exposition Authority', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Sublett', 'Jeanette', 'Jeanette Sublett', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
+  VALUES('Sublett', 'Jeanette', 'Jeanette Sublett', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Chicago Board of Education', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Sublett', 'Jeanette', 'Jeanette Sublett', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
+  VALUES('Sublett', 'Jeanette', 'Jeanette Sublett', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Public Building Commission of Chicago', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Sublett', 'Jeanette', 'Jeanette Sublett', '203 N. LaSalle, Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Ancona Montessori School', '2010');
+  VALUES('Sublett', 'Jeanette', 'Jeanette Sublett', '203 N LaSalle St., Ste. 2300', 'Chicago', 'IL', '60601', 'United States', 'Neal & Leroy, LLC', 'Ancona Montessori School', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Suffredin', 'Lawrence', 'Lawrence Suffredin', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Lawrence Suffredin', 'Museums in the Park', '2010');
+  VALUES('Suffredin', 'Lawrence', 'Lawrence Suffredin', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Lawrence Suffredin', 'Museums in the Park', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Suffredin', 'Lawrence', 'Lawrence Suffredin', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Lawrence Suffredin', 'Illinois Restaurant Association', '2010');
+  VALUES('Suffredin', 'Lawrence', 'Lawrence Suffredin', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Lawrence Suffredin', 'Illinois Restaurant Association', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Suffredin', 'Thomas', 'Thomas Suffredin', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Lawrence J. Suffredin, Jr.', 'Museums in the Park', '2010');
+  VALUES('Suffredin', 'Thomas', 'Thomas Suffredin', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Lawrence J. Suffredin, Jr.', 'Museums in the Park', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
-  VALUES('Suffredin', 'Thomas', 'Thomas Suffredin', '111 E. Wacker Drive, Suite 2800', 'Chicago', 'IL', '60601', 'United States', 'Lawrence J. Suffredin, Jr.', 'Illinois Restaurant Association', '2010');
+  VALUES('Suffredin', 'Thomas', 'Thomas Suffredin', '111 E. Wacker Dr., Ste. 2800', 'Chicago', 'IL', '60601', 'United States', 'Lawrence J. Suffredin, Jr.', 'Illinois Restaurant Association', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
   VALUES('Sullins', 'Pamela', 'Pamela Sullins', '150 Pierce Rd., Ste. 200', 'Itasca', 'IL', '60143', 'United States', 'SUPERVALU d/b/a Jewel-Osco and Save-a-Lot', 'Supervalu d/b/a Jewel-Osco and Save-a-Lot', '2010');
 INSERT INTO public.lobbyists(last_name, first_name, full_name, address, city, state, zip, country, employer_name, client_name, year)
