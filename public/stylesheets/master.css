@@ -258,7 +258,7 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 .mute { color: #999; font-size: 13px; }
 
 /* Twitter widget*/
-.twitter-widget { float: right; margin-left: 3%; width: 31%; }
+.right-content { float: right; margin-left: 3%; width: 31%; }
 
 /* Unordered lists */
 
