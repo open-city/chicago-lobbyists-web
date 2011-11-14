@@ -44,6 +44,12 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 .clear { clear: both; }
 #content, #nav-content { margin: 0 auto; width: 980px; }
 
+/* Primary content */
+.content-primary { float: left; width: 65%; }
+
+/* Secondary content */
+.content-secondary { float: right; margin-left: 3%; width: 31%; }
+
 /* Bios */
 #bio { clear: both; margin-bottom: 30px; }
 #bio-primary { float: right; width: 74.2%; }
@@ -256,9 +262,6 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 
 /* Muted text */
 .mute { color: #999; font-size: 13px; }
-
-/* Twitter widget*/
-.right-content { float: right; margin-left: 3%; width: 31%; }
 
 /* Unordered lists */
 
