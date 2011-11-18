@@ -3,16 +3,96 @@
 <!-- Content -->
 <div id="content">
   <%= cl_erb "common/header" %>
-  <%= cl_erb "common/stats" %>
-  
+
   <div class="clear"></div>
     
-  <h2>About this project</h2>
+  <div class='content-primary'> 
+  <h1>About this project</h1>
   
-<p>ChicagoLobbyists.org is intended to improve the transparency of interactions between City of Chicago agencies and lobbyists and their clients. All data comes from the City of Chicago and can be found at <a href="http://data.cityofchicago.org">data.cityofchicago.org</a>. We expect to make this application available for use with any city, county, or state.</p>
-<p>This is a project by <a href='http://twitter.com/chadwpry'>Chad Pry</a>, <a href='http://twitter.com/derek_eder'>Derek Eder</a>, <a href='http://twitter.com/paulbaker'>Paul Baker</a> and <a href='http://twitter.com/ryanbriones'>Ryan Briones</a>. It started on July 16th, 2011 at the Google Hackathon with some amazing help from <a href='http://twitter.com/patelc75'>Chirag Patel</a>, <a href='http://twitter.com/unruthless'>Ruthie BenDor</a> and <a href='http://twitter.com/rougeux'>Nick Rougeux</a>. Paul noticed the lobbyist data, conceived the project, and got the team together. Chad and Ryan did the bulk of the backend development with help from Derek and Chirag. Derek and Ruthie did the frontend development. Nick and Paul worked on the user interface prototypes.</p>
-<p>The datasets that are currently available do not allow us to present how much each client paid to each lobbyist or lobbying firm, nor which clients requested what actions in front of which agencies. We expect that the City will add data to make this possible.</p>
-<p>If you have any comments, questions or feature suggestions, you can contact us at <a href='mailto:chi.lobbyists@gmail.com'>chi.lobbyists@gmail.com</a>.</p>
+  <ul id="faq">
+      <li><a href="#what-is-this">What is this?</a></li>
+      <li><a href="#who-built-it">Who built it?</a></li>
+      <li><a href="#who-is-it-for">Who is it for?</a></li>
+      <li><a href="#where-did-you-get-your-data-from">Where did you get your data from?</a></li>
+      <li><a href="#how-does-the-data-get-on-to-the-citys-data-portal">How does the data get on to the city's data portal?</a></li>
+      <li><a href="#what-did-you-use-to-build-it">What did you use to build it?</a></li>
+      <li><a href="#press">Press</a></li>
+      <li><a href="#contact-us">Contact us</a></li>
+    </ul>
+	
+	<h2 id="what-is-this">What is this?</h2>
+	<p>ChicagoLobbyists.org is an open data, open government, and open source project intended to improve the transparency of interactions between the City of Chicago and lobbyists and their clients. All data comes from the <a href="http://data.cityofchicago.org">City of Chicago Data Portal</a> and can be downloaded for free.</p>
+	<hr />
+	
+	<h2 id="who-built-it">Who built it?</h2>
+	<p>This is a project by <a href='http://twitter.com/chadwpry'>Chad Pry</a>, <a href='http://twitter.com/derek_eder'>Derek Eder</a>, <a href='http://twitter.com/paulbaker'>Paul Baker</a> and <a href='http://twitter.com/ryanbriones'>Ryan Briones</a>. It started on July 16th, 2011 at the Google Hackathon with some amazing help from <a href='http://twitter.com/patelc75'>Chirag Patel</a>, <a href='http://twitter.com/unruthless'>Ruthie BenDor</a> and <a href='http://twitter.com/rougeux'>Nick Rougeux</a>. Paul noticed the lobbyist data, conceived the project, and got the team together. Chad and Ryan did the bulk of the backend development with help from Derek and Chirag. Derek and Ruthie did the frontend development. Nick and Paul worked on the user interface prototypes.</p>
+	<hr />
+	
+	<h2 id="who-is-it-for">Who is it for?</h2>
+	<p>This site is for anyone who is interested in how lobbyists interact with Chicago's government. It could be used in the following ways: </p>
+	
+	<ul>
+		<li>as a resource for firms looking to hire effective lobbyists based on their performance, cost, and experience</li>
+		<li>by lobbyists themselves to rate and compare their own performance</li>
+		<li>by journalists as a research tool</li>
+		<li>by citizens to who seek to understand how their local government works and to see the role that lobbyists play in it</li>
+	</ul>
+	<hr />
+
+	<h2 id="where-did-you-get-your-data-from">Where did you get your data from?</h2>
+	<p>All of our data came from the <a href='http://data.cityofchicago.org/'>City of Chicago's Data Portal</a>. Specifically, we took the following datasets from 2010:</p>
+	
+	<p class='r'><a href='http://data.cityofchicago.org/Ethics/Lobbyist-Data-2010-Lobbyist-Registry/2ft4-4uik'><img src='/images/city-data-portal.png' alt='Lobbyist Data - 2010 Lobbyist Registry' title='Lobbyist Data - 2010 Lobbyist Registry' /></a></p>
+	
+	<ul>
+		<li><a href='http://data.cityofchicago.org/Ethics/Lobbyist-Data-2010-Lobbyist-Registry/2ft4-4uik'>2010 Lobbyist Registry</a></li>
+		<li><a href='http://data.cityofchicago.org/Ethics/Lobbyist-Data-2010-Lobbyist-Compensation-Report/ina9-6kq2'>2010 Lobbyist Compensation Report</a></li>
+		<li><a href='http://data.cityofchicago.org/Ethics/Lobbyist-Data-2010-Lobbyist-Major-Expenditures-Rep/dqw9-xyre'>2010 Lobbyist Major Expenditures Report</a></li>
+		<li><a href='http://data.cityofchicago.org/Ethics/Lobbyist-Data-2010-Lobbyist-Agency-Report/2g5r-pikx'>2010 Lobbyist Agency Report</a></li>
+	</ul>
+	
+	<p>When the full dataset for 2011 is released in January 2012, we will update this site to include that data as well.</p>
+	<div class='clear'></div>
+	<hr />
+	
+	<h2 id="how-does-the-data-get-on-to-the-citys-data-portal">How does the data get on to the city's data portal?</h2>
+	<p>According to <a href='http://www.amlegal.com/nxt/gateway.dll/Illinois/chicago_il/title2citygovernmentandadministration/chapter2-156governmentalethics?f=templates$fn=default.htm$3.0$vid=amlegal:chicago_il$anc=JD_2-156-210'>Article 3 of the Governmental Ethics Ordinance</a>, all lobbyists are required to register with the Ethics Board each January 20 (or within 5 business days of first engaging in lobbying activities), and file reports about their lobbying activities with the Board each January 20 and July 20.</p> 
+	
+	<p class='r'><a href='/documents/Lobbyist-2011-A-1-2.pdf'><img src='/images/lobbyist-registration-form-A.png' alt='Lobbyist Registration Form A - Statement of Registration' title='Lobbyist Registration Form A - Statement of Registration' /></a></p>
+	<p>The forms can be downloaded from the <a href='http://www.cityofchicago.org/content/city/en/depts/ethics/provdrs/lobby/svcs/lobbyist_registrationandreporting.html'>city's website</a>, or here:</p>
+	
+	<ul>
+		<li><a href='/documents/Lobbyist-2011-A-1-2.pdf'>Form A - Statement of Registration</a> (PDF)</li>
+		<li><a href='/documents/Lobbyist-2011-B.pdf'>Form B - Amendment to Registration</a> (PDF)</li>
+		<li><a href='/documents/Lobbyist-2011-C1-2-3.pdf'>Form C - Activity Report</a> (PDF)</li>
+		<li><a href='/documents/Lobbyist-2010-D.pdf'>Form D - Lobbyist Termination Notice</a> (PDF)</li>
+	</ul>
+	<div class='clear'></div>
+	
+	<p>After the forms are filled out and collected for each lobbyist, they are entered by hand in to an internal system by Board of Ethics staff. That data is then uploaded to the data portal as it is updated (twice a year). For more information, see the <a href='http://www.cityofchicago.org/content/city/en/depts/ethics/supp_info/lobbyist_filing_requirements.html'>City of Chicago's lobbyist filing requirements</a>.</p>
+	<hr />
+	
+	<h2 id="what-did-you-use-to-build-it">What did you use to build it?</h2>
+	<p>This site is built with <a href='http://www.ruby-lang.org/en/'>Ruby</a>, <a href='http://www.postgresql.org/'>PostgreSQL</a> and uses the <a href='http://www.sinatrarb.com/'>Sinatra</a> web platform. It is hosted for free, courtesy of <a href='http://www.heroku.com/'>Heroku</a>.</p>
+	
+	<p>To get the data from CSV (comma separated values) on the <a href='http://data.cityofchicago.org/'>Chicago Data Portal</a>, we first cleaned it using <a href='http://code.google.com/p/google-refine/'>Google Refine</a> (an amazing tool for normalizing data), and <a href='http://www.aquafold.com/aquadatastudio.html'>Aqua Data Studio</a> for generating the PostgreSQL import scripts.</p>
+	
+	<p>All of the code is open source and <a href='https://github.com/ryanbriones/chicagolobbyists'>available on github</a>.</p>
+	<hr />
+
+	<h2 id="press">Press</h2>
+    <p>Since launching in early August 2011, we've made some headlines in the news, notably for our efforts to engage the City of Chicago on releasing more detailed lobbyist data.</p>
+    
+    <ul>
+    	<li><a href='http://www.cityofchicago.org/city/en/depts/mayor/press_room/press_releases/2011/august_2011/mayor_emanuel_announcesnewlobbyistdatathatprovidesclearconnectio.html'>Mayor Emanuel's release on updated lobbyist data</a> - City of Chicago website</li>
+    	<li><a href='http://chicagotonight.wttw.com/2011/08/30/mayor-rahm-emanuel'>Mayor Rahm Emanuel</a> - interview on Chicago Tonight (WTTW) discussing updated lobbyist data</li>
+    </ul>
+  	<hr />
+  
+	<h2 id="contact-us">Contact us</h2>
+	<p>If you have any comments, questions or feature suggestions, you can email us at <a href='mailto:chi.lobbyists@gmail.com'>chi.lobbyists@gmail.com</a> or tweet us at <a href='https://twitter.com/#!/chilobbyists'>@chilobbyists</a>.</p>
+</div> 
+
   <%= cl_erb "common/footer" %>
 </div>
 <!-- /Content -->

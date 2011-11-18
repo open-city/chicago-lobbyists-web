@@ -31,7 +31,6 @@ h3 { font-size: 17px; line-height: 1.17; margin-bottom: 0.5em; }
 h4 { font-size: 1.1em; }
 hr { background: #ddd; border: 0; clear: both; color: #ddd; height: 1px; margin: 1.5em 0; }
 ol { list-style: decimal; margin-left: 2em; }
-li { margin-bottom: 0.5em; }
 table { border-collapse: collapse; width: 100%; }
 table li, table ul { margin: 0; }
 td { border: 1px solid #ddd; border-width: 1px 0; padding: 0.3em 0.5em 0.3em 0; vertical-align: top; }
@@ -42,6 +41,10 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 /* Layout
 =====================================================================*/
 .clear { clear: both; }
+.l { float: left; }
+.l img { padding-right: 10px; }
+.r { float: right; }
+.r img { padding-left: 10px; }
 #content, #nav-content { margin: 0 auto; width: 980px; }
 
 /* Primary content */
