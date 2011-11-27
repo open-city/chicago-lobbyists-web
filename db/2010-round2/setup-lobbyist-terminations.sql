@@ -10,354 +10,354 @@ CREATE TABLE public.lobbyist_terminations  (
 );
 
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Aiello', 'Anthony', '0008-04-01');
+  VALUES('Aiello', 'Anthony', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Alexander', 'Michael', '0008-05-02');
+  VALUES('Alexander', 'Michael', '2010-11-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Ammermann', 'Mary', '0006-12-31');
+  VALUES('Ammermann', 'Mary', '2010-07-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Anderson', 'Bridget', '0014-12-01');
+  VALUES('Anderson', 'Bridget', '2012-06-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Asmar', 'Christian', '0013-08-31');
+  VALUES('Asmar', 'Christian', '2011-03-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Balcer', 'Jerome', '0009-01-30');
+  VALUES('Balcer', 'Jerome', '2010-08-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Barbe', 'Jana', '0008-04-01');
+  VALUES('Barbe', 'Jana', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Barnett', 'Cornell', '0017-04-01');
+  VALUES('Barnett', 'Cornell', '2010-10-11');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Bell', 'M''Lou', '0007-06-02');
+  VALUES('Bell', 'M''Lou', '2010-12-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Benway', 'Allison', '0008-08-02');
+  VALUES('Benway', 'Allison', '2012-02-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Berman', 'Alyssa', '0008-04-01');
+  VALUES('Berman', 'Alyssa', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Bibbo', 'Tino', '0008-09-30');
+  VALUES('Bibbo', 'Tino', '2011-04-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Blum', 'Richard', '0010-10-01');
+  VALUES('Blum', 'Richard', '2011-04-04');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Boblick', 'Shelby', '0008-04-01');
+  VALUES('Boblick', 'Shelby', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Borgard', 'Lawrence', '0008-07-02');
+  VALUES('Borgard', 'Lawrence', '2012-01-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Botica', 'Luke', '0007-01-31');
+  VALUES('Botica', 'Luke', '2010-08-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Boyle', 'Kathleen', '0009-08-02');
+  VALUES('Boyle', 'Kathleen', '2012-02-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Bransby', 'Clive', '0008-03-02');
+  VALUES('Bransby', 'Clive', '2011-09-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Brett', 'Matthew', '0008-08-02');
+  VALUES('Brett', 'Matthew', '2012-02-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Brussel', 'Gabrielle', '0007-12-31');
+  VALUES('Brussel', 'Gabrielle', '2011-07-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Buck', 'John', '0008-04-01');
+  VALUES('Buck', 'John', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Burhan', 'Charles', '0007-08-31');
+  VALUES('Burhan', 'Charles', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Burke', 'Daniel', '0009-08-02');
+  VALUES('Burke', 'Daniel', '2012-02-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Burke', 'Stephen', '0008-08-30');
+  VALUES('Burke', 'Stephen', '2010-03-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Butler', 'Calvin', '0015-08-31');
+  VALUES('Butler', 'Calvin', '2012-03-08');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Callahan', 'Patrick', '0008-05-02');
+  VALUES('Callahan', 'Patrick', '2010-11-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Cannistra', 'Giovanni', '0008-01-31');
+  VALUES('Cannistra', 'Giovanni', '2011-08-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Carriera', 'Rafael', '0008-04-01');
+  VALUES('Carriera', 'Rafael', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Cassens', 'Stephen', '0017-08-02');
+  VALUES('Cassens', 'Stephen', '2010-02-12');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Cellini', 'Fernando', '0008-01-31');
+  VALUES('Cellini', 'Fernando', '2011-08-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Chalmers', 'Caryn', '0008-04-01');
+  VALUES('Chalmers', 'Caryn', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Chomicz', 'Thomas', '0008-04-01');
+  VALUES('Chomicz', 'Thomas', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Christofanelli', 'Joseph', '0007-06-02');
+  VALUES('Christofanelli', 'Joseph', '2010-12-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Cisar', 'Michael', '0007-08-31');
+  VALUES('Cisar', 'Michael', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Clark', 'Frank', '0017-04-01');
+  VALUES('Clark', 'Frank', '2010-10-11');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Cokic', 'Kathy', '0007-08-03');
+  VALUES('Cokic', 'Kathy', '2010-02-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Cope', 'Ronald', '0008-01-31');
+  VALUES('Cope', 'Ronald', '2011-08-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Cousin', 'Ertharin', '0008-09-30');
+  VALUES('Cousin', 'Ertharin', '2011-04-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('De Natale', 'Denise', '0008-01-31');
+  VALUES('De Natale', 'Denise', '2011-08-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Dewith-Anderson', 'Letitia', '0014-12-01');
+  VALUES('Dewith-Anderson', 'Letitia', '2012-06-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Dolejsi', 'John', '0008-04-01');
+  VALUES('Dolejsi', 'John', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Donnelly', 'Thomas', '0008-05-02');
+  VALUES('Donnelly', 'Thomas', '2010-11-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Dougherty', 'Brian', '0008-08-30');
+  VALUES('Dougherty', 'Brian', '2010-03-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Dougherty', 'Bridget', '0009-04-01');
+  VALUES('Dougherty', 'Bridget', '2011-10-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Dougherty', 'Bridget', '0018-01-31');
+  VALUES('Dougherty', 'Bridget', '2010-08-12');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Douglas', 'Lia', '0013-10-01');
+  VALUES('Douglas', 'Lia', '2011-04-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Durkin', 'Michael', '0008-04-01');
+  VALUES('Durkin', 'Michael', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Elliott', 'Rodney', '0008-04-01');
+  VALUES('Elliott', 'Rodney', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Feeney', 'Daniel', '0013-10-01');
+  VALUES('Feeney', 'Daniel', '2011-04-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Fisher', 'Paul', '0008-04-01');
+  VALUES('Fisher', 'Paul', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Friedman', 'Arthur', '0013-10-01');
+  VALUES('Friedman', 'Arthur', '2011-04-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Gallanet', 'Gerard', '0007-08-31');
+  VALUES('Gallanet', 'Gerard', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Gearen', 'John', '0008-08-02');
+  VALUES('Gearen', 'John', '2012-02-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Gersh', 'Deborah', '0008-04-01');
+  VALUES('Gersh', 'Deborah', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Gilfillan', 'Michael', '0008-05-02');
+  VALUES('Gilfillan', 'Michael', '2010-11-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Goedert', 'Thomas', '0008-10-30');
+  VALUES('Goedert', 'Thomas', '2012-05-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Gomez', 'Armando', '0008-12-30');
+  VALUES('Gomez', 'Armando', '2011-07-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Gonzalez', 'Reynold', '0017-04-01');
+  VALUES('Gonzalez', 'Reynold', '2010-10-11');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Guidotti', 'Giovanni', '0008-01-31');
+  VALUES('Guidotti', 'Giovanni', '2011-08-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Gutierrez', 'Soraida', '0007-10-01');
+  VALUES('Gutierrez', 'Soraida', '2010-04-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Hack', 'Susanne', '0007-01-31');
+  VALUES('Hack', 'Susanne', '2010-08-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Haggerty', 'Mary', '0014-12-01');
+  VALUES('Haggerty', 'Mary', '2012-06-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Haislet', 'Tim', '0009-07-02');
+  VALUES('Haislet', 'Tim', '2012-01-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Hamilton', 'Nancy', '0008-10-30');
+  VALUES('Hamilton', 'Nancy', '2010-05-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Hammond', 'Taylor', '0008-04-01');
+  VALUES('Hammond', 'Taylor', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Harwood', 'Graham', '0007-08-31');
+  VALUES('Harwood', 'Graham', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Heintze', 'Arnette', '0009-05-02');
+  VALUES('Heintze', 'Arnette', '2011-11-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Hill', 'Michael', '0014-12-01');
+  VALUES('Hill', 'Michael', '2012-06-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Hoerup Jensen', 'Jens', '0018-07-03');
+  VALUES('Hoerup Jensen', 'Jens', '2011-01-12');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Holsapple', 'Dennis', '0007-08-03');
+  VALUES('Holsapple', 'Dennis', '2011-02-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Horbinski', 'Thomas', '0007-08-31');
+  VALUES('Horbinski', 'Thomas', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Horsnail', 'Joanna', '0008-08-02');
+  VALUES('Horsnail', 'Joanna', '2012-02-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Infante', 'Nick', '0012-11-30');
+  VALUES('Infante', 'Nick', '2010-06-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Ittner', 'Rachel', '0008-04-01');
+  VALUES('Ittner', 'Rachel', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Jacobson', 'Theresa', '0007-10-31');
+  VALUES('Jacobson', 'Theresa', '2010-05-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Jarosz', 'Richard', '0015-10-31');
+  VALUES('Jarosz', 'Richard', '2010-05-10');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Jaworski', 'Jill', '0010-06-02');
+  VALUES('Jaworski', 'Jill', '2011-12-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Johnston', 'Ronald "Scott"', '0012-11-30');
+  VALUES('Johnston', 'Ronald "Scott"', '2010-06-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Jones', 'Walter', '0008-04-01');
+  VALUES('Jones', 'Walter', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Jurgens-Tamminga', 'Nicolette', '0008-07-02');
+  VALUES('Jurgens-Tamminga', 'Nicolette', '2012-01-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Kaden', 'Jonathon', '0008-04-01');
+  VALUES('Kaden', 'Jonathon', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Kain', 'Pamela', '0008-10-30');
+  VALUES('Kain', 'Pamela', '2011-05-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Kapadia', 'Ali', '0007-08-31');
+  VALUES('Kapadia', 'Ali', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Karr', 'Robert', '0008-05-02');
+  VALUES('Karr', 'Robert', '2010-11-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Kedzierski', 'John', '0007-08-31');
+  VALUES('Kedzierski', 'John', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Keller', 'Jay', '0008-04-01');
+  VALUES('Keller', 'Jay', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Kessel', 'Renee', '0011-07-03');
+  VALUES('Kessel', 'Renee', '2011-01-05');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('King', 'Brian', '0008-09-30');
+  VALUES('King', 'Brian', '2011-04-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Kirn', 'Jonathan', '0008-04-01');
+  VALUES('Kirn', 'Jonathan', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Kluzak', 'David', '0008-04-01');
+  VALUES('Kluzak', 'David', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Krol', 'Fred', '0008-04-01');
+  VALUES('Krol', 'Fred', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Laslo', 'Margaret', '0008-01-31');
+  VALUES('Laslo', 'Margaret', '2011-08-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Laudolff', 'Paul', '0007-08-31');
+  VALUES('Laudolff', 'Paul', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Lenz', 'Mark', '0014-05-03');
+  VALUES('Lenz', 'Mark', '2011-11-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Lindsey', 'Connie', '0007-12-31');
+  VALUES('Lindsey', 'Connie', '2011-07-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Lites', 'Richard', '0007-06-02');
+  VALUES('Lites', 'Richard', '2010-12-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Lochran', 'James', '0008-04-01');
+  VALUES('Lochran', 'James', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Louik', 'Myron', '0014-07-03');
+  VALUES('Louik', 'Myron', '2011-01-08');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Lurie', 'Michael', '0019-08-31');
+  VALUES('Lurie', 'Michael', '2012-03-12');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Lyons', 'Cathryn', '0008-03-02');
+  VALUES('Lyons', 'Cathryn', '2011-09-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Markert', 'Jeffrey', '0008-12-30');
+  VALUES('Markert', 'Jeffrey', '2011-07-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Martinez', 'Marina', '0007-07-03');
+  VALUES('Martinez', 'Marina', '2010-01-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('McCombs', 'Mark', '0015-01-31');
+  VALUES('McCombs', 'Mark', '2011-08-08');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('McKeehan', 'Denise', '0008-03-02');
+  VALUES('McKeehan', 'Denise', '2011-09-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('McKeska', 'Joseph', '0013-12-31');
+  VALUES('McKeska', 'Joseph', '2011-07-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Meek', 'David', '0008-08-30');
+  VALUES('Meek', 'David', '2012-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Meinz', 'Thomas', '0008-07-02');
+  VALUES('Meinz', 'Thomas', '2012-01-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Metzler', 'Monica', '0008-08-02');
+  VALUES('Metzler', 'Monica', '2012-02-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Meyer', 'Frederick', '0008-04-01');
+  VALUES('Meyer', 'Frederick', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Mihm', 'Jennifer', '0008-08-02');
+  VALUES('Mihm', 'Jennifer', '2012-02-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Mitchell', 'Tad', '0009-06-01');
+  VALUES('Mitchell', 'Tad', '2011-12-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Molloy', 'John', '0007-08-31');
+  VALUES('Molloy', 'John', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Monson', 'Paul', '0008-04-01');
+  VALUES('Monson', 'Paul', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Mullen', 'Mike', '0008-04-01');
+  VALUES('Mullen', 'Mike', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Naik', 'Binita', '0007-07-03');
+  VALUES('Naik', 'Binita', '2010-01-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Nash', 'Caroline', '0013-08-02');
+  VALUES('Nash', 'Caroline', '2011-02-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Nations', 'Marlene', '0008-04-01');
+  VALUES('Nations', 'Marlene', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Nickey', 'William', '0007-12-31');
+  VALUES('Nickey', 'William', '2011-07-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Nora', 'Mark', '0006-10-01');
+  VALUES('Nora', 'Mark', '2010-04-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('O''Donnel', 'John', '0008-04-01');
+  VALUES('O''Donnel', 'John', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('O''Keefe', 'Joseph', '0016-07-02');
+  VALUES('O''Keefe', 'Joseph', '2010-01-11');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Parr', 'Ian', '0007-08-31');
+  VALUES('Parr', 'Ian', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Pearman', 'John', '0009-08-02');
+  VALUES('Pearman', 'John', '2012-02-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Pekkala', 'Lisa', '0008-04-01');
+  VALUES('Pekkala', 'Lisa', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Pittman', 'Clyde', '0008-09-30');
+  VALUES('Pittman', 'Clyde', '2011-04-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Pope', 'Erica', '0008-03-02');
+  VALUES('Pope', 'Erica', '2011-09-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Powell', 'Jeffrey', '0014-05-03');
+  VALUES('Powell', 'Jeffrey', '2011-11-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Pugh', 'Stephen', '0008-10-30');
+  VALUES('Pugh', 'Stephen', '2012-05-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Readey', 'Jay', '0008-04-01');
+  VALUES('Readey', 'Jay', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Robinson', 'John', '0008-04-01');
+  VALUES('Robinson', 'John', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Roddy', 'Joseph', '0008-03-02');
+  VALUES('Roddy', 'Joseph', '2011-09-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Rodziewicz', 'Michael', '0008-08-30');
+  VALUES('Rodziewicz', 'Michael', '2010-03-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Sarli', 'Guy', '0008-04-01');
+  VALUES('Sarli', 'Guy', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Satterthwaite', 'Emily', '0014-04-02');
+  VALUES('Satterthwaite', 'Emily', '2011-10-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Schoepel', 'Scott', '0007-08-31');
+  VALUES('Schoepel', 'Scott', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Schott', 'James', '0008-07-02');
+  VALUES('Schott', 'James', '2012-01-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Seder', 'Scott', '0019-08-31');
+  VALUES('Seder', 'Scott', '2012-03-12');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Shakman', 'Michael', '0013-10-01');
+  VALUES('Shakman', 'Michael', '2011-04-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Sheehan', 'Michael', '0008-04-01');
+  VALUES('Sheehan', 'Michael', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Sierra', 'Rodrigo', '0009-12-01');
+  VALUES('Sierra', 'Rodrigo', '2011-06-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Silver', 'Stacey', '0008-10-30');
+  VALUES('Silver', 'Stacey', '2012-05-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Simon', 'John', '0007-12-31');
+  VALUES('Simon', 'John', '2011-07-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Singh', 'Ajay', '0007-08-31');
+  VALUES('Singh', 'Ajay', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Skov', 'Christian', '0018-07-03');
+  VALUES('Skov', 'Christian', '2011-01-12');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Smith', 'Jerome', '0007-10-31');
+  VALUES('Smith', 'Jerome', '2010-05-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Smith', 'Timothy', '0008-08-30');
+  VALUES('Smith', 'Timothy', '2010-03-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Soodan', 'Kehar', '0008-08-02');
+  VALUES('Soodan', 'Kehar', '2010-02-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Spach', 'Roger', '0008-04-01');
+  VALUES('Spach', 'Roger', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Spencer', 'Parke', '0012-01-31');
+  VALUES('Spencer', 'Parke', '2010-08-06');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Steffan', 'Timothy', '0008-04-01');
+  VALUES('Steffan', 'Timothy', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Stephens', 'Thomas', '0008-04-01');
+  VALUES('Stephens', 'Thomas', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Stepusin', 'Paul', '0014-06-02');
+  VALUES('Stepusin', 'Paul', '2010-12-08');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Stewart', 'Barbara', '0008-03-02');
+  VALUES('Stewart', 'Barbara', '2011-09-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Strange', 'Robert', '0009-03-02');
+  VALUES('Strange', 'Robert', '2010-09-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Stricklin', 'David', '0009-08-02');
+  VALUES('Stricklin', 'David', '2012-02-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Swainson', 'John', '0008-04-01');
+  VALUES('Swainson', 'John', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Swatland', 'Lisa', '0013-10-01');
+  VALUES('Swatland', 'Lisa', '2011-04-07');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Taylor', 'Darrell', '0008-04-01');
+  VALUES('Taylor', 'Darrell', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Theisen', 'Patrick', '0012-08-30');
+  VALUES('Theisen', 'Patrick', '2012-03-05');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Ullman', 'Patricia', '0008-08-02');
+  VALUES('Ullman', 'Patricia', '2012-02-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Valenti', 'John', '0009-04-01');
+  VALUES('Valenti', 'John', '2011-10-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Van Der Molen', 'Richard', '0008-12-30');
+  VALUES('Van Der Molen', 'Richard', '2011-07-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Van Schaack', 'Greg', '0008-04-01');
+  VALUES('Van Schaack', 'Greg', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Vanecko', 'Mark', '0007-08-31');
+  VALUES('Vanecko', 'Mark', '2011-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Vaughan', 'Erin', '0008-12-30');
+  VALUES('Vaughan', 'Erin', '2011-07-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Vazquez', 'Nancy', '0008-03-02');
+  VALUES('Vazquez', 'Nancy', '2011-09-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Vite', 'David', '0008-05-02');
+  VALUES('Vite', 'David', '2010-11-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Walling', 'Caroline', '0008-09-30');
+  VALUES('Walling', 'Caroline', '2011-04-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Walsh', 'Jim', '0008-04-01');
+  VALUES('Walsh', 'Jim', '2011-10-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Webb', 'Seth', '0008-08-30');
+  VALUES('Webb', 'Seth', '2012-03-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Wexler', 'Mitchell', '0015-01-31');
+  VALUES('Wexler', 'Mitchell', '2011-08-08');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Weyers', 'Larry', '0008-07-02');
+  VALUES('Weyers', 'Larry', '2012-01-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Williams', 'Elaine', '0007-08-03');
+  VALUES('Williams', 'Elaine', '2010-02-02');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Zancan', 'Dawn', '0006-10-01');
+  VALUES('Zancan', 'Dawn', '2010-04-01');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Zeitler', 'Jonathon', '0008-10-30');
+  VALUES('Zeitler', 'Jonathon', '2010-05-03');
 INSERT INTO public.lobbyist_terminations(last_name, first_name, termination_date)
-  VALUES('Ziomek', 'Scott', '0017-04-01');
+  VALUES('Ziomek', 'Scott', '2010-10-11');
