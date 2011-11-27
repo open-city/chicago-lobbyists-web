@@ -3,15 +3,18 @@ class Agency
 
   storage_names[:default] = "chi_agencies"
 
-  property :id,         Serial,  :required => true
-  property :slug,       String,  :required => true
-  property :code,       String,  :required => true
-  property :name,       String,  :required => true
-  property :address_id, Integer
+  property :id,             Serial,  :required => true
+  property :slug,           String,  :required => true
+  property :name,           String,  :required => true
+  property :description,    String
+  property :address_id,     Integer
 
   has n, :actions
+  has 1, :address
   has n, :lobbyists, :through => :actions
   has n, :firms, :through => :lobbyists
+  
+  belongs_to :address
   
   def self.list_by_actions default_options={:limit => 5}
     sql = <<-SQL

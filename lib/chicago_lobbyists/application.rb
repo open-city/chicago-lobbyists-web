@@ -100,7 +100,7 @@ module ChicagoLobbyists
     
     get "/agencies/:id" do
       @agency = Agency.first :slug => params[:id]
-      @page_title = "#{@agency.name} (#{@agency.code}) - City Agency"
+      @page_title = "#{@agency.name} - City Agency"
       @current_menu = "agencies"
       @lobbyist_actions = @agency.actions.group_by { |action|
         action.lobbyist }.sort_by { |lobbyist, actions|

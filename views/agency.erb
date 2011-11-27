@@ -8,7 +8,7 @@
   <div id="bio">
     <div id="bio-header">
       <p>City Agency</p>
-      <h1><%= @agency.name %> (<%= @agency.code %>)</h1>
+      <h1><%= @agency.name %></h1>
     </div>
     
     <div id="bio-primary">
@@ -73,18 +73,22 @@
 
     </div>
     <div id="bio-secondary">
-      <div class="map-overlay">
-        <div class="text">Coming Soon!</div>
-      </div>
-      <img alt="" src="../images/map.jpg" />
-      
-      <p><strong>(N) miles</strong> from Chicago City Hall</p>
-      <p>
-      <!--        <a href="firm.html">Aviation (AVIA)</a> -->
-        <div class="addy">
-          Address Unknown
-        </div>
-      </p>
+      <div id="map_canvas" style="border:1px solid #000; width: 222px; height: 222px;"></div>
+
+      <script type="text/javascript">
+        $(function(){
+          defineMap(new google.maps.LatLng(41.37680856570233,-84.287109375));
+
+          if (map != null)
+            geocode("<%= @agency.address.full_address.gsub(/\/n/, ' ').gsub(/ /, '+') %>");
+        });
+      </script>
+
+      <p><strong>Address on file:</strong></p>
+      <p><%= @agency.address.full_address_formatted %></p>
+
+      <h2>Agency description</h2>
+      <p><%= @agency.description %></p>
     </div>
   </div>
   
