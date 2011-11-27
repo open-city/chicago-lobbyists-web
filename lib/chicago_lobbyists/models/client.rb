@@ -12,6 +12,7 @@ class Client
   has n, :firms,     :through => :client_relationships
   has n, :lobbyists, :through => :client_relationships
   has n, :actions,   :through => :lobbyists
+  has n, :compensations
 
   def self.list_by_lobbyists
     all :order => :name.desc
@@ -29,5 +30,9 @@ class Client
     repository(:default).adapter.select(sql.strip, default_options[:limit]).map { |struct| 
       [struct.slug, struct.name, struct.count]
     }
+  end
+  
+  def total_compensation
+    Compensation.aggregate(:compensation.sum, {:client_id => self.id}) || 0.00
   end
 end

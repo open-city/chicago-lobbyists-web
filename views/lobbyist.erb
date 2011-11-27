@@ -19,15 +19,27 @@
         
         <div class="section">
           <h2>Clients</h2>
-          <ul>
+          <table>
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th title="Amount paid to lobbyist by client">Amount paid</th>
+              </tr>
+            </thead>
+            <tbody>
             <% if @lobbyist.clients.empty? %>
-              <li>No clients found</li>
+              <tr><td colspan='2'>No clients found</td></tr>
             <% else %>
               <% @lobbyist.clients.each do |client| %>
-              <li><a href="/clients/<%= client.slug %>"><%= client.name %></a></li>
+              <tr>
+              	<td><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
+              	<td><%= number_to_currency client.compensations.sum(:compensation) %></td>
+              </tr>
               <% end %>
             <% end %>
-          </ul>
+            </tbody>
+          </table>
+          
         </div>
         <div class="section">
           <h2>Actions sought</h2>
