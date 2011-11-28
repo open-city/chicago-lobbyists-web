@@ -18,7 +18,7 @@
         </div><!-- /.section -->
         
         <div class="section">
-          <h2>Lobbyists</h2>
+          <h2><%= @firm.lobbyists.count %> <%= @firm.lobbyists.count == 1 ? " lobbyist" : " lobbyists" %> employed</h2>
           <ul>
             <% @firm.lobbyists.each do |lobbyist| %>
             <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></li>
@@ -27,16 +27,30 @@
         </div><!-- /.section -->
         
         <div class="section">
-          <h2>Clients</h2>
-          <ul>
+          <h2><%= @firm.clients.count %> <%= @firm.clients.count == 1 ? " client" : " clients" %></h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th title="Amount paid to firm by client">Amount paid</th>
+              </tr>
+            </thead>
+            <tbody>
             <% if @firm.clients.empty? %>
-              <li>No clients found</li>
+              <tr><td colspan='2'>No clients found</td></tr>
             <% else %>
               <% @firm.clients.each do |client| %>
-            <li><a href="/clients/<%= client.slug %>"><%= client.name %></a></li>
+              <tr>
+              	<td><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
+              	<% @firm.lobbyists.each do |lobbyist| 
+              		@client_sum = client.compensations.sum(:compensation, {:lobbyist_id => lobbyist.id})
+              	end %>
+              	<td><%= number_to_currency @client_sum %></td>
+              </tr>
               <% end %>
             <% end %>
-          </ul>
+            </tbody>
+          </table>
         </div><!-- /.section -->
         
         <div class="section">
@@ -51,11 +65,10 @@
 
             <% end %>
           </dl>
-          <p class="mute">Current data does not allow us to learn <strong>how much each client paid to each lobbying firm or lobbyist.</strong> We expect that the city will add data to make this possible.</p>
         </div><!-- /.section -->
 
         <div class="section">
-          <h2>Agencies from whom this firm sought actions.</h2>
+          <h2><%= @agency_actions.count %> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</h2>
           <table>
             <thead>
               <tr>
@@ -65,12 +78,16 @@
               </tr>
             </thead>
             <tbody>
-              <% @agency_actions.each do |agency, actions| %>
-              <tr>
-                <td><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a></td>
-                <td><%= actions.select(&:administrative).count %></td>
-                <td><%= actions.select(&:legislative).count %></td>
-              </tr>
+              <% if @agency_actions.empty? %>
+                <tr><td colspan='3'>No agencies found</td></tr>
+              <% else %>
+                <% @agency_actions.each do |agency, actions| %>
+                <tr>
+                  <td><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a></td>
+                  <td><%= actions.select(&:administrative).count %></td>
+                  <td><%= actions.select(&:legislative).count %></td>
+                </tr>
+              <% end %>
             <% end %>
             </tbody>
           </table>

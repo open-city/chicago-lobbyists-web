@@ -43,17 +43,5 @@ class Compensation
     repository(:default).adapter.select(sql.strip, default_options[:limit]).map { |struct|
       [struct.name, struct.slug, "%.2f" % struct.sum] }
   end
-  
-  def self.compensation_by_lobbyist_by_client default_options={:lobbyist_id => 0, :client_id => 0}
-    sql = <<-SQL
-      SELECT sum(compensation)
-      FROM chi_lobbyist_compensations
-      WHERE lobbyist_id = ?
-      AND client_id = ?
-    SQL
-
-    repository(:default).adapter.select(sql.strip, default_options[:lobbyist_id, :client_id]).map { |struct|
-      [struct.sum] }
-  end
 
 end

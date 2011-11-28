@@ -18,7 +18,7 @@
         </div>
         
         <div class="section">
-          <h2>Clients</h2>
+          <h2><%= @lobbyist.clients.count %> <%= @lobbyist.clients.count == 1 ? " client" : " clients" %></h2>
           <table>
             <thead>
               <tr>
@@ -33,7 +33,7 @@
               <% @lobbyist.clients.each do |client| %>
               <tr>
               	<td><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
-              	<td><%= number_to_currency client.compensations.sum(:compensation) %></td>
+              	<td><%= number_to_currency client.compensations.sum(:compensation, {:lobbyist_id => @lobbyist.id}) %></td>
               </tr>
               <% end %>
             <% end %>
@@ -44,19 +44,20 @@
         <div class="section">
           <h2>Actions sought</h2>
           <dl>
-            <% @actions.each do |purpose, actions| %>
-            <dt><%= purpose %></dt>
-
-            <% actions.group_by { |action| action.agency.name }.each do |name, actions| %>
-              <dd><a href="/agencies/<%= actions.first.agency.slug %>"><%= name %></a> (<%= actions.count %>)</dd>
-            <% end %>
-
+          <% if @actions.empty? %>
+              <dd>No actions found</dd>
+            <% else %>
+              <% @actions.each do |purpose, actions| %>
+                <dt><%= purpose %></dt>
+                <% actions.group_by { |action| action.agency.name }.each do |name, actions| %>
+                  <dd><a href="/agencies/<%= actions.first.agency.slug %>"><%= name %></a> (<%= actions.count %>)</dd>
+                <% end %>
+              <% end %>
             <% end %>
           </dl>
         </div>
         <div class="section">
-          <h2>Agencies</h2>
-          
+          <h2><%= @agency_actions.count %> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</h2>
           <table>
             <thead>
               <tr>
@@ -66,12 +67,16 @@
               </tr>
             </thead>
             <tbody>
-              <% @agency_actions.each do |agency, actions| %>
-              <tr>
-                <td><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a></td>
-                <td><%= actions.select(&:administrative).count %></td>
-                <td><%= actions.select(&:legislative).count %></td>
-              </tr>
+              <% if @agency_actions.empty? %>
+                <tr><td colspan='3'>No agencies found</td></tr>
+              <% else %>
+                <% @agency_actions.each do |agency, actions| %>
+                <tr>
+                  <td><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a></td>
+                  <td><%= actions.select(&:administrative).count %></td>
+                  <td><%= actions.select(&:legislative).count %></td>
+                </tr>
+              <% end %>
             <% end %>
             </tbody>
           </table>
