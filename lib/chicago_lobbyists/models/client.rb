@@ -21,7 +21,7 @@ class Client
   def self.all_by_most_active default_options={:limit => 5}
     sql = <<-EOSQL
       SELECT c.slug, c.name, coalesce(SUM(co.compensation), SUM(co.compensation), 0.00) as amount FROM chi_clients c
-      INNER JOIN chi_lobbyist_compensations co 
+      LEFT OUTER JOIN chi_lobbyist_compensations co 
       ON co.client_id = c.id
       GROUP BY c.slug, c.name
       ORDER BY coalesce(SUM(co.compensation), SUM(co.compensation), 0.00) DESC
