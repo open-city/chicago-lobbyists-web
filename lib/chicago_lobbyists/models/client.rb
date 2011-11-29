@@ -36,4 +36,8 @@ class Client
   def total_compensation
     Compensation.aggregate(:compensation.sum, {:client_id => self.id}) || 0.00
   end
+  
+  def total_city_payments
+    CityPayment.aggregate(:amount.sum, {:client_id => self.id}) || 0.00
+  end
 end

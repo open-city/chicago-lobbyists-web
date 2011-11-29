@@ -16,6 +16,11 @@
           <h2>2010 payments to lobbyists</h2>
           <p><strong class="total-paid"><%= number_to_currency @client.total_compensation %></strong></p>
         </div>
+        
+        <div class="section">
+          <h2>2010 payments from Chicago</h2>
+          <p><strong class="total-paid"><%= number_to_currency @client.total_city_payments %></strong></p>
+        </div>
     
         <div class="section">
           <h2>Lobbyists hired</h2>
@@ -43,14 +48,14 @@
           </table>
         </div><!-- /.section -->
         
-        <!--<div class="section">
+        <div class="section">
           <h2>Payments from city</h2>
           <table>
             <thead>
               <tr>
-                <th>Department</th>
                 <th>Amount</th>
                 <th>Payment Date</th>
+                <th>Department</th>
               </tr>
             </thead>
             <tbody>
@@ -61,15 +66,15 @@
               <% else %>
                 <% @client.city_payments.each do |city_payment| %>
               <tr>
-                <td><%= city_payment.department_name.strip.length == 0 ? "Unknown" : city_payment.department_name %></td>
                 <td><%= number_to_currency city_payment.amount %></td>
-                <td><%= city_payment.check_date %></td>
+                <td><%= city_payment.check_date.strftime("%m/%d/%Y") %></td>
+                <td><%= city_payment.department_name.strip.length == 0 ? "" : city_payment.department_name %></td>
               </tr>
                 <% end %>
               <% end %>
             </tbody>
           </table>
-        </div> /.section -->
+        </div> <!--/.section -->
     </div>
     <div id="bio-secondary">
     </div>
