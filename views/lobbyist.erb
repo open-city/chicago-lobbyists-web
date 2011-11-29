@@ -92,6 +92,40 @@
             </tbody>
           </table>
         </div>
+        
+        <div class="section">
+          <h2>Categorized expenditures</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th>Office expenses</th>
+                <th>Compensation to others</th>
+                <th>Public education</th>
+                <th>Personal sustinance</th>
+                <th>Other</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if @categorized_expenditures.empty? %>
+                <tr><td colspan='7'>No expenditures found</td></tr>
+              <% else %>
+                <% @categorized_expenditures.each do |expenditure| %>
+                <tr>
+                  <td><a href="/client/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
+                  <td><%= number_to_currency expenditure.office_expenses %></td>
+                  <td><%= number_to_currency expenditure.compensation_to_others %></td>
+                  <td><%= number_to_currency expenditure.public_education %></td>
+                  <td><%= number_to_currency expenditure.personal_sustinance %></td>
+                  <td><%= number_to_currency expenditure.other_expenditures %></td>
+                  <td><%= number_to_currency expenditure.total_expenses %></td>
+                </tr>
+              <% end %>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
     </div>
     <div id="bio-secondary">
       <div id="map_canvas" style="border:1px solid #000; width: 222px; height: 222px;"></div>

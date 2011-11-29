@@ -49,6 +49,7 @@ module ChicagoLobbyists
       @agency_actions = @lobbyist.actions.group_by { |action|
         action.agency
       }.sort_by { |agency, actions| agency.name }
+      @categorized_expenditures = @lobbyist.categorized_expenditures.all(:total_expenses.gt => 0)
 
       erb :lobbyist
     end
