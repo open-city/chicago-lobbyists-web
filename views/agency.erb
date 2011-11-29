@@ -67,6 +67,7 @@
 
     </div>
     <div id="bio-secondary">
+      <% unless @agency.address.street == "" %>
       <div id="map_canvas" style="border:1px solid #000; width: 222px; height: 222px;"></div>
 
       <script type="text/javascript">
@@ -80,9 +81,12 @@
 
       <p><strong>Address on file:</strong></p>
       <p><%= @agency.address.full_address_formatted %></p>
-
-      <h2>Agency description</h2>
-      <p><%= @agency.description %></p>
+	  <% end %>
+	  
+	  <% unless @agency.description == "" %>	
+        <h2>Agency description</h2>
+        <p><%= @agency.description %></p>
+      <% end %>
     </div>
   </div>
   
