@@ -49,20 +49,16 @@
             <thead>
               <tr>
                 <th>Action sought</th>
-                <th>Lobbyist (engagements)</th>
+                <th>Lobbyist</th>
+                <th>Client</th>
               </tr>
             </thead>
             <tbody>
-              <% @purpose_actions.each do |purpose, actions| %>
+              <% @purpose_actions.each do |action| %>
               <tr>
-                <td><%= purpose %></td>
-                <td nowrap>
-                  <ul>
-                  <% actions.group_by(&:lobbyist).each do |lobbyist, actions| %>
-                    <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a> (<%= actions.count %>)</a></li>
-                  <% end %>
-                  </ul>
-                </td>
+                <td><%= action.purpose %></td>
+                <td><a href="/lobbyists/<%= action.lobbyist.slug %>"><%= action.lobbyist.full_name %></a></td>
+                <td><a href="/clients/<%= action.client.slug %>"><%= action.client.name %></a></td>
               </tr>
               <% end %>
             </tbody>

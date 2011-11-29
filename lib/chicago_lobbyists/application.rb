@@ -45,9 +45,7 @@ module ChicagoLobbyists
       @lobbyist = Lobbyist.first :slug => params[:id]
       @page_title = "#{@lobbyist.first_name} #{@lobbyist.last_name} - Lobbyist"
       @current_menu = "lobbyists"
-      @actions = @lobbyist.actions.group_by { |action|
-        action.purpose
-      }.sort_by { |purpose| purpose }
+      @actions = @lobbyist.actions.sort_by { |action| action.purpose }
       @agency_actions = @lobbyist.actions.group_by { |action|
         action.agency
       }.sort_by { |agency, actions| agency.name }
@@ -67,9 +65,7 @@ module ChicagoLobbyists
       @firm = Firm.first :slug => params[:id]
       @page_title = "#{@firm.name} - Lobbying Firm"
       @current_menu = "firms"
-      @actions = @firm.actions.group_by { |action|
-        action.purpose
-      }.sort_by { |purpose| purpose }
+      @actions = @firm.actions.sort_by { |action| action.purpose }
       @agency_actions = @firm.actions.group_by { |action|
         action.agency
       }.sort_by { |agency, actions| agency.name }
@@ -105,9 +101,7 @@ module ChicagoLobbyists
       @lobbyist_actions = @agency.actions.group_by { |action|
         action.lobbyist }.sort_by { |lobbyist, actions|
           lobbyist.full_name }
-      @purpose_actions = @agency.actions.group_by { |action|
-          action.purpose
-        }.sort_by { |purpose, actions| purpose }
+      @purpose_actions = @agency.actions.sort_by { |action| action.purpose }
       erb :agency
     end
     

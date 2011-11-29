@@ -20,7 +20,7 @@ class Agency
     sql = <<-SQL
       SELECT agency.slug, agency.name, COUNT(action.id)
       FROM chi_agencies agency
-        INNER JOIN chi_actions action
+        LEFT OUTER JOIN chi_actions action
         ON agency.id = action.agency_id
       GROUP BY agency.slug, agency.name
       ORDER BY COUNT(action.id) DESC

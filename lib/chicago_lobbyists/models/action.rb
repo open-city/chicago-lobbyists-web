@@ -13,5 +13,6 @@ class Action
 
   belongs_to :agency
   belongs_to :lobbyist
+  belongs_to :client
 
 end
