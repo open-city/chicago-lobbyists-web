@@ -3,12 +3,12 @@
   <%= cl_erb "common/header" %>
   <%= cl_erb "common/stats" %>
   
-   <script type="text/javascript">    
+  <script type="text/javascript">
 	    $(function(){
 	      setBarWidthByCurrency();
 	      $('.tabs').tabs();
 	    });
-    </script>
+  </script>
   
   <div class="clear"></div>
   
@@ -26,7 +26,8 @@
       	<ul class="stats">
 	        <li><strong><%= @agency_actions.count %></strong> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied
 	        <li><strong><%= @actions.count %></strong> <%= @actions.count == 1 ? " action" : " actions" %> sought
-	      	<p><%= @actions.select(&:administrative).count %> administrative
+	      	<p>
+	      	  <%= @actions.select(&:administrative).count %> administrative
 	          <br /><%= @actions.select(&:legislative).count %> legislative
 	        </p>
 	     	</li>
@@ -54,7 +55,7 @@
 		          null,
 		          null,
 		          { "bSearchable": false, "bSortable": false },
-		          { "bSearchable": false, "bSortable": false }          
+		          { "bSearchable": false, "bSortable": false }
 		        ],
 		        "aaSorting": [[0, "asc"]],
 		        "bFilter": true,
@@ -91,7 +92,7 @@
 	        <% end %>
 	        </tbody>
 	      </table>
-      	</div>
+      	</div><!-- end tab-actions-->
       
       	<div class='tab-content' id="tab-payments">
 	      <script type="text/javascript">    
@@ -130,7 +131,7 @@
 	        <% end %>
 	        </tbody>
 	      </table>
-	    </div>
+	    </div><!-- end tab-payments-->
 	    
 	    <% unless @categorized_expenditures.empty? %>
 	    <div class="tab-content" id="tab-expenses">
@@ -142,7 +143,7 @@
 		          null,
 		          { "sType": "num-html" }     
 		        ],
-		        "aaSorting": [[0, "asc"], [2, "desc"]],
+		        "aaSorting": [[2, "desc"]],
 		        "bFilter": true,
 		        "bInfo": false,
 		        "bPaginate": false
@@ -165,79 +166,88 @@
 	            <tr>
 	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
 	          	  <td class='nb'>Office expenses</td>
-	          	  <td><%= number_to_currency expenditure.office_expenses %></td>
+	          	  <td class="bar"><span style="width:100%;"><strong><%= number_to_currency expenditure.office_expenses %></strong></span></td>
 	            </tr>
 	            <% end %>
 	            <% if expenditure.compensation_to_others > 0 %>
 	            <tr>
 	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
 	          	  <td class='nb'>Compensation to others</td>
-	          	  <td><%= number_to_currency expenditure.compensation_to_others %></td>
+	          	  <td class="bar"><span style="width:100%;"><strong><%= number_to_currency expenditure.compensation_to_others %></strong></span></td>
 	            </tr>
 	            <% end %>
 	            <% if expenditure.public_education > 0 %>
 	            <tr>
 	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
 	          	  <td class='nb'>Public education</td>
-	          	  <td><%= number_to_currency expenditure.public_education %></td>
+	          	  <td class="bar"><span style="width:100%;"><strong><%= number_to_currency expenditure.public_education %></strong></span></td>
 	            </tr>
 	            <% end %>
 	            <% if expenditure.personal_sustinance > 0 %>
 	            <tr>
 	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
 	          	  <td class='nb'>Personal sustinance</td>
-	          	  <td><%= number_to_currency expenditure.personal_sustinance %></td>
+	          	  <td class="bar"><span style="width:100%;"><strong><%= number_to_currency expenditure.personal_sustinance %></strong></span></td>
 	            </tr>
 	            <% end %>
 	            <% if expenditure.other_expenditures > 0 %>
 	            <tr>
 	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
 	          	  <td class='nb'>Other expenditures</td>
-	          	  <td><%= number_to_currency expenditure.other_expenditures %></td>
+	          	  <td class="bar"><span style="width:100%;"><strong><%= number_to_currency expenditure.other_expenditures %></strong></span></td>
 	            </tr>
 	            <% end %>
 	          <% end %>
 	        </tbody>
 	      </table>
-		 
-      </div>
-      <% end %>
+        </div><!-- end tab-expenses-->
+        <% end %>
       
-      <div class="tab-content" id="tab-comments">
-      </div>
-      
-      </div>
-     </div>
+        <div class="tab-content" id="tab-comments">
+        <div id="disqus_thread"></div>
+		  <script type="text/javascript">
+		    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		    var disqus_shortname = 'chicagolobbyists'; // required: replace example with your forum shortname
+		
+		    /* * * DON'T EDIT BELOW THIS LINE * * */
+		    (function() {
+		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+		  </script>
+		  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div><!-- end tab-comment-->
+      </div><!-- end tabs-->
+    </div><!-- end bio-primary-->
       
      <div id="bio-secondary">
-  	
-     <div id="map_canvas"></div>
+       <div id="map_canvas"></div>
+        <script type="text/javascript">
+          $(function(){
+            defineMap(new google.maps.LatLng(41.37680856570233,-84.287109375));
 
-      <script type="text/javascript">
-        $(function(){
-          defineMap(new google.maps.LatLng(41.37680856570233,-84.287109375));
-
-          <% @lobbyist.firms.map(&:addresses).first.each do |address| %>
-          if (map != null)
-            geocode("<%= address.full_address.gsub(/\/n/, ' ').gsub(/ /, '+') %>");
-         <% end %>
-        });
-      </script>
+            <% @lobbyist.firms.map(&:addresses).first.each do |address| %>
+            if (map != null)
+              geocode("<%= address.full_address.gsub(/\/n/, ' ').gsub(/ /, '+') %>");
+            <% end %>
+          });
+        </script>
       
-      <h2>Lobbying firm</h2>
-      <% @lobbyist.firms.each do |firm| %>
-        <p><a href="/firms/<%= firm.slug %>"><%= firm.name %></a></p>
-        <p><strong>Address(es) on file:</strong></p>
-        <% firm.addresses.each do |address| %>
-          <p><%= address.full_address_formatted %></p>
+        <h2>Lobbying firm</h2>
+        <% @lobbyist.firms.each do |firm| %>
+          <p><a href="/firms/<%= firm.slug %>"><%= firm.name %></a></p>
+          <p><strong>Address(es) on file:</strong></p>
+          <% firm.addresses.each do |address| %>
+            <p><%= address.full_address_formatted %></p>
+          <% end %>
         <% end %>
-      <% end %>
-  	
-  	</div>
+  	</div><!-- end bio-secondary-->
   </div><!-- /.bio -->
   
   <div class="clear"></div>
-
+  
   <%= cl_erb "common/footer" %>
 </div>
 <!-- /Content -->
