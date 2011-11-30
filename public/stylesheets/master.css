@@ -24,18 +24,20 @@ blockquote, dl, ol, p, pre, table, ul { margin-bottom: 1.4em; }
 dt { font-size: 15px; font-weight: bold; margin-top: 1em; }
 dt:first-child { margin-top: 0; }
 em { font-style: italic; }
-h1 { font-size: 27px; line-height: 1.14; margin-bottom: 1em; }
-h1, h2, h3, h4, h5, h6, strong { font-weight: bold; }
+h1 { font-size: 30px; font-weight: normal; line-height: 1.14; margin-bottom: 0.5em; }
+h2, h3, h4, h5, h6, strong { font-weight: bold; }
+h1 span { font-size: 16px; }
 h2 { font-size: 19px; line-height: 1.26; }
 h3 { font-size: 17px; line-height: 1.17; margin-bottom: 0.5em; }
 h4 { font-size: 1.1em; }
 hr { background: #ddd; border: 0; clear: both; color: #ddd; height: 1px; margin: 1.5em 0; }
+input, select, text area { font-size: 1em; }
 ol { list-style: decimal; margin-left: 2em; }
 table { border-collapse: collapse; width: 100%; }
 table li, table ul { margin: 0; }
-td { border: 1px solid #ddd; border-width: 1px 0; padding: 0.3em 0.5em 0.3em 0; vertical-align: top; }
-th { font-size: 12px; font-weight: bold; padding: 0.3em 0.5em 0.3em 0; }
-ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
+td { border: 1px solid #ddd; border-width: 1px 0; padding: 0.3em 1.5em 0.3em 0; vertical-align: top; }
+th { font-size: 12px; font-weight: bold; padding: 0.3em 1.5em 0.3em 0; }
+ul { list-style: disc; margin-left: 1.5em; }
 
 
 /* Layout
@@ -55,8 +57,9 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 
 /* Bios */
 #bio { clear: both; margin-bottom: 30px; }
-#bio-primary { float: right; width: 74.2%; }
-#bio-secondary { float: left; position: relative; width: 22.7%; }
+#bio-primary { float: left; width: 74.2%; }
+#bio-secondary { float: right; position: relative; width: 22.7%; }
+
 #bio-secondary .map-overlay {
   background:#fff6d3;
   border:3px solid #FFE27E;
@@ -76,7 +79,6 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-
   margin: 40px 0 0 15px;
   transform: rotate(-45deg);
 }
@@ -171,6 +173,16 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 #dashboard h2 { color: #c00000; font-size: 14px; margin-bottom: 0.5em; text-transform: uppercase; }
 #dashboard h2 a { text-transform: none; padding-left: 1em; }
 
+/* DataTables */
+.datatable { clear: both; }
+.dataTables_filter { float: right; margin-bottom: 1em; }
+.dataTables_filter input { padding: 0.3em; width: 15em; }
+.table-head { float: left; margin-bottom: 1em; }
+th.sorting, th.sorting_asc, th.sorting_desc { cursor: pointer; }
+th.sorting_asc span { background: url(/images/sort-up.png) no-repeat 100% 50%; padding-right: 10px; }
+th.sorting_desc span { background: url(/images/sort-down.png) no-repeat 100% 50%; padding-right: 10px; }
+.nb { white-space: nowrap; }
+
 /* Charts on Homepage */
 .chartlist {
   border-top: 1px solid #eee;
@@ -225,43 +237,36 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
 }
 
 .listing td {
-  padding: 1em 0;
+  padding: 0.5em 0;
+  vertical-align: middle;
 }
 
-.listing .bar {
+.bar {
   padding: 0.4em 0;
   position: relative;
   width: 50%;
 }
 
-.listing .bar span { 
+.bar span { 
   background: #b8e4f5;
+  border-left: 1px solid #b8e4f5;
+  border-radius: 3px;
   display: block;
   font-weight: bold;
   height: 100%;
-  line-height: 2em;
   overflow: visible;
-  padding: 0.4em 0;
 }
 
-.listing .bar span strong {
-  padding: 0 4.5em 0 0.5em;
-}
+.bar span strong { display: block; font-weight: normal; padding: 0.3em 0.5em; }
+.listing .bar span strong { padding: 0.8em 0.5em; }
 
 #listing th span {
   color: #027BB6;
   cursor: pointer;
 }
 
-#listing th.sorting_asc span {
-  background: url(/images/sort-up.png) no-repeat 100% 50%;
-  padding-right: 10px;
-}
-
-#listing th.sorting_desc span {
-  background: url(/images/sort-down.png) no-repeat 100% 50%;
-  padding-right: 10px;
-}
+/* Map */
+#map_canvas { border: 1px solid #aaa; height: 222px; margin-bottom: 1em; }
 
 /* Muted text */
 .mute { color: #999; font-size: 13px; }
@@ -272,3 +277,37 @@ ul { list-style: disc; margin-left: 1.5em; margin-top: 0.5em; }
   list-style: none;
   margin-left: 0;
 }
+
+/* Stats */
+.stats { font-size: 16px; list-style: none; margin-left: 0;; }
+.stats li { margin-bottom: 0.5em; }
+.stats p { font-size: 13px; margin: 0; }
+.stats strong { font-size: 28px; }
+
+/* Tabs */
+.ui-tabs-hide { display: none; }
+.tab-content { border: 1px solid #ccc; border-radius: 0 6px 6px 6px; clear: both; margin-bottom: 1.5em; padding: 25px; }
+
+	/* Nav */
+	.tab-nav { font-size: 16px; list-style: none; margin: 0; }
+	
+	.tab-nav a {
+		background: #ffffff;
+		background: -moz-linear-gradient(top, #ffffff 70%, #e5e5e5 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(70%,#ffffff), color-stop(100%,#e5e5e5));
+		background: -webkit-linear-gradient(top, #ffffff 70%,#e5e5e5 100%);
+		background: -o-linear-gradient(top, #ffffff 70%,#e5e5e5 100%);
+		background: -ms-linear-gradient(top, #ffffff 70%,#e5e5e5 100%);
+		background: linear-gradient(top, #ffffff 70%,#e5e5e5 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+		border: 1px solid #ccc;
+		border-radius: 6px 6px 0 0;
+		display: block;
+		margin-bottom: -1px;
+		padding: 0.5em 1.5em;
+	}
+	
+	.tab-nav a:hover { background: #E4F3FA; color: #346983; text-decoration: none; }
+	.tab-nav li { float: left; margin-right: 3px; }
+	
+	.ui-tabs-selected a, .ui-tabs-selected a:hover { background: #fff; border-bottom-color: #fff; color: #000; }

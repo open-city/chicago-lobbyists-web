@@ -3,48 +3,49 @@
   <%= cl_erb "common/header" %>
   <%= cl_erb "common/stats" %>
   
+   <script type="text/javascript">    
+	    $(function(){
+	      setBarWidthByCurrency();
+	      $('.tabs').tabs();
+	    });
+    </script>
+  
   <div class="clear"></div>
   
   <div id="bio">
-    <div id="bio-header">
-      <p>Lobbyist</p>
-      <h1><%= @lobbyist.full_name %></h1>
+    <div id="bio-primary">
+      <h1><%= @lobbyist.full_name %> <span>(Lobbyist)</span></h1>
+      <div class="c2l">
+	      <ul class="stats">
+	      	<li><strong><%= number_to_currency @lobbyist.total_compensation %></strong> in 2010 payments</li>
+	        <li><strong>+<%= number_to_currency @lobbyist.total_expenditure %></strong> in 2010 expenses</li>
+	        <li><strong><%= @lobbyist.clients.count %></strong> <%= @lobbyist.clients.count == 1 ? " client" : " clients" %></li>
+	      </ul>
+      </div>
+      <div class="c2r">
+      	<ul class="stats">
+	        <li><strong><%= @agency_actions.count %></strong> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied
+	        <li><strong><%= @actions.count %></strong> <%= @actions.count == 1 ? " action" : " actions" %> sought
+	      	<p><%= @actions.select(&:administrative).count %> administrative
+	          <br /><%= @actions.select(&:legislative).count %> legislative
+	        </p>
+	     	</li>
+	     </ul>
+      </div>
       
-      <div id="map_canvas" style="border:1px solid #000; width: 222px; height: 222px;"></div>
-
-      <script type="text/javascript">
-        $(function(){
-          defineMap(new google.maps.LatLng(41.37680856570233,-84.287109375));
-
-          <% @lobbyist.firms.map(&:addresses).first.each do |address| %>
-          if (map != null)
-            geocode("<%= address.full_address.gsub(/\/n/, ' ').gsub(/ /, '+') %>");
-         <% end %>
-        });
-      </script>
-
-      <h2>Lobbying firm</h2>
-      <% @lobbyist.firms.each do |firm| %>
-        <p><a href="/firms/<%= firm.slug %>"><%= firm.name %></a></p>
-        <p><strong>Address(es) on file:</strong></p>
-        <% firm.addresses.each do |address| %>
-          <p><%= address.full_address_formatted %></p>
-        <% end %>
-      <% end %>
+      <div class="clear"></div>
       
-      <p>2010 payments: <%= number_to_currency @lobbyist.total_compensation %></p>
-      <p>2010 expenditures: <%= number_to_currency @lobbyist.total_expenditure %></p>
-      
-      <p><%= @lobbyist.clients.count %> <%= @lobbyist.clients.count == 1 ? " client" : " clients" %></p>
-      <p><%= @agency_actions.count %> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</p>
-      <p><%= @actions.count %> <%= @actions.count == 1 ? " action" : " actions" %> sought
-      	<br /> - <%= @actions.select(&:administrative).count %> administrative
-        <br /> - <%= @actions.select(&:legislative).count %> legislative
-      </p>
-    </div>
-    <hr />
-  
-    <div class='c2l'>
+      <div class="tabs">
+        <ul class="tab-nav">
+        	<li><a href="#tab-payments">Payments <span class="mute">(<%= @lobbyist.clients.count %>)</span></a></li>
+        	<li><a href="#tab-actions">Actions <span class="mute">(<%= @actions.count %>)</span></a></li>
+        	<% unless @categorized_expenditures.empty? %>
+        		<li><a href="#tab-expenses">Expenses <span class="mute">(<%= @categorized_expenditures.count %>)</span></a></li>
+        	<% end %>
+        	<li><a href="#tab-comments">Comments</a></li>
+        </ul>
+        
+	    <div class="tab-content" id="tab-actions">
 	    <script type="text/javascript">    
 		    $(function(){
 		      $("#action-table").dataTable({
@@ -55,7 +56,7 @@
 		          { "bSearchable": false, "bSortable": false },
 		          { "bSearchable": false, "bSortable": false }          
 		        ],
-		        "aaSorting": [[0, "asc"], [1, "asc"]],
+		        "aaSorting": [[0, "asc"]],
 		        "bFilter": true,
 		        "bInfo": false,
 		        "bPaginate": false
@@ -63,15 +64,15 @@
 		    });
 	    </script>
 	    
-		<h2>Actions</h2>
+		<h2 class="table-head">Actions sought</h2>
 		  <table id="action-table" class="datatable">
 	        <thead>
 	          <tr>
-	            <th>Purpose</th>
-	            <th>Agency</th>
-	            <th>Client</th>
-	            <th title="Administrative actions">Admin.</th>
-	            <th title="Legislative actions">Leg.</th>
+	            <th width="15%"><span>Purpose</span></th>
+	            <th width="37.5%"><span>Agency</span></th>
+	            <th width="37.5%"><span>Client</span></th>
+	            <th title="Administrative actions" width="5%">Admin.</th>
+	            <th title="Legislative actions" width="5%">Leg.</th>
 	          </tr>
 	        </thead>
 	        <tbody>
@@ -80,19 +81,19 @@
 	        <% else %>
 	          <% @actions.each do |action| %>
 	          <tr>
-	          	<td><%= action.purpose %></td>
+	          	<td class="nb"><%= action.purpose %></td>
 	          	<td><a href='/agencies/<%= action.agency.slug %>'><%= action.agency.name %></a></td>
 	          	<td><a href='/clients/<%= action.client.slug %>'><%= action.client.name %></a></td>
-	          	<td><%= action.administrative %></td>
-	          	<td><%= action.legislative %></td>
+	          	<td><%= action.administrative ? "Yes" : "No" %></td>
+	          	<td><%= action.legislative ? "Yes" : "No" %></td>
 	          </tr>
 	          <% end %>
 	        <% end %>
 	        </tbody>
 	      </table>
-      </div>
+      	</div>
       
-      <div class='c2r'>
+      	<div class='tab-content' id="tab-payments">
 	      <script type="text/javascript">    
 		    $(function(){
 		      $("#payments-table").dataTable({
@@ -108,7 +109,7 @@
 		    });
 	      </script>
 	      
-	      <h2>Payments</h2>         
+	      <h2 class="table-head">Payments</h2>         
 	      <table id="payments-table" class="datatable">
 	        <thead>
 	          <tr>
@@ -122,14 +123,17 @@
 	        <% else %>
 	          <% @lobbyist.clients.each do |client| %>
 	            <tr>
-	          	  <td><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
-	          	  <td><%= number_to_currency client.compensations.sum(:compensation, {:lobbyist_id => @lobbyist.id}) %></td>
+	          	  <td class="nb"><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
+	          	  <td class="bar"><span style="width:100%;"><strong><%= number_to_currency client.compensations.sum(:compensation, {:lobbyist_id => @lobbyist.id}) %></strong></span></td>
 	            </tr>
 	          <% end %>
 	        <% end %>
 	        </tbody>
 	      </table>
-	      
+	    </div>
+	    
+	    <% unless @categorized_expenditures.empty? %>
+	    <div class="tab-content" id="tab-expenses">
 	      <script type="text/javascript">    
 		    $(function(){
 		      $("#expenditures-table").dataTable({
@@ -146,8 +150,7 @@
 		    });
 	      </script>
 	      
-	      <% unless @categorized_expenditures.empty? %>
-	      <h2>Expenditures</h2>         
+	      <h2 class="table-head">Expenditures</h2>         
 	      <table id="expenditures-table" class="datatable">
 	        <thead>
 	          <tr>
@@ -161,43 +164,76 @@
 	            <% if expenditure.office_expenses > 0 %>
 	            <tr>
 	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
-	          	  <td>Office expenses</td>
+	          	  <td class='nb'>Office expenses</td>
 	          	  <td><%= number_to_currency expenditure.office_expenses %></td>
 	            </tr>
 	            <% end %>
 	            <% if expenditure.compensation_to_others > 0 %>
 	            <tr>
 	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
-	          	  <td>Compensation to others</td>
+	          	  <td class='nb'>Compensation to others</td>
 	          	  <td><%= number_to_currency expenditure.compensation_to_others %></td>
 	            </tr>
 	            <% end %>
 	            <% if expenditure.public_education > 0 %>
 	            <tr>
 	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
-	          	  <td>Public education</td>
+	          	  <td class='nb'>Public education</td>
 	          	  <td><%= number_to_currency expenditure.public_education %></td>
 	            </tr>
 	            <% end %>
 	            <% if expenditure.personal_sustinance > 0 %>
 	            <tr>
 	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
-	          	  <td>Personal sustinance</td>
+	          	  <td class='nb'>Personal sustinance</td>
 	          	  <td><%= number_to_currency expenditure.personal_sustinance %></td>
 	            </tr>
 	            <% end %>
 	            <% if expenditure.other_expenditures > 0 %>
 	            <tr>
 	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
-	          	  <td>Other expenditures</td>
+	          	  <td class='nb'>Other expenditures</td>
 	          	  <td><%= number_to_currency expenditure.other_expenditures %></td>
 	            </tr>
 	            <% end %>
 	          <% end %>
 	        </tbody>
 	      </table>
-		 <% end %>
+		 
       </div>
+      <% end %>
+      
+      <div class="tab-content" id="tab-comments">
+      </div>
+      
+      </div>
+     </div>
+      
+     <div id="bio-secondary">
+  	
+     <div id="map_canvas"></div>
+
+      <script type="text/javascript">
+        $(function(){
+          defineMap(new google.maps.LatLng(41.37680856570233,-84.287109375));
+
+          <% @lobbyist.firms.map(&:addresses).first.each do |address| %>
+          if (map != null)
+            geocode("<%= address.full_address.gsub(/\/n/, ' ').gsub(/ /, '+') %>");
+         <% end %>
+        });
+      </script>
+      
+      <h2>Lobbying firm</h2>
+      <% @lobbyist.firms.each do |firm| %>
+        <p><a href="/firms/<%= firm.slug %>"><%= firm.name %></a></p>
+        <p><strong>Address(es) on file:</strong></p>
+        <% firm.addresses.each do |address| %>
+          <p><%= address.full_address_formatted %></p>
+        <% end %>
+      <% end %>
+  	
+  	</div>
   </div><!-- /.bio -->
   
   <div class="clear"></div>

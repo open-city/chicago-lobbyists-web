@@ -22,6 +22,11 @@ function calculateNumberBars()
         $(this).children().width((($(this).children().children().html()/maxNumber) * 100) + '%');
       });
     }
+    else {
+    	$('.bar').each(function(){
+        	$(this).children().width('0%');
+      	});
+    }
 }
 
 function setUlBarWidthByCurrency(ulId) {
