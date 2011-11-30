@@ -1,7 +1,7 @@
 function setBarWidthByCurrency() {
 	$('.bar span strong').toNumber();
 	calculateNumberBars();
-	$('.bar span strong').formatCurrency();
+	$('.bar span strong').formatCurrency({ roundToDecimalPlace:0 });
 }
 
 function setBarWidthByNumber() {
@@ -27,7 +27,7 @@ function calculateNumberBars()
 function setUlBarWidthByCurrency(ulId) {
 	$('#' + ulId + ' li .count').toNumber();
 	calculateUlBars(ulId);
-	$('#' + ulId + ' li .count').formatCurrency();
+	$('#' + ulId + ' li .count').formatCurrency({ roundToDecimalPlace:0 });
 }
 
 function setUlBarWidthByNumber(ulId) {
