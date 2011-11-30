@@ -9,74 +9,140 @@
     <div id="bio-header">
       <p>Client of lobbying firm</p>
       <h1><%= @client.name %></h1>
+      
+      <p>2010 payments to lobbyists: <%= number_to_currency @client.total_compensation %></p>
+      <p>2010 payments from Chicago: <%= number_to_currency @client.total_city_payments %></p>
+      
+      <p><%= @client.lobbyists.count %> <%= @client.lobbyists.count == 1 ? " lobbyist" : " lobbyists" %> hired</p>
+      <p><%= @client.actions.count %> <%= @client.actions.count == 1 ? " action" : " actions" %> sought
+      	<br /> - <%= @client.actions.select(&:administrative).count %> administrative
+        <br /> - <%= @client.actions.select(&:legislative).count %> legislative
+      </p>
     </div>
+    <hr />
+       
+    <% unless @actions.empty? %>   
+    <div class="c2l">
+      <script type="text/javascript">    
+	    $(function(){
+	      $("#action-table").dataTable({
+	        "aoColumns": [
+	          null,
+	          null,
+	          null,
+	          { "bSearchable": false, "bSortable": false },
+	          { "bSearchable": false, "bSortable": false }          
+	        ],
+	        "aaSorting": [[0, "asc"]],
+	        "bFilter": true,
+	        "bInfo": false,
+	        "bPaginate": false
+	      });
+	    });
+      </script>
     
-    <div id="bio-primary">
-    	<div class="section">
-          <h2>2010 payments to lobbyists</h2>
-          <p><strong class="total-paid"><%= number_to_currency @client.total_compensation %></strong></p>
-        </div>
-        
-        <div class="section">
-          <h2>2010 payments from Chicago</h2>
-          <p><strong class="total-paid"><%= number_to_currency @client.total_city_payments %></strong></p>
-        </div>
+      <h2>Actions sought by hired lobbyists</h2>
+      <table id="action-table" class="datatable">
+        <thead>
+          <tr>
+            <th>Purpose</th>
+            <th>Lobbyist</th>
+            <th>Agency</th>
+            <th title="Administrative actions">Admin.</th>
+            <th title="Legislative actions">Leg.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @actions.each do |action| %>
+          <tr>
+          	<td><%= action.purpose %></td>
+          	<td><a href='/lobbyists/<%= action.lobbyist.slug %>'><%= action.lobbyist.full_name %></a></td>
+          	<td><a href='/agencies/<%= action.agency.slug %>'><%= action.agency.name %></a></td>
+          	<td><%= action.administrative %></td>
+          	<td><%= action.legislative %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <% end %>
     
-        <div class="section">
-          <h2>Lobbyists hired</h2>
-          <table>
-            <thead>
+    <% unless @client.lobbyists.empty? %>
+    <div class="c2r">
+      <script type="text/javascript">    
+	    $(function(){
+	      $("#lobbyists-table").dataTable({
+	        "aoColumns": [
+	          null,
+	          null,
+	          { "sType": "num-html" }       
+	        ],
+	        "aaSorting": [[0, "asc"]],
+	        "bFilter": true,
+	        "bInfo": false,
+	        "bPaginate": false
+	      });
+	    });
+      </script>
+    
+      <h2>Lobbyists hired</h2>
+      <table id="lobbyists-table">
+        <thead>
+          <tr>
+            <th>Lobbyist</th>
+            <th>Firm</th>
+            <th title="Amount paid to lobbyist by <%= @client.name %>">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% @client.lobbyists.each do |lobbyist| %>
               <tr>
-                <th>Lobbyist</th>
-                <th>Firm</th>
-                <th title="Amount paid to lobbyist by <%= @client.name %>">Amount</th>
+              	<td><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></td>
+	            <td><a href="/firms/<%= lobbyist.firms.first.slug %>"><%= lobbyist.firms.first.name %></a></td>
+	            <td><%= number_to_currency lobbyist.compensations.sum(:compensation, {:client_id => @client.id}) %></td>
               </tr>
-            </thead>
-            <tbody>
-            <% if @client.lobbyists.empty? %>
-              <tr><td colspan='3'>No lobbyists found</td></tr>
-            <% else %>
-	            <% @client.lobbyists.each do |lobbyist| %>
-	              <tr>
-	              	<td><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></td>
-		            <td><a href="/firms/<%= lobbyist.firms.first.slug %>"><%= lobbyist.firms.first.name %></a></td>
-		            <td><%= number_to_currency lobbyist.compensations.sum(:compensation, {:client_id => @client.id}) %></td>
-	              </tr>
-	            <% end %>
             <% end %>
-            </tbody>
-          </table>
-        </div><!-- /.section -->
-        
-        <div class="section">
-          <h2>Payments from city</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Amount</th>
-                <th>Payment Date</th>
-                <th>Department</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% if @client.city_payments.empty? %>
-              <tr>
-                <td colspan="3">No payments found</td>
-              </tr>
-              <% else %>
-                <% @client.city_payments.each do |city_payment| %>
-              <tr>
-                <td><%= number_to_currency city_payment.amount %></td>
-                <td><%= city_payment.check_date.strftime("%m/%d/%Y") %></td>
-                <td><%= city_payment.department_name.strip.length == 0 ? "" : city_payment.department_name %></td>
-              </tr>
-                <% end %>
-              <% end %>
-            </tbody>
-          </table>
-        </div> <!--/.section -->
-    </div>
-    <div id="bio-secondary">
+        </tbody>
+      </table>
+      <% end %>
+      
+      <% unless @client.city_payments.empty? %>
+      <script type="text/javascript">    
+	    $(function(){
+	      $("#city-payments-table").dataTable({
+	        "aoColumns": [
+	          { "sType": "num-html" },
+	          null,
+	          null       
+	        ],
+	        "aaSorting": [[1, "asc"]],
+	        "bFilter": true,
+	        "bInfo": false,
+	        "bPaginate": false
+	      });
+	    });
+      </script>
+    
+      <h2>Payments from city</h2>
+      <table id="city-payments-table">
+        <thead>
+          <tr>
+            <th>Amount</th>
+            <th>Payment Date</th>
+            <th>Department</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @client.city_payments.each do |city_payment| %>
+          <tr>
+            <td><%= number_to_currency city_payment.amount %></td>
+            <td><%= city_payment.check_date.strftime("%m/%d/%Y") %></td>
+            <td><%= city_payment.department_name.strip.length == 0 ? "" : city_payment.department_name %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <% end %>
     </div>
   </div>
   

@@ -85,6 +85,7 @@ module ChicagoLobbyists
       @client = Client.first :slug => params[:id]
       @page_title = "#{@client.name} - Client"
       @current_menu = "clients"
+      @actions = @client.actions.sort_by { |action| action.purpose }
       erb :client
     end
     
@@ -99,6 +100,7 @@ module ChicagoLobbyists
       @agency = Agency.first :slug => params[:id]
       @page_title = "#{@agency.name} - City Agency"
       @current_menu = "agencies"
+      @actions = @agency.actions.sort_by { |action| action.purpose }
       @lobbyist_actions = @agency.actions.group_by { |action|
         action.lobbyist }.sort_by { |lobbyist, actions|
           lobbyist.full_name }

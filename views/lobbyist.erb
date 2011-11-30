@@ -9,125 +9,7 @@
     <div id="bio-header">
       <p>Lobbyist</p>
       <h1><%= @lobbyist.full_name %></h1>
-    </div>
-    
-    <div id="bio-primary">
-        <div class="section">
-          <h2>2010 payments</h2>
-          <p><strong class="total-paid"><%= number_to_currency @lobbyist.total_compensation %></strong></p>
-        </div>
-        
-        <div class="section">
-          <h2><%= @lobbyist.clients.count %> <%= @lobbyist.clients.count == 1 ? " client" : " clients" %></h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Client</th>
-                <th title="Amount paid to lobbyist by client">Amount paid</th>
-              </tr>
-            </thead>
-            <tbody>
-            <% if @lobbyist.clients.empty? %>
-              <tr><td colspan='2'>No clients found</td></tr>
-            <% else %>
-              <% @lobbyist.clients.each do |client| %>
-              <tr>
-              	<td><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
-              	<td><%= number_to_currency client.compensations.sum(:compensation, {:lobbyist_id => @lobbyist.id}) %></td>
-              </tr>
-              <% end %>
-            <% end %>
-            </tbody>
-          </table>
-          
-        </div>
-        <div class="section">
-          <h2><%= @actions.count %> <%= @actions.count == 1 ? " action" : " actions" %> sought</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Purpose</th>
-                <th>Agency</th>
-                <th>Client</th>
-              </tr>
-            </thead>
-            <tbody>
-            <tbody>
-            <% if @actions.empty? %>
-              <tr><td colspan='3'>No actions found</td></tr>
-            <% else %>
-              <% @actions.each do |action| %>
-              <tr>
-              	<td><%= action.purpose %></td>
-              	<td><a href='/agencies/<%= action.agency.slug %>'><%= action.agency.name %></a></td>
-              	<td><a href='/clients/<%= action.client.slug %>'><%= action.client.name %></a></td>
-              </tr>
-              <% end %>
-            <% end %>
-            </tbody>
-          </table>
-        </div>
-        <div class="section">
-          <h2><%= @agency_actions.count %> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Agency</th>
-                <th title="Administrative actions">Admin.</th>
-                <th title="Legislative actions">Leg.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% if @agency_actions.empty? %>
-                <tr><td colspan='3'>No agencies found</td></tr>
-              <% else %>
-                <% @agency_actions.each do |agency, actions| %>
-                <tr>
-                  <td><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a></td>
-                  <td><%= actions.select(&:administrative).count %></td>
-                  <td><%= actions.select(&:legislative).count %></td>
-                </tr>
-              <% end %>
-            <% end %>
-            </tbody>
-          </table>
-        </div>
-        
-        <div class="section">
-          <h2>Categorized expenditures</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Client</th>
-                <th>Office expenses</th>
-                <th>Compensation to others</th>
-                <th>Public education</th>
-                <th>Personal sustinance</th>
-                <th>Other</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% if @categorized_expenditures.empty? %>
-                <tr><td colspan='7'>No expenditures found</td></tr>
-              <% else %>
-                <% @categorized_expenditures.each do |expenditure| %>
-                <tr>
-                  <td><a href="/client/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
-                  <td><%= number_to_currency expenditure.office_expenses %></td>
-                  <td><%= number_to_currency expenditure.compensation_to_others %></td>
-                  <td><%= number_to_currency expenditure.public_education %></td>
-                  <td><%= number_to_currency expenditure.personal_sustinance %></td>
-                  <td><%= number_to_currency expenditure.other_expenditures %></td>
-                  <td><%= number_to_currency expenditure.total_expenses %></td>
-                </tr>
-              <% end %>
-            <% end %>
-            </tbody>
-          </table>
-        </div>
-    </div>
-    <div id="bio-secondary">
+      
       <div id="map_canvas" style="border:1px solid #000; width: 222px; height: 222px;"></div>
 
       <script type="text/javascript">
@@ -150,7 +32,172 @@
         <% end %>
       <% end %>
       
-    </div><!-- /.bio-secondary -->
+      <p>2010 payments: <%= number_to_currency @lobbyist.total_compensation %></p>
+      <p>2010 expenditures: <%= number_to_currency @lobbyist.total_expenditure %></p>
+      
+      <p><%= @lobbyist.clients.count %> <%= @lobbyist.clients.count == 1 ? " client" : " clients" %></p>
+      <p><%= @agency_actions.count %> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</p>
+      <p><%= @actions.count %> <%= @actions.count == 1 ? " action" : " actions" %> sought
+      	<br /> - <%= @actions.select(&:administrative).count %> administrative
+        <br /> - <%= @actions.select(&:legislative).count %> legislative
+      </p>
+    </div>
+    <hr />
+  
+    <div class='c2l'>
+	    <script type="text/javascript">    
+		    $(function(){
+		      $("#action-table").dataTable({
+		        "aoColumns": [
+		          null,
+		          null,
+		          null,
+		          { "bSearchable": false, "bSortable": false },
+		          { "bSearchable": false, "bSortable": false }          
+		        ],
+		        "aaSorting": [[0, "asc"], [1, "asc"]],
+		        "bFilter": true,
+		        "bInfo": false,
+		        "bPaginate": false
+		      });
+		    });
+	    </script>
+	    
+		<h2>Actions</h2>
+		  <table id="action-table" class="datatable">
+	        <thead>
+	          <tr>
+	            <th>Purpose</th>
+	            <th>Agency</th>
+	            <th>Client</th>
+	            <th title="Administrative actions">Admin.</th>
+	            <th title="Legislative actions">Leg.</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	        <% if @actions.empty? %>
+	          <tr><td colspan='5'>No actions found</td></tr>
+	        <% else %>
+	          <% @actions.each do |action| %>
+	          <tr>
+	          	<td><%= action.purpose %></td>
+	          	<td><a href='/agencies/<%= action.agency.slug %>'><%= action.agency.name %></a></td>
+	          	<td><a href='/clients/<%= action.client.slug %>'><%= action.client.name %></a></td>
+	          	<td><%= action.administrative %></td>
+	          	<td><%= action.legislative %></td>
+	          </tr>
+	          <% end %>
+	        <% end %>
+	        </tbody>
+	      </table>
+      </div>
+      
+      <div class='c2r'>
+	      <script type="text/javascript">    
+		    $(function(){
+		      $("#payments-table").dataTable({
+		        "aoColumns": [
+		          null,
+		          { "sType": "num-html" }     
+		        ],
+		        "aaSorting": [[1, "desc"], [0, "asc"]],
+		        "bFilter": true,
+		        "bInfo": false,
+		        "bPaginate": false
+		      });
+		    });
+	      </script>
+	      
+	      <h2>Payments</h2>         
+	      <table id="payments-table" class="datatable">
+	        <thead>
+	          <tr>
+	            <th>Client</th>
+	            <th>Amount</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	        <% if @lobbyist.clients.empty? %>
+	          <tr><td colspan='2'>No clients found</td></tr>
+	        <% else %>
+	          <% @lobbyist.clients.each do |client| %>
+	            <tr>
+	          	  <td><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
+	          	  <td><%= number_to_currency client.compensations.sum(:compensation, {:lobbyist_id => @lobbyist.id}) %></td>
+	            </tr>
+	          <% end %>
+	        <% end %>
+	        </tbody>
+	      </table>
+	      
+	      <script type="text/javascript">    
+		    $(function(){
+		      $("#expenditures-table").dataTable({
+		        "aoColumns": [
+		          null,
+		          null,
+		          { "sType": "num-html" }     
+		        ],
+		        "aaSorting": [[0, "asc"], [2, "desc"]],
+		        "bFilter": true,
+		        "bInfo": false,
+		        "bPaginate": false
+		      });
+		    });
+	      </script>
+	      
+	      <% unless @categorized_expenditures.empty? %>
+	      <h2>Expenditures</h2>         
+	      <table id="expenditures-table" class="datatable">
+	        <thead>
+	          <tr>
+	            <th>Client</th>
+	            <th>Description</th>
+	            <th>Amount</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <% @categorized_expenditures.each do |expenditure| %>
+	            <% if expenditure.office_expenses > 0 %>
+	            <tr>
+	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
+	          	  <td>Office expenses</td>
+	          	  <td><%= number_to_currency expenditure.office_expenses %></td>
+	            </tr>
+	            <% end %>
+	            <% if expenditure.compensation_to_others > 0 %>
+	            <tr>
+	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
+	          	  <td>Compensation to others</td>
+	          	  <td><%= number_to_currency expenditure.compensation_to_others %></td>
+	            </tr>
+	            <% end %>
+	            <% if expenditure.public_education > 0 %>
+	            <tr>
+	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
+	          	  <td>Public education</td>
+	          	  <td><%= number_to_currency expenditure.public_education %></td>
+	            </tr>
+	            <% end %>
+	            <% if expenditure.personal_sustinance > 0 %>
+	            <tr>
+	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
+	          	  <td>Personal sustinance</td>
+	          	  <td><%= number_to_currency expenditure.personal_sustinance %></td>
+	            </tr>
+	            <% end %>
+	            <% if expenditure.other_expenditures > 0 %>
+	            <tr>
+	          	  <td><a href="/clients/<%= expenditure.client.slug %>"><%= expenditure.client.name %></a></td>
+	          	  <td>Other expenditures</td>
+	          	  <td><%= number_to_currency expenditure.other_expenditures %></td>
+	            </tr>
+	            <% end %>
+	          <% end %>
+	        </tbody>
+	      </table>
+		 <% end %>
+      </div>
   </div><!-- /.bio -->
   
   <div class="clear"></div>

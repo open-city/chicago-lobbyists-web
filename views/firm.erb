@@ -9,108 +9,7 @@
     <div id="bio-header">
       <p>Lobbying firm</p>
       <h1><%= @firm.name %></h1>
-    </div>
-    
-    <div id="bio-primary">
-        <div class="section">
-          <h2>2010 billing</h2>
-          <p><strong class="total-paid"><%= number_to_currency @firm.total_compensation %></strong></p>
-        </div><!-- /.section -->
-        
-        <div class="section">
-          <h2><%= @firm.lobbyists.count %> <%= @firm.lobbyists.count == 1 ? " lobbyist" : " lobbyists" %> employed</h2>
-          <ul>
-            <% @firm.lobbyists.each do |lobbyist| %>
-            <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></li>
-            <% end %>
-          </ul>
-        </div><!-- /.section -->
-        
-        <div class="section">
-          <h2><%= @firm.clients.count %> <%= @firm.clients.count == 1 ? " client" : " clients" %></h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Client</th>
-                <th title="Amount paid to firm by client">Amount paid</th>
-              </tr>
-            </thead>
-            <tbody>
-            <% if @firm.clients.empty? %>
-              <tr><td colspan='2'>No clients found</td></tr>
-            <% else %>
-              <% @firm.clients.each do |client| %>
-              <tr>
-              	<td><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
-              	<%
-              	client_sum = 0 
-              	@firm.lobbyists.each do |lobbyist| 
-              		client_sum += Integer(client.compensations.sum(:compensation, {:lobbyist_id => lobbyist.id}))
-              	end %>
-              	<td><%= number_to_currency client_sum %></td>
-              	<% client_sum = 0 %>
-              </tr>
-              <% end %>
-            <% end %>
-            </tbody>
-          </table>
-        </div><!-- /.section -->
-        
-        <div class="section">
-          <h2><%= @actions.count %> <%= @actions.count == 1 ? " action" : " actions" %> sought</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Purpose</th>
-                <th>Agency</th>
-                <th>Client</th>
-              </tr>
-            </thead>
-            <tbody>
-            <tbody>
-            <% if @actions.empty? %>
-              <tr><td colspan='3'>No actions found</td></tr>
-            <% else %>
-              <% @actions.each do |action| %>
-              <tr>
-              	<td><%= action.purpose %></td>
-              	<td><a href='/agencies/<%= action.agency.slug %>'><%= action.agency.name %></a></td>
-              	<td><a href='/clients/<%= action.client.slug %>'><%= action.client.name %></a></td>
-              </tr>
-              <% end %>
-            <% end %>
-            </tbody>
-          </table>
-        </div><!-- /.section -->
-
-        <div class="section">
-          <h2><%= @agency_actions.count %> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Agency</th>
-                <th title="Administrative actions">Admin.</th>
-                <th title="Legislative actions">Leg.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% if @agency_actions.empty? %>
-                <tr><td colspan='3'>No agencies found</td></tr>
-              <% else %>
-                <% @agency_actions.each do |agency, actions| %>
-                <tr>
-                  <td><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a></td>
-                  <td><%= actions.select(&:administrative).count %></td>
-                  <td><%= actions.select(&:legislative).count %></td>
-                </tr>
-              <% end %>
-            <% end %>
-            </tbody>
-          </table>
-        </div><!-- /.section -->
-
-    </div>
-    <div id="bio-secondary">
+      
       <div id="map_canvas" style="border:1px solid #000; width: 222px; height: 222px;"></div>
 
       <script type="text/javascript">
@@ -128,7 +27,121 @@
       <% @firm.addresses.each do |address| %>
       <p><%= address.full_address_formatted %></p>
       <% end %>
+      
+      <p>2010 payments: <%= number_to_currency @firm.total_compensation %></p>
+      
+      <p><%= @firm.clients.count %> <%= @firm.clients.count == 1 ? " client" : " clients" %></p>
+      <p><%= @agency_actions.count %> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</p>
+      <p><%= @actions.count %> <%= @actions.count == 1 ? " action" : " actions" %> sought
+      	<br /> - <%= @actions.select(&:administrative).count %> administrative
+        <br /> - <%= @actions.select(&:legislative).count %> legislative
+      </p>
+      
+      <p><%= @firm.lobbyists.count %> <%= @firm.lobbyists.count == 1 ? " lobbyist" : " lobbyists" %> employed</p>
+      <ul>
+        <% @firm.lobbyists.each do |lobbyist| %>
+        <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></li>
+        <% end %>
+      </ul>
+      
     </div>
+    <hr />
+    
+    <div class='c2l'>
+	    <script type="text/javascript">    
+		    $(function(){
+		      $("#action-table").dataTable({
+		        "aoColumns": [
+		          null,
+		          null,
+		          null,
+		          null,
+		          { "bSearchable": false, "bSortable": false },
+		          { "bSearchable": false, "bSortable": false }          
+		        ],
+		        "aaSorting": [[0, "asc"], [1, "asc"]],
+		        "bFilter": true,
+		        "bInfo": false,
+		        "bPaginate": false
+		      });
+		    });
+	    </script>
+	    
+		<h2>Actions</h2>
+		<table id="action-table" class="datatable">
+	        <thead>
+	          <tr>
+	            <th>Purpose</th>
+	            <th>Lobbyist</th>
+	            <th>Agency</th>
+	            <th>Client</th>
+	            <th title="Administrative actions">Admin.</th>
+	            <th title="Legislative actions">Leg.</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	        <% if @actions.empty? %>
+	          <tr><td colspan='6'>No actions found</td></tr>
+	        <% else %>
+	          <% @actions.each do |action| %>
+	          <tr>
+	          	<td><%= action.purpose %></td>
+	          	<td><a href='/lobbyists/<%= action.lobbyist.slug %>'><%= action.lobbyist.full_name %></a></td>
+	          	<td><a href='/agencies/<%= action.agency.slug %>'><%= action.agency.name %></a></td>
+	          	<td><a href='/clients/<%= action.client.slug %>'><%= action.client.name %></a></td>
+	          	<td><%= action.administrative %></td>
+	          	<td><%= action.legislative %></td>
+	          </tr>
+	          <% end %>
+	        <% end %>
+	        </tbody>
+	      </table>
+      </div>
+      
+      <div class='c2r'>
+	      <script type="text/javascript">    
+		    $(function(){
+		      $("#payments-table").dataTable({
+		        "aoColumns": [
+		          null,
+		          { "sType": "num-html" }     
+		        ],
+		        "aaSorting": [[1, "desc"], [0, "asc"]],
+		        "bFilter": true,
+		        "bInfo": false,
+		        "bPaginate": false
+		      });
+		    });
+	      </script>
+	      
+	      <h2>Payments</h2>         
+	      <table id="payments-table" class="datatable">
+	        <thead>
+	          <tr>
+	            <th>Client</th>
+	            <th>Amount</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	        <% if @firm.clients.empty? %>
+	          <tr><td colspan='2'>No clients found</td></tr>
+	        <% else %>
+	          <% @firm.clients.each do |client| %>
+	            <tr>
+	          	  <td><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
+	          	  <%
+	              	client_sum = 0 
+	              	@firm.lobbyists.each do |lobbyist| 
+	              		client_sum += Integer(client.compensations.sum(:compensation, {:lobbyist_id => lobbyist.id}))
+	              	end %>
+	              	<td><%= number_to_currency client_sum %></td>
+	              	<% client_sum = 0 %>
+	            </tr>
+	          <% end %>
+	        <% end %>
+	        </tbody>
+	      </table>	      
+        </div>
   </div>
   
   <div class="clear"></div>

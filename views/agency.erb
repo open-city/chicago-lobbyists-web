@@ -9,64 +9,7 @@
     <div id="bio-header">
       <p>City Agency</p>
       <h1><%= @agency.name %></h1>
-    </div>
-    
-    <div id="bio-primary">
-        <div class="section spotlight">
-          <h2>Actions involving lobbyists</h2>
-          <p>
-            <strong><%= @agency.actions.select(&:administrative).count %></strong> Administrative
-            <br />
-            <strong><%= @agency.actions.select(&:legislative).count %></strong> Legislative
-          </p>
-        </div><!-- /.section -->
-        
-        <div class="section">
-          <h2>Lobbyists seeking actions</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Lobbyist</th>
-                <th title="Administrative actions">Admin.</th>
-                <th title="Legislative actions">Leg.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @lobbyist_actions.each do |lobbyist, actions| %>
-              <tr>
-                <td><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></td>
-                <td><%= actions.group_by(&:administrative).count %></td>
-                <td><%= actions.group_by(&:legislative).count %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div><!-- /.section -->
-        
-        <div class="section">
-          <h2>Types of actions sought</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Action sought</th>
-                <th>Lobbyist</th>
-                <th>Client</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @purpose_actions.each do |action| %>
-              <tr>
-                <td><%= action.purpose %></td>
-                <td><a href="/lobbyists/<%= action.lobbyist.slug %>"><%= action.lobbyist.full_name %></a></td>
-                <td><a href="/clients/<%= action.client.slug %>"><%= action.client.name %></a></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div><!-- /.section -->
-
-    </div>
-    <div id="bio-secondary">
+      
       <% unless @agency.address.street == "" %>
       <div id="map_canvas" style="border:1px solid #000; width: 222px; height: 222px;"></div>
 
@@ -87,7 +30,60 @@
         <h2>Agency description</h2>
         <p><%= @agency.description %></p>
       <% end %>
+      
+      <p><%= @actions.count %> <%= @actions.count == 1 ? " action" : " actions" %> by lobbyists
+      	<br /> - <%= @actions.select(&:administrative).count %> administrative
+        <br /> - <%= @actions.select(&:legislative).count %> legislative
+      </p>
+
     </div>
+    <hr />
+    
+    <script type="text/javascript">    
+	    $(function(){
+	      $("#action-table").dataTable({
+	        "aoColumns": [
+	          null,
+	          null,
+	          null,
+	          { "bSearchable": false, "bSortable": false },
+	          { "bSearchable": false, "bSortable": false }          
+	        ],
+	        "aaSorting": [[0, "asc"], [1, "asc"]],
+	        "bFilter": true,
+	        "bInfo": false,
+	        "bPaginate": false
+	      });
+	    });
+    </script>
+    
+    <h2>Actions</h2>
+	<table id="action-table" class="datatable">
+        <thead>
+          <tr>
+            <th>Purpose</th>
+            <th>Lobbyist</th>
+            <th>Client</th>
+            <th title="Administrative actions">Admin.</th>
+            <th title="Legislative actions">Leg.</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% if @actions.empty? %>
+          <tr><td colspan='3'>No actions found</td></tr>
+        <% else %>
+          <% @actions.each do |action| %>
+          <tr>
+          	<td><%= action.purpose %></td>
+          	<td><a href='/lobbyists/<%= action.lobbyist.slug %>'><%= action.lobbyist.full_name %></a></td>
+          	<td><a href='/clients/<%= action.client.slug %>'><%= action.client.name %></a></td>
+          	<td><%= action.administrative %></td>
+          	<td><%= action.legislative %></td>
+          </tr>
+          <% end %>
+        <% end %>
+        </tbody>
+      </table>
   </div>
   
   <div class="clear"></div>
