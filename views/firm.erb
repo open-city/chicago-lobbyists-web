@@ -19,7 +19,7 @@
 	      <ul class="stats">
 	      	<li><strong><%= number_to_currency @firm.total_compensation %></strong> in 2010 payments</li>
 	        <li><strong><%= @firm.clients.count %></strong> <%= @firm.clients.count == 1 ? " client" : " clients" %></li>
-	        <li><strong><%= @agency_actions.count %></strong> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied
+	        <li><strong><%= @agency_actions.count %></strong> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</li>
 	        <li><strong><%= @actions.count %></strong> <%= @actions.count == 1 ? " action" : " actions" %> sought
 	      	  <p>
 	      	    <%= @actions.select(&:administrative).count %> administrative

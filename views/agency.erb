@@ -3,89 +3,137 @@
   <%= cl_erb "common/header" %>
   <%= cl_erb "common/stats" %>
   
+  <script type="text/javascript">
+	    $(function(){
+	      setBarWidthByCurrency();
+	      $('.tabs').tabs();
+	    });
+  </script>
+  
   <div class="clear"></div>
   
-  <div id="bio">
-    <div id="bio-header">
-      <p>City Agency</p>
-      <h1><%= @agency.name %></h1>
+    <div id="bio">
+    <div id="bio-primary">
+      <h1><%= @agency.name %> <span>(City agency)</span></h1>
+      <div class="c2l">
+	      <ul class="stats">
+	        <li><strong><%= @actions.count %></strong> <%= @actions.count == 1 ? " action" : " actions" %> sought
+	      	  <p>
+	      	    <%= @actions.select(&:administrative).count %> administrative
+	            <br /><%= @actions.select(&:legislative).count %> legislative
+	          </p>
+	        </li>
+	      </ul>
+      </div>
+      <div class="c2r">
+      	<ul class='stats'>
+      		<li><strong>x</strong> lobbyists</li>
+      		<li><strong>y</strong> lobbying firms</li>
+      	</ul>
+      </div>
       
-      <% unless @agency.address.street == "" %>
-      <div id="map_canvas" style="border:1px solid #000; width: 222px; height: 222px;"></div>
-
-      <script type="text/javascript">
-        $(function(){
-          defineMap(new google.maps.LatLng(41.37680856570233,-84.287109375));
-
-          if (map != null)
-            geocode("<%= @agency.address.full_address.gsub(/\/n/, ' ').gsub(/ /, '+') %>");
-        });
-      </script>
-
-      <p><strong>Address on file:</strong></p>
-      <p><%= @agency.address.full_address_formatted %></p>
-	  <% end %>
-	  
-	  <% unless @agency.description == "" %>	
+      <div class="clear"></div>
+      
+        <% unless @agency.description == "" %>	
         <h2>Agency description</h2>
         <p><%= @agency.description %></p>
-      <% end %>
-      
-      <p><%= @actions.count %> <%= @actions.count == 1 ? " action" : " actions" %> by lobbyists
-      	<br /> - <%= @actions.select(&:administrative).count %> administrative
-        <br /> - <%= @actions.select(&:legislative).count %> legislative
-      </p>
-
-    </div>
-    <hr />
-    
-    <script type="text/javascript">    
-	    $(function(){
-	      $("#action-table").dataTable({
-	        "aoColumns": [
-	          null,
-	          null,
-	          null,
-	          { "bSearchable": false, "bSortable": false },
-	          { "bSearchable": false, "bSortable": false }          
-	        ],
-	        "aaSorting": [[0, "asc"], [1, "asc"]],
-	        "bFilter": true,
-	        "bInfo": false,
-	        "bPaginate": false
-	      });
-	    });
-    </script>
-    
-    <h2>Actions</h2>
-	<table id="action-table" class="datatable">
-        <thead>
-          <tr>
-            <th>Purpose</th>
-            <th>Lobbyist</th>
-            <th>Client</th>
-            <th title="Administrative actions">Admin.</th>
-            <th title="Legislative actions">Leg.</th>
-          </tr>
-        </thead>
-        <tbody>
-        <% if @actions.empty? %>
-          <tr><td colspan='3'>No actions found</td></tr>
-        <% else %>
-          <% @actions.each do |action| %>
-          <tr>
-          	<td><%= action.purpose %></td>
-          	<td><a href='/lobbyists/<%= action.lobbyist.slug %>'><%= action.lobbyist.full_name %></a></td>
-          	<td><a href='/clients/<%= action.client.slug %>'><%= action.client.name %></a></td>
-          	<td><%= action.administrative %></td>
-          	<td><%= action.legislative %></td>
-          </tr>
-          <% end %>
         <% end %>
-        </tbody>
-      </table>
-  </div>
-  
+      
+      <div class="tabs">
+        <ul class="tab-nav">
+        	<% unless @actions.empty? %>
+        	  <li><a href="#tab-actions">Actions <span class="mute">(<%= @actions.count %>)</span></a></li>
+        	<% end %>
+        	<li><a href="#tab-comments">Comments</a></li>
+        </ul>
+        
+        <% unless @actions.empty? %>
+	    <div class="tab-content" id="tab-actions">
+	    <script type="text/javascript">    
+		    $(function(){
+		      $("#action-table").dataTable({
+		        "aoColumns": [
+		          null,
+		          null,
+		          null,
+		          null,
+		          { "bSearchable": false, "bSortable": false },
+		          { "bSearchable": false, "bSortable": false }
+		        ],
+		        "aaSorting": [[0, "asc"]],
+		        "bFilter": true,
+		        "bInfo": false,
+		        "bPaginate": false
+		      });
+		    });
+	    </script>
+	    
+		<h2 class="table-head">Actions sought</h2>
+		  <table id="action-table" class="datatable">
+	        <thead>
+	          <tr>
+	            <th width="15%"><span>Purpose</span></th>
+	            <th width="25%"><span>Lobbyist</span></th>
+	            <th width="25%"><span>Agency</span></th>
+	            <th width="25%"><span>Client</span></th>
+	            <th title="Administrative actions" width="5%">Admin.</th>
+	            <th title="Legislative actions" width="5%">Leg.</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <% @actions.each do |action| %>
+	          <tr>
+	          	<td><%= action.purpose %></td>
+	          	<td><a href='/lobbyists/<%= action.lobbyist.slug %>'><%= action.lobbyist.full_name %></a></td>
+	          	<td><a href='/agencies/<%= action.agency.slug %>'><%= action.agency.name %></a></td>
+	          	<td><a href='/clients/<%= action.client.slug %>'><%= action.client.name %></a></td>
+	          	<td><%= action.administrative ? "Yes" : "No" %></td>
+	          	<td><%= action.legislative ? "Yes" : "No" %></td>
+	          </tr>
+	          <% end %>
+	        </tbody>
+	      </table>
+      	</div><!-- end tab-actions-->
+      	<% end %>
+            
+        <div class="tab-content" id="tab-comments">
+        <div id="disqus_thread"></div>
+		  <script type="text/javascript">
+		    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		    var disqus_shortname = 'chicagolobbyists'; // required: replace example with your forum shortname
+		
+		    /* * * DON'T EDIT BELOW THIS LINE * * */
+		    (function() {
+		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+		  </script>
+		  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div><!-- end tab-comment-->
+      </div><!-- end tabs-->
+    </div><!-- end bio-primary-->
+      
+     <div id="bio-secondary">
+          <% unless @agency.address.street == "" %>
+	      <div id="map_canvas"></div>
+	
+	      <script type="text/javascript">
+	        $(function(){
+	          defineMap(new google.maps.LatLng(41.37680856570233,-84.287109375));
+	
+	          if (map != null)
+	            geocode("<%= @agency.address.full_address.gsub(/\/n/, ' ').gsub(/ /, '+') %>");
+	        });
+	      </script>
+	
+	      <p><strong>Address on file:</strong></p>
+	      <p><%= @agency.address.full_address_formatted %></p>
+		  <% end %>
+  	</div><!-- end bio-secondary-->
+  </div><!-- /.bio -->
+    
   <div class="clear"></div>
   
   <%= cl_erb "common/footer" %>

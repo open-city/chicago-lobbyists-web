@@ -24,7 +24,7 @@
       </div>
       <div class="c2r">
       	<ul class="stats">
-	        <li><strong><%= @agency_actions.count %></strong> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied
+	        <li><strong><%= @agency_actions.count %></strong> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</li>
 	        <li><strong><%= @actions.count %></strong> <%= @actions.count == 1 ? " action" : " actions" %> sought
 	      	<p>
 	      	  <%= @actions.select(&:administrative).count %> administrative
