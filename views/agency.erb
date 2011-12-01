@@ -27,8 +27,8 @@
       </div>
       <div class="c2r">
       	<ul class='stats'>
-      		<li><strong>x</strong> lobbyists</li>
-      		<li><strong>y</strong> lobbying firms</li>
+          <li><strong><%= @agency.lobbyists.uniq.count %></strong> lobbyists</li>
+          <li><strong><%= @agency.firms.uniq.count %></strong> lobbying firms</li>
       	</ul>
       </div>
       
