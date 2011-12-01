@@ -14,7 +14,7 @@ CREATE TABLE public.chi_agencies  (
 
 -- LOAD CHICAGO LOBBYIST AGENCIES
 INSERT INTO public.chi_agencies (slug, name, description, address_id)
-SELECT DISTINCT lower(replace(replace(replace(replace(replace(a.name, ',', ''), '.', ''), ' ', '-'), '&', 'and'), '''', '')), a.name, a.description, adr.id
+SELECT DISTINCT lower(replace(replace(replace(replace(replace(a.name, ',', ''), '.', ''), ' ', '-'), '&', 'and'), '''', '-')), a.name, a.description, adr.id
 FROM public.lobbyist_agencies a
   INNER JOIN public.chi_addresses adr
   ON adr.street = a.address

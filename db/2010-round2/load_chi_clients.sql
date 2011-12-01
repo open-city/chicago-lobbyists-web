@@ -12,5 +12,5 @@ CREATE TABLE public.chi_clients (
 
 -- LOAD CHICAGO CLIENTS
 INSERT INTO public.chi_clients (slug, name)
-SELECT DISTINCT lower(replace(replace(replace(replace(replace(replace(replace(replace(client_name, ',', ''), '.', ''), ' ', '-'), '&', 'and'), '/', '-'), '(', '-'), ')', ''), '--', '-')), client_name
+SELECT DISTINCT lower(replace(replace(replace(replace(replace(replace(replace(replace(replace(client_name, ',', ''), '''', '-'), '.', ''), ' ', '-'), '&', 'and'), '/', '-'), '(', '-'), ')', ''), '--', '-')), client_name
 FROM public.lobbyists;
