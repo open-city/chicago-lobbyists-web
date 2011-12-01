@@ -4,6 +4,40 @@
   <%= cl_erb "common/stats" %>
   
   <div class="clear"></div>
+
+
+  <div id="bio">
+    <div id="bio-primary">
+      <h1><%= @lobbyist.full_name %> <span>(Lobbyist)</span></h1>
+      <div class="c2l">
+	      <ul class="stats">
+	      	<li><strong><%= number_to_currency @lobbyist.total_compensation %></strong> in 2010 payments</li>
+	        <li><strong>+<%= number_to_currency @lobbyist.total_expenditure %></strong> in 2010 expenses</li>
+	        <li><strong><%= @lobbyist.clients.count %></strong> <%= @lobbyist.clients.count == 1 ? " client" : " clients" %></li>
+	      </ul>
+      </div>
+      <div class="c2r">
+      	<ul class="stats">
+	        <li><strong><%= @agency_actions.count %></strong> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied
+	        <li><strong><%= @actions.count %></strong> <%= @actions.count == 1 ? " action" : " actions" %> sought
+	      	<p>
+	      	  <%= @actions.select(&:administrative).count %> administrative
+	          <br /><%= @actions.select(&:legislative).count %> legislative
+	        </p>
+	     	</li>
+	     </ul>
+      </div>
+      
+      <div class="clear"></div>
+
+
+    </div>
+  </div>
+      
+
+
+
+
   
   <div id="bio">
     <div id="bio-header">

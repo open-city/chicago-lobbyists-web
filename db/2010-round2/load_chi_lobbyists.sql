@@ -17,7 +17,7 @@ CREATE TABLE public.chi_lobbyists  (
 -- terminations are all null with the current data set - no lobbyists in the termination list appear in the registry
 INSERT INTO public.chi_lobbyists (
   slug, last_name, first_name, full_name, termination_date)
-SELECT DISTINCT lower(replace(replace(l.first_name, ',', ''), '.', '')) || '-' || lower(replace(replace(l.last_name, ',', ''), '.', '')), l.last_name, l.first_name, l.full_name, t.termination_date
+SELECT DISTINCT lower(replace(replace(l.first_name, ',', ''), '.', '')) || '-' || lower(replace(replace(replace(l.last_name, ',', ''), ' ', '-'), '.', '')), l.last_name, l.first_name, l.full_name, t.termination_date
 FROM public.lobbyists l
 
   LEFT OUTER JOIN public.lobbyist_terminations t
