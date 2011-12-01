@@ -225,6 +225,19 @@ ul { list-style: disc; margin-left: 1.5em; }
   width: 5%;
 }
 
+.datatable.agency-actions .purpose {
+  width: 15%;
+}
+.datatable.agency-actions .lobbyist {
+  width: 25%;
+}
+.datatable.agency-actions .agency {
+  width: 25%;
+}
+.datatable.agency-actions .actions {
+  width: 5%;
+}
+
 th.sorting, th.sorting_asc, th.sorting_desc { cursor: pointer; }
 th.sorting_asc span { background: url(/images/sort-up.png) no-repeat 100% 50%; padding-right: 10px; }
 th.sorting_desc span { background: url(/images/sort-down.png) no-repeat 100% 50%; padding-right: 10px; }
