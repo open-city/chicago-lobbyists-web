@@ -61,8 +61,8 @@
             map_bounds.extend(results[0].geometry.location);
             map.fitBounds(map_bounds);
 
-            if (map.zoom > 14) {
-              map.setZoom(14);
+            if (map.zoom > 13) {
+              map.setZoom(13);
             }
           } else {
             alert("Geocode was not successful for the following reason: " + status);
