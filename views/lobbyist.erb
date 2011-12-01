@@ -18,7 +18,9 @@
       <div class="c2l">
 	      <ul class="stats">
 	      	<li><strong><%= number_to_currency @lobbyist.total_compensation %></strong> in 2010 payments</li>
+	      	<% unless @lobbyist.total_expenditure == 0 %>
 	        <li><strong>+<%= number_to_currency @lobbyist.total_expenditure %></strong> in 2010 expenses</li>
+	        <% end %>
 	        <li><strong><%= @lobbyist.clients.count %></strong> <%= @lobbyist.clients.count == 1 ? " client" : " clients" %></li>
 	      </ul>
       </div>
