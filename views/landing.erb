@@ -51,7 +51,7 @@
         <h2>Most lobbied city agencies <a href="/agencies">All agencies &raquo;</a></h2>
         <ul class="chartlist" id="home-agencies">
           <% @most_lobbied_agencies.each do |slug, name, count| %>
-            <li><a href="/agencies/<%= slug %>"><%= name %></a><span class="index"></span><span class="count"><%= count %></span></li>
+            <li><a href="/agencies/<%= slug %>"><%= name %></a><span class="index"></span><span class="count"><%= count %> actions</span></li>
           <% end %>
         </ul>
       </div>

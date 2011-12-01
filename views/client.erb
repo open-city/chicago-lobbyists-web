@@ -18,7 +18,9 @@
       <div class="c2l">
       	<ul class="stats">
 	      <li><strong><%= number_to_currency @client.total_compensation %></strong> 2010 payments to lobbyists</li>
+	      <% unless @client.city_payments.empty? %>
       	  <li><strong><%= number_to_currency @client.total_city_payments %></strong> 2010 payments from Chicago</li>
+      	  <% end %>
       	  <li><strong><%= @client.lobbyists.count %></strong> <%= @client.lobbyists.count == 1 ? " lobbyist" : " lobbyists" %> hired</li>
       	</ul>
       </div>
@@ -153,7 +155,7 @@
 		    });
 	      </script>
 	    
-	      <h2 class="table-head">Payments from city</h2>
+	      <h2 class="table-head">Payments from Chicago</h2>
 	      <table id="city-payments-table" class="datatable">
 	        <thead>
 	          <tr>
