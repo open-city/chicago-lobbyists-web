@@ -177,7 +177,22 @@ ul { list-style: disc; margin-left: 1.5em; }
 .datatable { clear: both; }
 .dataTables_filter { float: right; margin-bottom: 1em; }
 .dataTables_filter input { padding: 0.3em; width: 15em; }
+
 .table-head { float: left; margin-bottom: 1em; }
+
+.datatable.actions .purpose {
+  width: 15%;
+}
+.datatable.actions .agency {
+  width: 37.5%;
+}
+.datatable.actions .client {
+  width: 37.5%;
+}
+.datatable.actions .actions {
+  width: 5%;
+}
+
 th.sorting, th.sorting_asc, th.sorting_desc { cursor: pointer; }
 th.sorting_asc span { background: url(/images/sort-up.png) no-repeat 100% 50%; padding-right: 10px; }
 th.sorting_desc span { background: url(/images/sort-down.png) no-repeat 100% 50%; padding-right: 10px; }
