@@ -16,6 +16,11 @@ module ChicagoLobbyists
     def page
       0
     end
+    
+    # Render views/notfound.erb
+	not_found do
+	  erb :notfound
+	end
 
     get "/" do
       @current_menu = "home"

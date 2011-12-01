@@ -18,25 +18,19 @@
       <div class="c2l">
 	      <ul class="stats">
 	      	<li><strong><%= number_to_currency @firm.total_compensation %></strong> in 2010 payments</li>
+	      	<li><strong><%= @firm.lobbyists.count %></strong> <%= @firm.lobbyists.count == 1 ? " lobbyist" : " lobbyists" %> employed</li>
 	        <li><strong><%= @firm.clients.count %></strong> <%= @firm.clients.count == 1 ? " client" : " clients" %></li>
-	        <li><strong><%= @agency_actions.count %></strong> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</li>
+	      </ul>
+      </div>
+      <div class="c2r">
+      	<ul class="stats">
+			<li><strong><%= @agency_actions.count %></strong> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</li>
 	        <li><strong><%= @actions.count %></strong> <%= @actions.count == 1 ? " action" : " actions" %> sought
 	      	  <p>
 	      	    <%= @actions.select(&:administrative).count %> administrative
 	            <br /><%= @actions.select(&:legislative).count %> legislative
 	          </p>
 	        </li>
-	      </ul>
-      </div>
-      <div class="c2r">
-      	<ul class="stats">
-	        <li><strong><%= @firm.lobbyists.count %></strong> <%= @firm.lobbyists.count == 1 ? " lobbyist" : " lobbyists" %> employed
-		      <ul>
-		        <% @firm.lobbyists.each do |lobbyist| %>
-		        <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></li>
-		        <% end %>
-		      </ul>
-	     	</li>
 	     </ul>
       </div>
       
@@ -45,6 +39,7 @@
       <div class="tabs">
         <ul class="tab-nav">
         	<li><a href="#tab-payments">Payments <span class="mute">(<%= @firm.clients.count %>)</span></a></li>
+        	<li><a href="#tab-lobbyists">Lobbyists <span class="mute">(<%= @firm.lobbyists.count %>)</span></a></li>
         	<% unless @actions.empty? %>
         	  <li><a href="#tab-actions">Actions <span class="mute">(<%= @actions.count %>)</span></a></li>
         	<% end %>
@@ -99,6 +94,43 @@
 	      </table>
       	</div><!-- end tab-actions-->
       	<% end %>
+      	
+      	<% unless @firm.lobbyists.empty? %>
+	    <div class="tab-content" id="tab-lobbyists">
+	      <script type="text/javascript">    
+		    $(function(){
+		      $("#lobbyists-table").dataTable({
+		        "aoColumns": [
+		          null,
+		          { "sType": "num-html" }       
+		        ],
+		        "aaSorting": [[1, "desc"]],
+		        "bFilter": true,
+		        "bInfo": false,
+		        "bPaginate": false
+		      });
+		    });
+	      </script>
+	    
+	      <h2 class="table-head">Lobbyists hired</h2>
+	      <table id="lobbyists-table" class="datatable">
+	        <thead>
+	          <tr>
+	            <th>Lobbyist</th>
+	            <th>Amount</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	            <% @firm.lobbyists.each do |lobbyist| %>
+	              <tr>
+	              	<td><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></td>
+		            <td class="bar"><span style="width:100%;"><strong><%= number_to_currency lobbyist.compensations.sum(:compensation, {:lobbyist_id => lobbyist.id}) %></strong></span></td>
+	              </tr>
+	            <% end %>
+	        </tbody>
+	      </table>
+	      </div>
+	      <% end %>
       
       	<div class='tab-content' id="tab-payments">
 	      <script type="text/javascript">    

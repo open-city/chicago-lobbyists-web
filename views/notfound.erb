@@ -1,0 +1,25 @@
+<% @page_title = "Page not found"%>
+
+<!-- Content -->
+<div id="content">
+  <%= cl_erb "common/header" %>
+
+  <div class="clear"></div>
+    
+  <div class='content-primary'> 
+  	<h1>Page not found</h1>
+  
+  	<p>Sorry! We couldn't find the page you are looking for. Our data has been updated recently, so some of the URLs may have broken in the process.</p>
+  	
+  	<p>Try finding what you need from the links below:</p>
+  	<ul>
+  		<li><a href='/lobbyists/'>Lobbyists</a></li>
+  		<li><a href='/firms/'>Lobbying firms</a></li>
+  		<li><a href='/clients/'>Clients</a></li>
+  		<li><a href='/agencies/'>City agencies</a></li>
+  	</ul>
+  </div> 
+
+  <%= cl_erb "common/footer" %>
+</div>
+<!-- /Content -->
