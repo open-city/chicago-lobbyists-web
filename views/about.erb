@@ -93,6 +93,61 @@
 	<p>If you have any comments, questions or feature suggestions, you can email us at <a href='mailto:chi.lobbyists@gmail.com'>chi.lobbyists@gmail.com</a> or tweet us at <a href='https://twitter.com/#!/chilobbyists'>@chilobbyists</a>.</p>
 </div> 
 
+<div class="content-secondary">
+	<h2>Who are we?</h2>
+  	<p>We are a group of developers and designers in Chicago with a passion for open data and challenging problems.</p>
+  	<dl>
+	  	<dt><a href='http://twitter.com/paulbaker'>Paul Baker</a></dt>
+	  	<dd>President and co-founder of <a href='http://webitects.com'>Webitects</a></dd>
+	  	
+	  	<dt><a href='http://twitter.com/ryanbriones'>Ryan Briones</a></dt>
+	  	<dd>Developer at <a href='http://www.groupon.com/'>Groupon</a> and organizer for <a href='http://chicagodb.gathers.us/'>ChicagoDB</a></dd>
+	  	
+	  	<dt><a href='http://twitter.com/derek_eder'>Derek Eder</a></dt>
+	  	<dd>Developer at Webitects and organizer for <a href='http://opengovchicago.org'>OpenGov Chicago</a></dd>
+	  	
+	  	<dt><a href='http://twitter.com/chadwpry'>Chad Pry</a></dt>
+	  	<dd>Developer at Groupon and software mentor</dd>
+	  	
+	  	<dt><a href='http://twitter.com/rougeux'>Nick Rougeux</a></dt>
+	  	<dd>Designer and CSS wiz at Webitects</dd>
+  	</dl>
+  	
+  	<hr />
+  	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+	<script>
+	new TWTR.Widget({
+	  version: 2,
+	  type: 'profile',
+	  rpp: 3,
+	  interval: 6000,
+	  width: 'auto',
+	  height: 300,
+	  theme: {
+	    shell: {
+	      background: '#B8E4F5',
+	      color: '#027ab6'
+	    },
+	    tweets: {
+	      background: '#ffffff',
+	      color: '#000000',
+	      links: '#027BB6'
+	    }
+	  },
+	  features: {
+	    scrollbar: false,
+	    loop: false,
+	    live: false,
+	    hashtags: true,
+	    timestamp: true,
+	    avatars: true,
+	    behavior: 'all'
+	  }
+	}).render().setUser('chilobbyists').start();
+	</script>
+
+</div>
+
   <%= cl_erb "common/footer" %>
 </div>
 <!-- /Content -->
