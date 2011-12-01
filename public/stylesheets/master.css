@@ -180,16 +180,32 @@ ul { list-style: disc; margin-left: 1.5em; }
 
 .table-head { float: left; margin-bottom: 1em; }
 
-.datatable.actions .purpose {
+.datatable.lobbyist-actions .purpose {
   width: 15%;
 }
-.datatable.actions .agency {
+.datatable.lobbyist-actions .agency {
   width: 37.5%;
 }
-.datatable.actions .client {
+.datatable.lobbyist-actions .client {
   width: 37.5%;
 }
-.datatable.actions .actions {
+.datatable.lobbyist-actions .actions {
+  width: 5%;
+}
+
+.datatable.firm-actions .purpose {
+  width: 15%;
+}
+.datatable.firm-actions .lobbyist {
+  width: 25%;
+}
+.datatable.firm-actions .agency {
+  width: 25%;
+}
+.datatable.firm-actions .client {
+  width: 25%;
+}
+.datatable.firm-actions .actions {
   width: 5%;
 }
 
