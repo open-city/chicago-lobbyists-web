@@ -12,6 +12,7 @@ gem 'do_postgres'
 
 group :development do
   gem "heroku"
+  gem "pg"
   gem "shotgun"
   gem "unicorn"
 end
