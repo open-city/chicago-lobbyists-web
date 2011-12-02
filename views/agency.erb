@@ -56,7 +56,6 @@
 		          null,
 		          null,
 		          null,
-		          null,
 		          { "bSearchable": false, "bSortable": false },
 		          { "bSearchable": false, "bSortable": false }
 		        ],
@@ -74,7 +73,6 @@
 	          <tr>
 	            <th class="purpose"><span>Purpose</span></th>
 	            <th class="lobbyist"><span>Lobbyist</span></th>
-	            <th class="agency"><span>Agency</span></th>
 	            <th class="client"><span>Client</span></th>
 	            <th class="actions administrative" title="Administrative actions">Admin.</th>
 	            <th class="actions legislative" title="Legislative actions">Leg.</th>
@@ -85,7 +83,6 @@
 	          <tr>
 	          	<td><%= action.purpose %></td>
 	          	<td><a href='/lobbyists/<%= action.lobbyist.slug %>'><%= action.lobbyist.full_name %></a></td>
-	          	<td><a href='/agencies/<%= action.agency.slug %>'><%= action.agency.name %></a></td>
 	          	<td><a href='/clients/<%= action.client.slug %>'><%= action.client.name %></a></td>
 	          	<td><%= action.administrative ? "Yes" : "No" %></td>
 	          	<td><%= action.legislative ? "Yes" : "No" %></td>
