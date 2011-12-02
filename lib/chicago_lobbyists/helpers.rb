@@ -16,6 +16,12 @@ module ChicagoLobbyists
       Client.count
     end
 
+    def compensations_for(client)
+      client.compensations.sum(:compensation, {
+        :lobbyist_id => client.lobbyists.map(&:id)
+      }).to_i
+    end
+
     def cl_erb(template)
       erb template.to_sym
     end

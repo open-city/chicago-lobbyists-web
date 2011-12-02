@@ -163,15 +163,7 @@
 	          <% @firm.clients.each do |client| %>
 	            <tr>
 	          	  <td class="nb"><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
-	          	  <%
-#	              	client_sum = 0 
-                  client_sum = client.compensations.sum(:compensation, {:lobbyist_id => client.lobbyists.map(&:id)}).to_i
-#	              	client.lobbyists.each do |lobbyist| 
-#                    #puts "
-#	              		client_sum += client.compensations.sum(:compensation, {:lobbyist_id => lobbyist.id}).to_i
-#	              	end %>
-	              	<td class="bar"><span style="width:100%;"><strong><%= number_to_currency client_sum %></strong></span></td>
-	              	<% client_sum = 0 %>
+	              <td class="bar"><span style="width:100%;"><strong><%= number_to_currency(compensations_for(client)) %></strong></span></td>
 	            </tr>
 	          <% end %>
 	        <% end %>
