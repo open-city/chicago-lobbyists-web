@@ -17,7 +17,7 @@
       <h1><%= @agency.name %> <span>(City agency)</span></h1>
       <div class="c2l">
 	      <ul class="stats">
-	        <li><strong><%= @actions.count %></strong> <%= @actions.count == 1 ? " action" : " actions" %> sought
+	        <li><strong><%= @actions.count %></strong> lobbyist <%= @actions.count == 1 ? " action" : " actions" %>
 	      	  <p>
 	      	    <%= @actions.select(&:administrative).count %> administrative
 	            <br /><%= @actions.select(&:legislative).count %> legislative
@@ -27,8 +27,8 @@
       </div>
       <div class="c2r">
       	<ul class='stats'>
-          <li><strong><%= @agency.lobbyists.uniq.count %></strong> lobbyists</li>
-          <li><strong><%= @agency.firms.uniq.count %></strong> lobbying firms</li>
+          <li><strong><%= @agency.lobbyists.uniq.count %></strong> <%= @agency.lobbyists.uniq.count == 1 ? " lobbyist" : " lobbyists" %></li>
+          <li><strong><%= @agency.firms.uniq.count %></strong> lobbying <%= @agency.firms.uniq.count == 1 ? " firm" : " firms" %></li>
       	</ul>
       </div>
       
