@@ -106,7 +106,7 @@ ul { list-style: disc; margin-left: 1.5em; }
 #nav li { display: inline; margin-right: 1em; }
 #nav li.current { font-weight: bold; }
 #nav li.current a { color: #000; }
-#nav ul { list-style: none; margin: 0; }
+#nav ul { list-style: none; margin: 0; float: left; }
 
 /* Search */
 #search { float: right; text-align: right; white-space: nowrap; }
