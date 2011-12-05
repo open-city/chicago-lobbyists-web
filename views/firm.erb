@@ -19,7 +19,7 @@
 	      <ul class="stats">
 	      	<li><strong><%= number_to_currency @firm.total_compensation %></strong> in 2010 payments</li>
 	      	<li><strong><%= @firm.lobbyists.count %></strong> <%= @firm.lobbyists.count == 1 ? " lobbyist" : " lobbyists" %> employed</li>
-	        <li><strong><%= @firm.clients.count %></strong> <%= @firm.clients.count == 1 ? " client" : " clients" %></li>
+	        <li><strong><%= @firm.clients.uniq.count %></strong> <%= @firm.clients.count == 1 ? " client" : " clients" %></li>
 	      </ul>
       </div>
       <div class="c2r">
@@ -38,7 +38,7 @@
       
       <div class="tabs">
         <ul class="tab-nav">
-        	<li><a href="#tab-payments">Payments <span class="mute">(<%= @firm.clients.count %>)</span></a></li>
+        	<li><a href="#tab-payments">Payments <span class="mute">(<%= @firm.clients.uniq.count %>)</span></a></li>
         	<li><a href="#tab-lobbyists">Lobbyists <span class="mute">(<%= @firm.lobbyists.count %>)</span></a></li>
         	<% unless @actions.empty? %>
         	  <li><a href="#tab-actions">Actions <span class="mute">(<%= @actions.count %>)</span></a></li>
