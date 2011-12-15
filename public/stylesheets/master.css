@@ -55,6 +55,11 @@ ul { list-style: disc; margin-left: 1.5em; }
 /* Secondary content */
 .content-secondary { float: right; margin-left: 3%; width: 31%; }
 
+blockquote {
+	margin: 1em 3em;
+	color: #999;
+	padding-left: 1em; }
+
 /* Bios */
 #bio { clear: both; margin-bottom: 30px; }
 #bio-primary { float: left; width: 74.2%; }
