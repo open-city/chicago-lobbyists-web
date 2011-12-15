@@ -57,8 +57,8 @@ ul { list-style: disc; margin-left: 1.5em; }
 
 blockquote {
 	margin: 1em 3em;
-	color: #999;
-	padding-left: 1em; }
+	padding-left: 0.5em;
+	padding-right: 2em;}
 
 /* Bios */
 #bio { clear: both; margin-bottom: 30px; }
