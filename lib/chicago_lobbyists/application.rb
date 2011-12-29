@@ -6,10 +6,6 @@ module ChicagoLobbyists
       DataMapper.setup(:default, database_url)
       DataMapper.finalize
     end
-
-    configure :production do
-      require 'newrelic_rpm'
-    end
     
     helpers ChicagoLobbyists::Helpers
 
@@ -20,6 +16,11 @@ module ChicagoLobbyists
     def page
       0
     end
+    
+    # Render views/notfound.erb
+	not_found do
+	  erb :notfound
+	end
 
     get "/" do
       @current_menu = "home"
@@ -49,12 +50,11 @@ module ChicagoLobbyists
       @lobbyist = Lobbyist.first :slug => params[:id]
       @page_title = "#{@lobbyist.first_name} #{@lobbyist.last_name} - Lobbyist"
       @current_menu = "lobbyists"
-      @actions = @lobbyist.actions.group_by { |action|
-        action.purpose
-      }.sort_by { |purpose| purpose }
+      @actions = @lobbyist.actions.sort_by { |action| action.purpose }
       @agency_actions = @lobbyist.actions.group_by { |action|
         action.agency
       }.sort_by { |agency, actions| agency.name }
+      @categorized_expenditures = @lobbyist.categorized_expenditures.all(:total_expenses.gt => 0)
 
       erb :lobbyist
     end
@@ -71,9 +71,7 @@ module ChicagoLobbyists
       @firm = Firm.first :slug => params[:id]
       @page_title = "#{@firm.name} - Lobbying Firm"
       @current_menu = "firms"
-      @actions = @firm.actions.group_by { |action|
-        action.purpose
-      }.sort_by { |purpose| purpose }
+      @actions = @firm.actions.sort_by { |action| action.purpose }
       @agency_actions = @firm.actions.group_by { |action|
         action.agency
       }.sort_by { |agency, actions| agency.name }
@@ -92,6 +90,7 @@ module ChicagoLobbyists
       @client = Client.first :slug => params[:id]
       @page_title = "#{@client.name} - Client"
       @current_menu = "clients"
+      @actions = @client.actions.sort_by { |action| action.purpose }
       erb :client
     end
     
@@ -104,14 +103,13 @@ module ChicagoLobbyists
     
     get "/agencies/:id" do
       @agency = Agency.first :slug => params[:id]
-      @page_title = "#{@agency.name} (#{@agency.code}) - City Agency"
+      @page_title = "#{@agency.name} - City Agency"
       @current_menu = "agencies"
+      @actions = @agency.actions.sort_by { |action| action.purpose }
       @lobbyist_actions = @agency.actions.group_by { |action|
         action.lobbyist }.sort_by { |lobbyist, actions|
           lobbyist.full_name }
-      @purpose_actions = @agency.actions.group_by { |action|
-          action.purpose
-        }.sort_by { |purpose, actions| purpose }
+      @purpose_actions = @agency.actions.sort_by { |action| action.purpose }
       erb :agency
     end
     

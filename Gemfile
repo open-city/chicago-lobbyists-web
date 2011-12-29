@@ -12,9 +12,7 @@ gem 'do_postgres'
 
 group :development do
   gem "heroku"
+  gem "pg"
   gem "shotgun"
-end
-
-group :production do
-  gem "newrelic_rpm"
+  gem "unicorn"
 end
