@@ -16,6 +16,12 @@ module ChicagoLobbyists
       Client.count
     end
 
+    def compensations_for(client)
+      client.compensations.sum(:compensation, {
+        :lobbyist_id => client.lobbyists.map(&:id)
+      }).to_i
+    end
+
     def cl_erb(template)
       erb template.to_sym
     end
@@ -33,13 +39,17 @@ module ChicagoLobbyists
     end
     
     def number_to_currency(number)
-      decimal_part = number.to_f % 1
-      decimal_part_string = ("%.2f" % decimal_part)[1..-1]
-      
       integer_part = number.to_i
       integer_part_string = integer_part.to_s.reverse.gsub(/(\d{3}(?=(\d)))/, "\\1,").reverse
       
-      "$#{integer_part_string}#{decimal_part_string}"
+      "$#{integer_part_string}"
+    end
+    
+    def format_number(number)
+      integer_part = number.to_i
+      integer_part_string = integer_part.to_s.reverse.gsub(/(\d{3}(?=(\d)))/, "\\1,").reverse
+      
+      "#{integer_part_string}"
     end
     
     def html_title(page_title = nil)

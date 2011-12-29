@@ -12,7 +12,13 @@ CREATE TABLE public.chi_addresses (
   CONSTRAINT chi_addresses_unique UNIQUE (street, city, state, zip, country)
 );
 
--- LOAD CHICAGO ADDRESSES
+-- LOAD LOBBYIST FIRM ADDRESSES
 INSERT INTO public.chi_addresses (street, city, state, zip, country)
 SELECT DISTINCT address, city, UPPER(state), zip, country
 FROM public.lobbyists;
+
+-- LOAD CITY AGENCY ADDRESSES
+INSERT INTO public.chi_addresses (street, city, state, zip, country)
+SELECT DISTINCT address, city, UPPER(state), zip, country
+FROM public.lobbyist_agencies
+WHERE address is not NULL;

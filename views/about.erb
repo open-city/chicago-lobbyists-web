@@ -36,6 +36,8 @@
 		<li>by lobbyists themselves to rate and compare their own performance</li>
 		<li>by journalists as a research tool</li>
 		<li>by citizens to who seek to understand how their local government works and to see the role that lobbyists play in it</li>
+		<li>by the City of Chicago as a tool to comply with their <a href='http://blogs.wttw.com/moreonthestory/2011/07/28/city-council-passes-ethics-reform-ordinance/'>lobbyist ethics ordinance</a> (specifically the "Creation of a 
+searchable online system for registration and reporting.")</li>
 	</ul>
 	<hr />
 
@@ -47,8 +49,9 @@
 	<ul>
 		<li><a href='http://data.cityofchicago.org/Ethics/Lobbyist-Data-2010-Lobbyist-Registry/2ft4-4uik'>2010 Lobbyist Registry</a></li>
 		<li><a href='http://data.cityofchicago.org/Ethics/Lobbyist-Data-2010-Lobbyist-Compensation-Report/ina9-6kq2'>2010 Lobbyist Compensation Report</a></li>
-		<li><a href='http://data.cityofchicago.org/Ethics/Lobbyist-Data-2010-Lobbyist-Major-Expenditures-Rep/dqw9-xyre'>2010 Lobbyist Major Expenditures Report</a></li>
+		<li><a href='http://data.cityofchicago.org/Ethics/Lobbyist-Data-2010-Lobbyist-Categorized-Expenditur/zugr-hsc5'>2010 Lobbyist Categorized Expenditures Report</a></li>
 		<li><a href='http://data.cityofchicago.org/Ethics/Lobbyist-Data-2010-Lobbyist-Agency-Report/2g5r-pikx'>2010 Lobbyist Agency Report</a></li>
+		<li><a href='http://data.cityofchicago.org/Administration-Finance/Payments/s4vu-giwb'>City of Chicago Payments</a> (2010 subset)</li>
 	</ul>
 	
 	<p>When the full dataset for 2011 is released in January 2012, we will update this site to include that data as well.</p>
@@ -84,14 +87,71 @@
     <p>Since launching in early August 2011, we've made some headlines in the news, notably for our efforts to engage the City of Chicago on releasing more detailed lobbyist data.</p>
     
     <ul>
-    	<li><a href='http://www.cityofchicago.org/city/en/depts/mayor/press_room/press_releases/2011/august_2011/mayor_emanuel_announcesnewlobbyistdatathatprovidesclearconnectio.html'>Mayor Emanuel's release on updated lobbyist data</a> - City of Chicago website</li>
-    	<li><a href='http://chicagotonight.wttw.com/2011/08/30/mayor-rahm-emanuel'>Mayor Rahm Emanuel interview</a> - <em>Chicago Tonight</em> (WTTW) discussing updated lobbyist data</li>
+    	<li><a href='http://gov20.govfresh.com/can-the-internet-help-disrupt-the-power-of-chicago-lobbyists-through-transparency/'>Can the Internet help disrupt the power of Chicago Lobbyists through transparency?</a> - Dec 7, 2011 on govfresh</li>
+    	<li><a href='http://chicagoist.com/2011/12/07/new_web_project_simplifies_citys_op.php'>New Web Project Simplifies City's Open Lobbying Data</a> - Dec 7, 2011 on Chicagoist</li>
+    	<li><a href='http://www.cityofchicago.org/city/en/depts/mayor/press_room/press_releases/2011/august_2011/mayor_emanuel_announcesnewlobbyistdatathatprovidesclearconnectio.html'>Mayor Emanuel's release on updated lobbyist data</a> - Aug 30, 2011 on City of Chicago website</li>
+    	<li><a href='http://chicagotonight.wttw.com/2011/08/30/mayor-rahm-emanuel'>Mayor Rahm Emanuel interview</a> - Aug 30, 2011 on <em>Chicago Tonight</em> (WTTW) discussing updated lobbyist data</li>
     </ul>
   	<hr />
   
 	<h2 id="contact-us">Contact us</h2>
 	<p>If you have any comments, questions or feature suggestions, you can email us at <a href='mailto:chi.lobbyists@gmail.com'>chi.lobbyists@gmail.com</a> or tweet us at <a href='https://twitter.com/#!/chilobbyists'>@chilobbyists</a>.</p>
 </div> 
+
+<div class="content-secondary">
+	<h2>Who are we?</h2>
+  	<p>We are a group of developers and designers in Chicago with a passion for open data and challenging problems.</p>
+  	<dl>
+	  	<dt><a href='http://twitter.com/paulbaker'>Paul Baker</a></dt>
+	  	<dd>President and co-founder of <a href='http://webitects.com'>Webitects</a></dd>
+	  	
+	  	<dt><a href='http://twitter.com/ryanbriones'>Ryan Briones</a></dt>
+	  	<dd>Developer at <a href='http://www.groupon.com/'>Groupon</a> and organizer for <a href='http://chicagodb.gathers.us/'>ChicagoDB</a></dd>
+	  	
+	  	<dt><a href='http://twitter.com/derek_eder'>Derek Eder</a></dt>
+	  	<dd>Developer at Webitects and organizer for <a href='http://opengovchicago.org'>OpenGov Chicago</a></dd>
+	  	
+	  	<dt><a href='http://twitter.com/chadwpry'>Chad Pry</a></dt>
+	  	<dd>Developer at Groupon and software mentor</dd>
+	  	
+	  	<dt><a href='http://twitter.com/rougeux'>Nick Rougeux</a></dt>
+	  	<dd>Designer and CSS wiz at Webitects</dd>
+  	</dl>
+  	
+  	<hr />
+  	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+	<script>
+	new TWTR.Widget({
+	  version: 2,
+	  type: 'profile',
+	  rpp: 3,
+	  interval: 6000,
+	  width: 'auto',
+	  height: 300,
+	  theme: {
+	    shell: {
+	      background: '#B8E4F5',
+	      color: '#027ab6'
+	    },
+	    tweets: {
+	      background: '#ffffff',
+	      color: '#000000',
+	      links: '#027BB6'
+	    }
+	  },
+	  features: {
+	    scrollbar: false,
+	    loop: false,
+	    live: false,
+	    hashtags: true,
+	    timestamp: true,
+	    avatars: true,
+	    behavior: 'all'
+	  }
+	}).render().setUser('chilobbyists').start();
+	</script>
+
+</div>
 
   <%= cl_erb "common/footer" %>
 </div>

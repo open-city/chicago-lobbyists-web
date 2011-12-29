@@ -5,13 +5,13 @@
   
   <script type="text/javascript">
     $(function(){
-      setBarWidthByNumber();
+      setBarWidthByCurrency();
     
       $("#listing").dataTable({
         "aaSorting": [[1, "desc"], [0, "asc"]],
         "aoColumns": [
           null,
-          { "sSortDataType": "dom-text", "sType": "num-html" }
+          { "sSortDataType": "dom-text", "sType": "currency" }
         ],
         "bFilter": false,
         "bInfo": false,
@@ -28,14 +28,14 @@
     <thead>
       <tr>
         <th><span>Client</span></th>
-        <th><span>Number of lobbyists used</span></th>
+        <th><span>Amount paid to lobbyists</span></th>
       </tr>
     </thead>
     <tbody>
-      <% @clients.each do |slug, name, count| %>
+      <% @clients.each do |slug, name, pay| %>
       <tr>
         <td><h3><a href="/clients/<%= slug %>"><%= name %></a></h3></td>
-        <td class="bar"><span><strong><%= count %></strong></span></td>
+        <td class="bar"><span><strong><%= number_to_currency pay %></strong></span></td>
       </tr>
       <% end %>
     </tbody>

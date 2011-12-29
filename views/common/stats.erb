@@ -1,8 +1,8 @@
 <ul id="stats">
-  <li class="<%= current_menu_class("lobbyists") %>"><a class="stat" href="/lobbyists"><strong><%= lobbyists_count %></strong> Lobbyists</a></li>
-  <li class="<%= current_menu_class("firms") %>"><a class="stat" href="/firms"><strong><%= firms_count %></strong>Lobbying firms</a></li>
-  <li id="paid"><span class="stat"><strong><%= number_to_currency(total_paid) %></strong> Paid to lobbyists in 2010</a></li>
-  <li class="<%= current_menu_class("agencies") %>"><a class="stat" href="/agencies"><strong><%= actions_count %></strong>Actions sought</a></li>
-  <li class="<%= current_menu_class("clients") %>"><a class="stat" href="/clients"><strong><%= clients_count %></strong>Clients</a></li>
+  <li class="<%= current_menu_class("lobbyists") %>"><a class="stat" href="/lobbyists"><strong><%= format_number lobbyists_count %></strong> Lobbyists</a></li>
+  <li class="<%= current_menu_class("firms") %>"><a class="stat" href="/firms"><strong><%= format_number firms_count %></strong>Lobbying firms</a></li>
+  <li id="paid"><span class="stat"><strong><%= number_to_currency(total_paid) %></strong> Paid to lobbyists in 2010</span></li>
+    <li class="<%= current_menu_class("clients") %>"><a class="stat" href="/clients"><strong><%= format_number clients_count %></strong>Clients</a></li>
+  <li class="<%= current_menu_class("agencies") %>"><a class="stat" href="/agencies"><strong><%= format_number actions_count %></strong>Actions sought</a></li>
 </ul>
 <hr />

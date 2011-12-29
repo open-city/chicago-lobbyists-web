@@ -6,13 +6,10 @@ class Compensation
   property :id,                     Serial,  :required => true
   property :lobbyist_id,            Integer, :required => true
   property :compensation,           Decimal, :default => 0.00, :precision => 15, :scale => 2
-  property :office_expenses,        Decimal, :default => 0.00, :precision => 15, :scale => 2
-  property :compensation_to_others, Decimal, :default => 0.00, :precision => 15, :scale => 2
-  property :public_education,       Decimal, :default => 0.00, :precision => 15, :scale => 2
-  property :personal_sustenance,    Decimal, :default => 0.00, :precision => 15, :scale => 2
-  property :other_expenses,         Decimal, :default => 0.00, :precision => 15, :scale => 2
+  property :client_id,				Integer, :required => true
 
   belongs_to :lobbyist
+  belongs_to :client
 
   def self.group_lobbyist_compensations default_options={:limit => 5}
     sql = <<-SQL

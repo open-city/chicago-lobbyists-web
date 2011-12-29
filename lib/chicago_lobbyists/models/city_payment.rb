@@ -10,9 +10,6 @@ class CityPayment
   property :check_date,      Date
   property :department_name, String
   property :contract_number, String
-  property :interesting,     Boolean
-  property :link,            String
-  property :notes,           String
 
   belongs_to :client
 

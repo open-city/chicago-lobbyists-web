@@ -15,6 +15,7 @@ class Lobbyist
   has n, :clients, :through => :client_relationships, :order => :name
   has n, :compensations
   has n, :actions, :order => :purpose
+  has n, :categorized_expenditures
 
   def self.list_by_compensation default_options={}
     options = { :limit => 20, :offset => 1 }.merge(default_options)
@@ -36,6 +37,10 @@ class Lobbyist
 
   def total_compensation
     Compensation.aggregate(:compensation.sum, {:lobbyist_id => self.id}) || 0.00
+  end
+  
+  def total_expenditure
+    CategorizedExpenditure.aggregate(:total_expenses.sum, {:lobbyist_id => self.id}) || 0.00
   end
 
 end

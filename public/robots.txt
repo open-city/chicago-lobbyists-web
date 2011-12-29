@@ -1,0 +1,2 @@
+User-agent: *   # directed to all spiders
+Crawl-delay: 10

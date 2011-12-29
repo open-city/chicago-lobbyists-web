@@ -1,4 +1,4 @@
-$.fn.dataTableExt.afnSortData['dom-text'] = function  ( oSettings, iColumn ) {
+jQuery.fn.dataTableExt.afnSortData['dom-text'] = function  ( oSettings, iColumn ) {
 	var aData = [];
 	$( 'td:eq('+iColumn+') span strong', oSettings.oApi._fnGetTrNodes(oSettings) ).each( function () {
 		aData.push( this.innerHTML );

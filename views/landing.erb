@@ -8,7 +8,7 @@
     $(function(){
     	setUlBarWidthByCurrency('home-lobbyists');
     	setUlBarWidthByCurrency('home-firms');
-    	setUlBarWidthByNumber('home-clients');
+    	setUlBarWidthByCurrency('home-clients');
     	setUlBarWidthByNumber('home-agencies');
     });
     
@@ -30,8 +30,8 @@
       <div class="section">
         <h2>Most active clients <a href="/clients">All clients &raquo;</a></h2>
         <ul class="chartlist" id="home-clients">
-          <% @most_active_clients.each do |slug, name, lobbyists_used| %>
-            <li><a href="/clients/<%= slug %>"><%= name %></a><span class="index"></span><span class="count"><%= lobbyists_used %></span></li>
+          <% @most_active_clients.each do |slug, name, pay| %>
+            <li><a href="/clients/<%= slug %>"><%= name %></a><span class="index"></span><span class="count"><%= number_to_currency(pay) %></span></li>
           <% end %>
         </ul>
       </div>

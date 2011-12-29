@@ -3,102 +3,213 @@
   <%= cl_erb "common/header" %>
   <%= cl_erb "common/stats" %>
   
+  <script type="text/javascript">
+	    $(function(){
+	      setBarWidthByCurrency();
+	      $('.tabs').tabs();
+	    });
+  </script>
+  
   <div class="clear"></div>
   
-  <div id="bio">
-    <div id="bio-header">
-      <p>Lobbying firm</p>
-      <h1><%= @firm.name %></h1>
-    </div>
-    
+    <div id="bio">
     <div id="bio-primary">
-        <div class="section">
-          <h2>2010 billing</h2>
-          <p><strong class="total-paid"><%= number_to_currency @firm.total_compensation %></strong></p>
-        </div><!-- /.section -->
+      <h1><%= @firm.name %> <span>(Firm)</span></h1>
+      <div class="c2l">
+	      <ul class="stats">
+	      	<li><strong><%= number_to_currency @firm.total_compensation %></strong> in 2010 payments</li>
+	      	<li><strong><%= @firm.lobbyists.count %></strong> <%= @firm.lobbyists.count == 1 ? " lobbyist" : " lobbyists" %> employed</li>
+	        <li><strong><%= @firm.clients.uniq.count %></strong> <%= @firm.clients.count == 1 ? " client" : " clients" %></li>
+	      </ul>
+      </div>
+      <div class="c2r">
+      	<ul class="stats">
+			<li><strong><%= @agency_actions.count %></strong> government <%= @agency_actions.count == 1 ? " agency" : " agencies" %> lobbied</li>
+	        <li><strong><%= @actions.count %></strong> <%= @actions.count == 1 ? " action" : " actions" %> sought
+	      	  <p>
+	      	    <%= @actions.select(&:administrative).count %> administrative
+	            <br /><%= @actions.select(&:legislative).count %> legislative
+	          </p>
+	        </li>
+	     </ul>
+      </div>
+      
+      <div class="clear"></div>
+      
+      <div class="tabs">
+        <ul class="tab-nav">
+        	<li><a href="#tab-payments">Payments <span class="mute">(<%= @firm.clients.uniq.count %>)</span></a></li>
+        	<li><a href="#tab-lobbyists">Lobbyists <span class="mute">(<%= @firm.lobbyists.count %>)</span></a></li>
+        	<% unless @actions.empty? %>
+        	  <li><a href="#tab-actions">Actions <span class="mute">(<%= @actions.count %>)</span></a></li>
+        	<% end %>
+        	<li><a href="#tab-comments">Comments</a></li>
+        </ul>
         
-        <div class="section">
-          <h2>Lobbyists</h2>
-          <ul>
-            <% @firm.lobbyists.each do |lobbyist| %>
-            <li><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></li>
+        <% unless @actions.empty? %>
+	    <div class="tab-content" id="tab-actions">
+	    <script type="text/javascript">    
+		    $(function(){
+		      $("#action-table").dataTable({
+		        "aoColumns": [
+		          null,
+		          null,
+		          null,
+		          null,
+		          { "bSearchable": false, "bSortable": false },
+		          { "bSearchable": false, "bSortable": false }
+		        ],
+		        "aaSorting": [[0, "asc"]],
+		        "bFilter": true,
+		        "bInfo": false,
+		        "bPaginate": false
+		      });
+		    });
+	    </script>
+	    
+		<h2 class="table-head">Actions sought</h2>
+		  <table id="action-table" class="datatable firm-actions">
+	        <thead>
+	          <tr>
+	            <th class="purpose"><span>Purpose</span></th>
+	            <th class="lobbyist"><span>Lobbyist</span></th>
+	            <th class="agency"><span>Agency</span></th>
+	            <th class="client"><span>Client</span></th>
+	            <th class="actions administrative" title="Administrative actions">Admin.</th>
+	            <th class="actions legislative" title="Legislative actions">Leg.</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <% @actions.each do |action| %>
+	          <tr>
+	          	<td class="nb"><%= action.purpose %></td>
+	          	<td><a href='/lobbyists/<%= action.lobbyist.slug %>'><%= action.lobbyist.full_name %></a></td>
+	          	<td><a href='/agencies/<%= action.agency.slug %>'><%= action.agency.name %></a></td>
+	          	<td><a href='/clients/<%= action.client.slug %>'><%= action.client.name %></a></td>
+	          	<td><%= action.administrative ? "Yes" : "No" %></td>
+	          	<td><%= action.legislative ? "Yes" : "No" %></td>
+	          </tr>
+	          <% end %>
+	        </tbody>
+	      </table>
+      	</div><!-- end tab-actions-->
+      	<% end %>
+      	
+      	<% unless @firm.lobbyists.empty? %>
+	    <div class="tab-content" id="tab-lobbyists">
+	      <script type="text/javascript">    
+		    $(function(){
+		      $("#lobbyists-table").dataTable({
+		        "aoColumns": [
+		          null,
+		          { "sType": "num-html" }       
+		        ],
+		        "aaSorting": [[1, "desc"]],
+		        "bFilter": true,
+		        "bInfo": false,
+		        "bPaginate": false
+		      });
+		    });
+	      </script>
+	    
+	      <h2 class="table-head">Lobbyists hired</h2>
+	      <table id="lobbyists-table" class="datatable">
+	        <thead>
+	          <tr>
+	            <th><span>Lobbyist</span></th>
+	            <th><span>Amount</span></th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	            <% @firm.lobbyists.each do |lobbyist| %>
+	              <tr>
+	              	<td><a href="/lobbyists/<%= lobbyist.slug %>"><%= lobbyist.full_name %></a></td>
+		            <td class="bar"><span style="width:100%;"><strong><%= number_to_currency lobbyist.compensations.sum(:compensation, {:lobbyist_id => lobbyist.id}) %></strong></span></td>
+	              </tr>
+	            <% end %>
+	        </tbody>
+	      </table>
+	      </div>
+	      <% end %>
+      
+      	<div class='tab-content' id="tab-payments">
+	      <script type="text/javascript">    
+		    $(function(){
+		      $("#payments-table").dataTable({
+		        "aoColumns": [
+		          null,
+		          { "sType": "num-html" }
+		        ],
+		        "aaSorting": [[1, "desc"]],
+		        "bFilter": true,
+		        "bInfo": false,
+		        "bPaginate": false
+		      });
+		    });
+	      </script>
+	      
+	      <h2 class="table-head">Payments per client</h2>
+	      <table id="payments-table" class="datatable">
+	        <thead>
+	          <tr>
+	            <th><span>Client</span></th>
+	            <th><span>Amount</span></th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	        <% if @firm.clients.empty? %>
+	          <tr><td colspan='2'>No clients found</td></tr>
+	        <% else %>
+	          <% @firm.clients.each do |client| %>
+	            <tr>
+	          	  <td class="nb"><a href="/clients/<%= client.slug %>"><%= client.name %></a></td>
+	              <td class="bar"><span style="width:100%;"><strong><%= number_to_currency(compensations_for(client)) %></strong></span></td>
+	            </tr>
+	          <% end %>
+	        <% end %>
+	        </tbody>
+	      </table>
+	    </div><!-- end tab-payments-->
+      
+        <div class="tab-content" id="tab-comments">
+        <div id="disqus_thread"></div>
+		  <script type="text/javascript">
+		    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		    var disqus_shortname = 'chicagolobbyists'; // required: replace example with your forum shortname
+		
+		    /* * * DON'T EDIT BELOW THIS LINE * * */
+		    (function() {
+		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+		  </script>
+		  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div><!-- end tab-comment-->
+      </div><!-- end tabs-->
+    </div><!-- end bio-primary-->
+      
+     <div id="bio-secondary">
+       <div id="map_canvas"></div>
+        <script type="text/javascript">
+          $(function(){
+            defineMap(new google.maps.LatLng(41.37680856570233,-84.287109375));
+
+            <% @firm.addresses.each do |address| %>
+            if (map != null)
+              geocode("<%= address.full_address.gsub(/\/n/, ' ').gsub(/ /, '+') %>");
             <% end %>
-          </ul>
-        </div><!-- /.section -->
-        
-        <div class="section">
-          <h2>Clients</h2>
-          <ul>
-            <% if @firm.clients.empty? %>
-              <li>No clients found</li>
-            <% else %>
-              <% @firm.clients.each do |client| %>
-            <li><a href="/clients/<%= client.slug %>"><%= client.name %></a></li>
-              <% end %>
-            <% end %>
-          </ul>
-        </div><!-- /.section -->
-        
-        <div class="section">
-          <h2>Actions sought</h2>
-          <dl>
-            <% @actions.each do |purpose, actions| %>
-            <dt><%= purpose %></dt>
-
-            <% actions.group_by { |action| action.agency.name }.each do |name, actions| %>
-              <dd><a href="/agencies/<%= actions.first.agency.slug %>"><%= name %></a> (<%= actions.count %>)</dd>
-            <% end %>
-
-            <% end %>
-          </dl>
-          <p class="mute">Current data does not allow us to learn <strong>how much each client paid to each lobbying firm or lobbyist.</strong> We expect that the city will add data to make this possible.</p>
-        </div><!-- /.section -->
-
-        <div class="section">
-          <h2>Agencies from whom this firm sought actions.</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Agency</th>
-                <th title="Administrative actions">Admin.</th>
-                <th title="Legislative actions">Leg.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @agency_actions.each do |agency, actions| %>
-              <tr>
-                <td><a href="/agencies/<%= agency.slug %>"><%= agency.name %></a></td>
-                <td><%= actions.select(&:administrative).count %></td>
-                <td><%= actions.select(&:legislative).count %></td>
-              </tr>
-            <% end %>
-            </tbody>
-          </table>
-          <p class="mute">Current data does not allow us to learn <strong>which clients requested what actions in front of which committees.</strong> We expect that the city will add data to make this possible.</p>
-        </div><!-- /.section -->
-
-    </div>
-    <div id="bio-secondary">
-      <div id="map_canvas" style="border:1px solid #000; width: 222px; height: 222px;"></div>
-
-      <script type="text/javascript">
-        $(function(){
-          defineMap(new google.maps.LatLng(41.37680856570233,-84.287109375));
-
-          <% @firm.addresses.each do |address| %>
-          if (map != null)
-            geocode("<%= address.full_address.gsub(/\/n/, ' ').gsub(/ /, '+') %>");
-         <% end %>
-        });
-      </script>
-
-      <p><strong>Address(es) on file:</strong></p>
-      <% @firm.addresses.each do |address| %>
-      <p><%= address.full_address_formatted %></p>
-      <% end %>
-    </div>
-  </div>
-  
+          });
+        </script>
+      
+        <p><strong>Address(es) on file:</strong></p>
+	    <% @firm.addresses.each do |address| %>
+	    <p><%= address.full_address_formatted %></p>
+	    <% end %>
+  	</div><!-- end bio-secondary-->
+  </div><!-- /.bio -->
+    
   <div class="clear"></div>
   
   <%= cl_erb "common/footer" %>
