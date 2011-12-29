@@ -6,6 +6,10 @@ module ChicagoLobbyists
       DataMapper.setup(:default, database_url)
       DataMapper.finalize
     end
+
+    configure :production do
+      require 'newrelic_rpm'
+    end
     
     helpers ChicagoLobbyists::Helpers
 
