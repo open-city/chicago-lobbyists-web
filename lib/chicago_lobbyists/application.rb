@@ -18,9 +18,17 @@ module ChicagoLobbyists
     end
     
     # Render views/notfound.erb
-	not_found do
-	  erb :notfound
-	end
+  	not_found do
+  	  erb :notfound
+  	end
+  	
+  	#handle errors with a frienly page
+  	set :show_exceptions, true if development?
+    set :raise_errors, false
+
+  	error do
+      erb :error
+    end
 
     get "/" do
       @current_menu = "home"
