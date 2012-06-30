@@ -23,7 +23,11 @@ module ChicagoLobbyists
   	end
   	
   	#handle errors with a frienly page
-  	set :show_exceptions, true if development?
+  	if development?
+      set :show_exceptions, true
+    else
+      set :show_exceptions, false
+    end
     set :raise_errors, false
 
   	error do
