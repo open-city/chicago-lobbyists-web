@@ -23,12 +23,10 @@ module ChicagoLobbyists
   	end
   	
   	#handle errors with a frienly page
-  	if development?
-      set :show_exceptions, true
-    else
+  	if ENV["RACK_ENV"] == "production"
       set :show_exceptions, false
-    end
-    set :raise_errors, false
+      set :raise_errors, false
+  	end
 
   	error do
       erb :error
